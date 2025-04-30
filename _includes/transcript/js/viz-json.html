@@ -134,11 +134,17 @@
             });
         });
 
-        // Reinitialize tooltips
+        // Reinitialize tooltips AFTER titles/data have been updated
         if (window.bootstrap && typeof bootstrap.Tooltip === 'function') {
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
             tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
+                // Dispose existing tooltip instance if it exists
+                var existingTooltip = bootstrap.Tooltip.getInstance(tooltipTriggerEl);
+                if (existingTooltip) {
+                    existingTooltip.dispose(); // Remove the old one
+                }
+                // Create a new tooltip instance
+                return new bootstrap.Tooltip(tooltipTriggerEl); // Create a fresh one
             });
         }
     }
