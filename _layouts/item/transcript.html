@@ -3,6 +3,7 @@
 # displays image or icon depending on "image_thumb"
 layout: item/item-page-base
 custom-foot: transcript/js/transcript-js.html;transcript/js/scrollama-js.html;transcript/js/pagedjs-js.html
+gallery: true
 ---
 {%- comment -%} Determine if transcript filename is the objectid of the item or if it is determined by the metadata's object-transcript field {%- endcomment -%}
 {% if page.object-transcript contains ".csv"%}
@@ -46,7 +47,7 @@ endcapture -%}
 {%endif%}
 
 
-
+{% assign children = site.data[site.metadata] | where_exp: 'item','item.parentid == page.objectid' %}
 
 <div id="scrolly">
   <article>
@@ -61,6 +62,12 @@ endcapture -%}
         {% endif %}
         <div id="transcript-metadata" class="no-print">
           {% include transcript/item/transcript-metadata.html %}
+          {% if children.size > 1 %}
+          <div id="child-objects" class="my-4">
+    
+            {% include transcript/item/ohd-compound-item-modal-gallery.html %}
+    
+          </div>{% endif %}
         </div>
         {% if site.data.filters %}
         {% include transcript/item/transcript-viz.html %}
