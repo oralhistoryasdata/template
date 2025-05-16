@@ -25,7 +25,7 @@ The [Oral History as Data (OHD)](https://github.com/oralhistoryasdata/) framewor
 
 - **[Full OHD Documentation](https://oralhistoryasdata.github.io/docs/) -** Our documentation provides how to guides, tutorials, and stepped instruction for building your own Oral History as Data project.  
 
-- **[CollectionBuilder Documentation](https://oralhistoryasdata.github.io/docs/) -** OHD is built on top of a CollectionBuilder-CSV template, so any options used in CSV can be used here. 
+- **[CollectionBuilder Documentation](https://collectionbuilder.github.io/docs/) -** OHD is built on top of a CollectionBuilder-CSV template, so any options used in CSV can be used here. 
 
 
 Please feel free to contact me with any questions. I'm happy to help. <dbecker@uidaho.edu>
