@@ -15,6 +15,8 @@ gallery: true
 {% assign items = site.data.transcripts[page.objectid] %}
 {% endif %}
 
+{% assign trancheck = site.data.transcripts[page.objectid] | map: "words" | compact %}
+
 {%- comment -%} if using color-coded visualization find all words used in the subject metadata {%- endcomment -%}
 {% if site.data.filters %}
 {% include transcript/style/filter-style.html %}
@@ -69,7 +71,7 @@ endcapture -%}
     
           </div>{% endif %}
         </div>
-        {% if site.data.filters %}
+        {% if site.data.filters and uniqueSubjects.size > 0 %}
         {% include transcript/item/transcript-viz.html %}
         {% endif %}
   </div>
