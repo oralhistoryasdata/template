@@ -35,7 +35,7 @@ json-generation: false ## true/false --> defaults to false (see note below if yo
 # Base Layout (OHD or CollectionBuilder)
 # If you'd like the site to look like CollectionBuilder instead of the OHD look, just change the below value for base-layout to CB rather than ohd
 base-layout: OHD # OHD or CB
-
+# NOTE!!: if you change this to CB, and would like the home page to look like other CollectionBuilder sites, you'll need to change the layout on the pages/index.md file to "home-infographic" from "home-cover"
 
 ##########
 # HOME PAGE
