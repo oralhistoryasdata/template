@@ -8,6 +8,9 @@
 {% if page.pdf %}
 <a target="_blank" rel="noopener" href="{{ page.pdf | relative_url }}" class="btn btn-outline-dark">Download PDF</a>
 {% else %}
-<a target="_blank" rel="noopener" onclick="preparePDF()" class="btn btn-outline-dark">Download PDF</a>
+{% assign trancheck = site.data.transcripts[page.objectid] | map: words %}
+{% if trancheck.size > 1 %}
+<a target="_blank" rel="noopener" onclick="preparePDF()" class="btn btn-outline-dark">Generate PDF</a>
+{% endif %}
 {% endif %}
 </div>
