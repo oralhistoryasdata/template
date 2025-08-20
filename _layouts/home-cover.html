@@ -33,7 +33,7 @@
     {% if site.data.filters and site.data.theme.home-page-visualization != false %}
 {% include transcript/index/viz-overview.html height="450px"%}
 {% else %}
-{% include feature/image.html objectid=site.data.theme.featured-image caption=false link="browse.html"%}
+{% include feature/image.html objectid=site.data.theme.featured-image caption=false link="browse.html" alt=site.data.theme.featured-image-alt-text%}
     </div> 
    {% endif %}
         </div>
