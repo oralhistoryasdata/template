@@ -6,7 +6,7 @@
 ##########
 # Transcript Page / Oral History as Data Options 
 # 
-transcript-fields: "description,date,location,interviewer,image" # choose from the following fields --> description,date,location,interviewer,interviewee,bio,image 
+transcript-fields: "description,date,location,interviewer,interviewee,image,bio" # choose from the following fields --> description,date,location,interviewer,interviewee,bio,image 
 # list the fields you'd like displayed, separated by comma
 media-scroll: true ## true/false or blank --> determines if the media and visualization will appear to the lower right as a user scrolls down a transcript. This only appears on larger screens (min width 1024px).
 search-and-filters: true ## true/false --> determines if the search and filter options that appears above the text of an interview/transcript 

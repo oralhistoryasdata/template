@@ -2,17 +2,20 @@
   <div class="my-2 row px-3 mt-4 meta">
     <div class="col">
       <p><span class="me-3">
-        {%if page.bio and site.data.theme.transcript-fields contains 'bio'%}<b>Bio:</b>  <span class="me-3">{{page.bio}}</span> <br/>{%endif%}
-        {%if page.description and site.data.theme.transcript-fields contains 'description'%}<b>Description:</b>  <span class="me-3">{{page.description}}</span>{%endif%}{%if
-        page.date and site.data.theme.transcript-fields contains 'date'%}<br><b>Date:</b> <span class="me-3">{{page.date}}</span>{%endif%} {%if
-          page.location and site.data.theme.transcript-fields contains 'location' %}<b>Location:</b> {{page.location }}{%endif%}
-        {%if page.interviewer and site.data.theme.transcript-fields contains 'interviewer' %} <br><b>Interviewer:</b> {{page.interviewer}}{%endif%}
-        {%if page.interviewer and site.data.theme.transcript-fields contains 'interviewee' %} <br><b>Interviewee:</b> {{page.interviewee}}{%endif%}
+        {%if page.interviewee and site.data.theme.transcript-fields contains 'interviewee' %}<b>Interviewee:</b> {{page.interviewee}}<br> {%endif%}
+        {%if page.description and site.data.theme.transcript-fields contains 'description'%}<b>Description:</b>  <span class="me-3">{{page.description}}</span><br>{%endif%}
+        
+        {%if page.date and site.data.theme.transcript-fields contains 'date'%}<b>Date:</b> {{page.date}}<br>{%endif%} 
+        {%if page.location and site.data.theme.transcript-fields contains 'location' %}<b>Location:</b> {{page.location }}<br>{%endif%}
+        {%if page.interviewer and site.data.theme.transcript-fields contains 'interviewer' %}<b>Interviewer:</b> {{page.interviewer}}<br>{%endif%}
+        
        </p>
       {% include transcript/item/download-buttons.html %}
       {% include transcript/item/metadata-modal.html %}
 
    </div>
+   {%if page.bio and site.data.theme.transcript-fields contains 'bio'%}
+{% include transcript/item/bio-modal.html %}{% endif %}
     {% if site.data.theme.transcript-fields contains 'image'  %}
     {% if page.image_small or page.image_thumb %}
     <div class="col-md-3 {% if av == 'vimeo' or av == 'youtube'%}d-none d-md-block{% endif %}">
