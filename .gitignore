@@ -16,3 +16,16 @@ Gemfile.lock
 
 # Ignore objects directory to avoid committing binary files (other than demo files)
 # if you would like to commit your objects to github, delete the line below!
+
+
+# Environment variables (contains API keys)
+.env
+
+# Virtual environment
+llm_analyzer/venv/
+llm_analyzer/venv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
