@@ -1,0 +1,154 @@
+# OHD LLM Analyzer Configuration
+# This file contains all prompts and processing settings for the transcript analysis pipeline
+
+# Processing Configuration
+config:
+  # Summarization settings
+  segment_size: 20
+  max_segment_chars: 2500
+  target_vocab_terms: 25
+  min_word_length: 15
+  min_word_count: 4
+  excluded_phrases:
+    - "Good."
+    - "OK."
+    - "Right."
+    - "Yes."
+    - "No."
+    - "Mm-hmm."
+  
+  # Tagging settings
+  thematic_section_size: 8        # Number of rows per thematic section
+  overlap_rows: 2                 # Overlapping rows between sections
+  min_section_length: 100         # Minimum character length for sections
+  
+  # Maximum tokens for LLM responses
+  max_tokens:
+    segment_summary: 200
+    overall_summary: 300
+    vocabulary_generation: 800
+    section_analysis: 400         # For thematic section analysis
+    row_tagging: 200              # For individual row tagging
+
+# LLM Prompts
+prompts:
+  
+  # Prompt for summarizing individual transcript segments
+  segment_summary:
+    template: |
+      Summarize this segment from an oral history interview about writing and technology.
+      
+      Interview: {transcript_name}
+      
+      Transcript segment:
+      {segment_text}
+      
+      Create a 2-3 sentence summary focusing on:
+      - Key themes about writing practices
+      - Technology's impact on creative work
+      - Professional development or career insights
+      - Changes in practice over time
+      
+      Keep the summary concise but capture the main themes discussed.
+  
+  # Prompt for creating overall transcript summary from segment summaries
+  overall_summary:
+    template: |
+      Create a comprehensive summary of this oral history interview based on these segment summaries.
+      
+      Interview: {transcript_name}
+      
+      Segment summaries:
+      {combined_summaries}
+      
+      Create a 4-5 sentence overall summary that captures:
+      - The interviewee's main insights about writing and technology
+      - Key themes that emerge across the conversation
+      - Notable changes in practice or perspective mentioned
+      - The overall arc or focus of the interview
+      
+      Focus on the most significant themes and insights.
+  
+  # Prompt for generating controlled vocabulary from all transcript summaries
+  vocabulary_generation:
+    template: |
+      Based on these oral history interview summaries about writing and technology, create a controlled vocabulary of exactly {target_terms} terms for tagging and visualization.
+      
+      Interview summaries:
+      {combined_summaries}
+      
+      Create {target_terms} concise thematic terms (1-3 words each) that would be useful for:
+      - Filtering and segmenting the collection
+      - Visualizing themes across interviews
+      - Academic analysis of writing practices and technology
+      
+      Focus on themes like:
+      - Writing processes and practices
+      - Technology's impact on creative work
+      - Professional development
+      - Changes over time
+      - Tools and methods
+      - Creative approaches
+      
+      For each term, provide:
+      1. A short tag (1-3 words, lowercase, suitable for filtering)
+      2. A clear description (8-12 words explaining the theme)
+      
+      Format your response exactly like this:
+      revision: iterative process of improving and refining written work
+      correspondence: communication with editors publishers and other writers  
+      technology: digital tools and their impact on writing practices
+      early: writing practices before widespread computer adoption
+      
+      Provide exactly {target_terms} terms, focusing on the most important themes that appear across multiple interviews.
+  
+  # Prompt for analyzing thematic sections in transcripts
+  section_analysis:
+    template: |
+      Analyze this section of an oral history interview about writing and technology to identify the main themes.
+      
+      AVAILABLE VOCABULARY TERMS:
+      {vocab_terms}
+      
+      INTERVIEW SECTION:
+      {section_text}
+      
+      Your task:
+      1. Identify the PRIMARY THEMES in this section (1-4 themes maximum)
+      2. Select ONLY the vocabulary terms that clearly and strongly apply
+      3. Focus on themes that span multiple exchanges in this section
+      
+      Respond in this exact format:
+      THEMES: [list only the tag names that apply, separated by semicolons]
+      CONFIDENCE: [0.0-1.0 score for how well these themes capture the section]
+      REASONING: [Brief explanation of why these themes were selected]
+      
+      Example:
+      THEMES: technology; revision; collaboration
+      CONFIDENCE: 0.8
+      REASONING: Section discusses computer adoption for writing, editing practices, and working with others
+      
+      Be selective - only choose themes that are clearly evident and central to the section.
+
+
+# Content filtering rules
+content_filters:
+  # Minimum content requirements for meaningful rows
+  meaningful_content:
+    min_length: 15
+    min_words: 4
+    exclude_patterns:
+      - "^\\[.*\\]$"  # Exclude stage directions in brackets
+    exclude_exact:
+      - "Good."
+      - "OK." 
+      - "Right."
+      - "Yes."
+      - "No."
+      - "Mm-hmm."
+  
+  # Vocabulary term validation
+  vocabulary_validation:
+    max_tag_words: 3
+    min_tag_length: 2
+    required_description_words: 6

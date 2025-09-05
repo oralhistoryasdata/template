@@ -6,14 +6,40 @@ Step 2: Generate single controlled vocabulary (17-30 terms) from all summaries
 """
 import json
 import pandas as pd
+import yaml
 from pathlib import Path
 from typing import List, Dict
 from simple_llm_client import SimpleLLMClient
 
 
 class TranscriptSummarizer:
-    def __init__(self, llm_client: SimpleLLMClient = None):
+    def __init__(self, llm_client: SimpleLLMClient = None, config_path: str = "prompts.yml"):
         self.llm = llm_client or SimpleLLMClient()
+        self.config = self.load_config(config_path)
+    
+    def load_config(self, config_path: str) -> Dict:
+        """Load configuration from prompts.yml"""
+        try:
+            with open(config_path, 'r', encoding='utf-8') as f:
+                return yaml.safe_load(f)
+        except Exception as e:
+            print(f"Warning: Could not load config from {config_path}: {e}")
+            return self.get_default_config()
+    
+    def get_default_config(self) -> Dict:
+        """Default configuration if prompts.yml is not available"""
+        return {
+            'config': {
+                'segment_size': 20,
+                'max_segment_chars': 2500,
+                'target_vocab_terms': 25,
+                'max_tokens': {
+                    'segment_summary': 200,
+                    'overall_summary': 300,
+                    'vocabulary_generation': 800
+                }
+            }
+        }
     
     def load_transcript(self, csv_path: Path) -> pd.DataFrame:
         """Load transcript CSV with basic cleaning"""
@@ -21,10 +47,17 @@ class TranscriptSummarizer:
         print(f"  Loaded {len(df)} rows from {csv_path.name}")
         return df
     
-    def extract_meaningful_segments(self, df: pd.DataFrame, segment_size: int = 20) -> List[str]:
+    def extract_meaningful_segments(self, df: pd.DataFrame) -> List[str]:
         """Extract meaningful content segments for summarization"""
         segments = []
         meaningful_rows = []
+        
+        # Get configuration parameters
+        segment_size = self.config['config'].get('segment_size', 20)
+        max_segment_chars = self.config['config'].get('max_segment_chars', 2500)
+        min_word_length = self.config['config'].get('min_word_length', 15)
+        min_word_count = self.config['config'].get('min_word_count', 4)
+        excluded_phrases = self.config['config'].get('excluded_phrases', ['Good.', 'OK.', 'Right.', 'Yes.', 'No.', 'Mm-hmm.'])
         
         # Filter for substantial content
         for _, row in df.iterrows():
@@ -32,10 +65,10 @@ class TranscriptSummarizer:
             speaker = str(row.get('speaker', '')).strip()
             
             # Keep rows with substantial content
-            if (len(words) > 15 and 
-                len(words.split()) >= 4 and
+            if (len(words) > min_word_length and 
+                len(words.split()) >= min_word_count and
                 not words.startswith('[') and
-                words not in ['Good.', 'OK.', 'Right.', 'Yes.', 'No.', 'Mm-hmm.']):
+                words not in excluded_phrases):
                 
                 meaningful_rows.append(f"{speaker}: {words}")
         
@@ -44,14 +77,18 @@ class TranscriptSummarizer:
             segment = meaningful_rows[i:i+segment_size]
             if segment:  # Only add non-empty segments
                 segment_text = "\n".join(segment)
-                segments.append(segment_text[:2500])  # Truncate very long segments
+                segments.append(segment_text[:max_segment_chars])  # Truncate very long segments
         
         print(f"    Created {len(segments)} segments from {len(meaningful_rows)} meaningful exchanges")
         return segments
     
     def summarize_segment(self, segment_text: str, transcript_name: str) -> str:
         """Summarize a single segment of transcript"""
-        prompt = f"""Summarize this segment from an oral history interview about writing and technology.
+        # Get prompt template from config
+        prompt_template = self.config.get('prompts', {}).get('segment_summary', {}).get('template', '')
+        if not prompt_template:
+            # Fallback to default if not found in config
+            prompt_template = """Summarize this segment from an oral history interview about writing and technology.
 
 Interview: {transcript_name}
 
@@ -65,9 +102,12 @@ Create a 2-3 sentence summary focusing on:
 - Changes in practice over time
 
 Keep the summary concise but capture the main themes discussed."""
+        
+        prompt = prompt_template.format(transcript_name=transcript_name, segment_text=segment_text)
+        max_tokens = self.config['config']['max_tokens'].get('segment_summary', 200)
 
         try:
-            summary = self.llm.generate_text(prompt, max_tokens=200)
+            summary = self.llm.generate_text(prompt, max_tokens=max_tokens)
             return summary.strip()
         except Exception as e:
             print(f"    Warning: Error summarizing segment: {e}")
@@ -117,7 +157,11 @@ Keep the summary concise but capture the main themes discussed."""
         # Combine segment summaries (limit for context window)
         combined_summaries = "\n\n".join(segment_summaries[:8])  # Limit to first 8 segments
         
-        prompt = f"""Create a comprehensive summary of this oral history interview based on these segment summaries.
+        # Get prompt template from config
+        prompt_template = self.config.get('prompts', {}).get('overall_summary', {}).get('template', '')
+        if not prompt_template:
+            # Fallback to default if not found in config
+            prompt_template = """Create a comprehensive summary of this oral history interview based on these segment summaries.
 
 Interview: {transcript_name}
 
@@ -131,9 +175,12 @@ Create a 4-5 sentence overall summary that captures:
 - The overall arc or focus of the interview
 
 Focus on the most significant themes and insights."""
+        
+        prompt = prompt_template.format(transcript_name=transcript_name, combined_summaries=combined_summaries)
+        max_tokens = self.config['config']['max_tokens'].get('overall_summary', 300)
 
         try:
-            overall = self.llm.generate_text(prompt, max_tokens=300)
+            overall = self.llm.generate_text(prompt, max_tokens=max_tokens)
             return overall.strip()
         except Exception as e:
             print(f"    Warning: Error creating overall summary: {e}")
@@ -142,11 +189,16 @@ Focus on the most significant themes and insights."""
 
 
 class VocabularyGenerator:
-    def __init__(self, llm_client: SimpleLLMClient = None):
+    def __init__(self, llm_client: SimpleLLMClient = None, config: Dict = None):
         self.llm = llm_client or SimpleLLMClient()
+        self.config = config
     
-    def generate_controlled_vocabulary(self, summaries: List[Dict], target_terms: int = 25) -> List[Dict]:
+    def generate_controlled_vocabulary(self, summaries: List[Dict], target_terms: int = None) -> List[Dict]:
         """Generate controlled vocabulary from transcript summaries"""
+        # Use config for target terms if not specified
+        if target_terms is None:
+            target_terms = self.config['config'].get('target_vocab_terms', 25) if self.config else 25
+            
         print(f"\n🏷️  Generating controlled vocabulary ({target_terms} terms)...")
         
         # Combine all overall summaries
@@ -164,7 +216,11 @@ class VocabularyGenerator:
         # Combine summaries (limit for context window)
         combined_summaries = "\n\n".join(all_summaries[:10])  # Limit to prevent context overflow
         
-        prompt = f"""Based on these oral history interview summaries about writing and technology, create a controlled vocabulary of exactly {target_terms} terms for tagging and visualization.
+        # Get prompt template from config
+        prompt_template = self.config.get('prompts', {}).get('vocabulary_generation', {}).get('template', '') if self.config else ''
+        if not prompt_template:
+            # Fallback to default if not found in config
+            prompt_template = """Based on these oral history interview summaries about writing and technology, create a controlled vocabulary of exactly {target_terms} terms for tagging and visualization.
 
 Interview summaries:
 {combined_summaries}
@@ -194,21 +250,24 @@ early: writing practices before widespread computer adoption
 
 Provide exactly {target_terms} terms, focusing on the most important themes that appear across multiple interviews."""
 
+        prompt = prompt_template.format(target_terms=target_terms, combined_summaries=combined_summaries)
+        max_tokens = self.config['config']['max_tokens'].get('vocabulary_generation', 800) if self.config else 800
+
         try:
-            response = self.llm.generate_text(prompt, max_tokens=800)
+            response = self.llm.generate_text(prompt, max_tokens=max_tokens)
             vocabulary = self.parse_vocabulary_response(response, target_terms)
             
             if len(vocabulary) < target_terms * 0.7:  # If we got fewer than 70% of target
-                print(f"    ⚠️  Got only {len(vocabulary)} terms, attempting second generation...")
-                # Try again with a simpler approach
-                vocabulary = self.generate_fallback_vocabulary(combined_summaries, target_terms)
+                print(f"    ⚠️  Got only {len(vocabulary)} terms, no fallback available")
+                print(f"    💡 Consider adjusting prompts or trying again")
             
             print(f"    ✅ Generated {len(vocabulary)} vocabulary terms")
             return vocabulary
             
         except Exception as e:
             print(f"    ❌ Error generating vocabulary: {e}")
-            return self.generate_fallback_vocabulary(combined_summaries, target_terms)
+            print(f"    💡 Consider checking LLM connection or adjusting prompts")
+            return []
     
     def parse_vocabulary_response(self, response: str, target_terms: int) -> List[Dict]:
         """Parse vocabulary terms from LLM response"""
@@ -239,41 +298,6 @@ Provide exactly {target_terms} terms, focusing on the most important themes that
                         break
         
         return vocabulary[:target_terms]  # Ensure we don't exceed target
-    
-    def generate_fallback_vocabulary(self, summaries_text: str, target_terms: int) -> List[Dict]:
-        """Generate fallback vocabulary with simpler approach"""
-        print(f"    Using fallback vocabulary generation...")
-        
-        # Basic terms that commonly appear in writing/technology oral histories
-        fallback_terms = [
-            {"tag": "revision", "description": "iterative process of improving and refining written work"},
-            {"tag": "technology", "description": "digital tools and their impact on writing practices"},
-            {"tag": "correspondence", "description": "communication with editors publishers and other writers"},
-            {"tag": "early", "description": "writing practices before widespread computer adoption"},
-            {"tag": "process", "description": "individual approaches to creating written work"},
-            {"tag": "computer", "description": "impact of computers on writing and editing"},
-            {"tag": "paper", "description": "use of physical materials in writing process"},
-            {"tag": "teaching", "description": "instruction and pedagogy in writing and literature"},
-            {"tag": "publishing", "description": "experiences with publication and literary industry"},
-            {"tag": "collaboration", "description": "working with others in creative and professional contexts"},
-            {"tag": "digital", "description": "electronic tools and online platforms for writing"},
-            {"tag": "editing", "description": "revision and refinement of written work"},
-            {"tag": "career", "description": "professional development and literary career progression"},
-            {"tag": "reading", "description": "influences from other writers and literary works"},
-            {"tag": "workshop", "description": "writing groups and collaborative learning environments"},
-            {"tag": "inspiration", "description": "sources of creative ideas and motivation"},
-            {"tag": "routine", "description": "daily practices and habits in writing process"},
-            {"tag": "manuscript", "description": "physical and digital documents in writing workflow"},
-            {"tag": "feedback", "description": "input from readers editors and writing community"},
-            {"tag": "genre", "description": "different forms and styles of creative writing"},
-            {"tag": "archive", "description": "preservation and organization of literary materials"},
-            {"tag": "research", "description": "investigation and preparation for creative work"},
-            {"tag": "deadline", "description": "time constraints and pressure in writing process"},
-            {"tag": "voice", "description": "development of individual writing style and perspective"},
-            {"tag": "craft", "description": "technical skills and artistic techniques in writing"}
-        ]
-        
-        return fallback_terms[:target_terms]
     
     def save_vocabulary_csv(self, vocabulary: List[Dict], output_path: str):
         """Save vocabulary as gen-filters.csv"""
@@ -339,8 +363,8 @@ def main():
     print(f"    📊 {len(all_summaries)} transcripts summarized")
     
     # Step 2: Generate controlled vocabulary
-    vocab_generator = VocabularyGenerator(llm_client)
-    vocabulary = vocab_generator.generate_controlled_vocabulary(all_summaries, target_terms=25)
+    vocab_generator = VocabularyGenerator(llm_client, summarizer.config)
+    vocabulary = vocab_generator.generate_controlled_vocabulary(all_summaries)
     
     if vocabulary:
         # Save gen-filters.csv
