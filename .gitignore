@@ -22,8 +22,8 @@ Gemfile.lock
 .env
 
 # Virtual environment
-llm_analyzer/venv/
-llm_analyzer/venv
+venv/
+venv
 
 # Python cache
 __pycache__/

@@ -1,0 +1,84 @@
+# Configuration settings for LLM analysis
+config:
+  batch_size: 100  # Number of transcript rows to process at once (reduced for smaller models)
+  vocab_terms_range: "3-6"  # Number of vocabulary terms to generate per batch
+
+# Prompts for different analysis stages
+prompts:
+  extract_utterances:
+    user: |
+      Extract {vocab_terms_range} significant thematic utterances from this oral history transcript segment.
+      Focus on utterances that reveal themes about:
+      - Writing and creative processes
+      - Technology's impact on creative work
+      - Professional development in the arts
+      - Changes in practice over time
+      
+      Transcript segment:
+      {batch_text}
+      
+      Return a JSON response with this exact structure:
+      {{
+        "utterances": ["quote 1", "quote 2", "quote 3"],
+        "context": "Brief description of the thematic content in this segment"
+      }}
+      
+      Only include the most thematically significant utterances.
+
+  generate_thematic_terms:
+    user: |
+      Based on these utterances from oral history interviews about writing and technology,
+      generate 10-15 concise thematic terms (1-3 words each).
+      
+      Terms should be suitable for tagging and filtering, similar to these examples:
+      - "paper" (using paper in writing process)
+      - "between" (working between media)
+      - "early" (writing before computers)
+      - "revision" (revision practices)
+      - "correspondence" (correspondence with others)
+      
+      Utterances:
+      {utterances_text}
+      
+      Return a JSON response with this exact structure:
+      {{
+        "terms": ["term1", "term2", "term3", "term4", "term5"]
+      }}
+      
+      Generate terms that capture the key themes about writing practices and technology.
+
+  create_controlled_vocabulary:
+    user: |
+      Create a controlled vocabulary from these thematic terms for oral history analysis.
+      Each term needs a short tag (1-3 words) and a clear description.
+      
+      Format should match this example:
+      tag: "between"
+      description: "working between media to advance writing process"
+      
+      Terms to process:
+      {terms}
+      
+      Create concise, consistent tag identifiers and clear descriptions.
+
+  tag_transcript_rows:
+    user: |
+      Tag each row with relevant terms from this vocabulary.
+      Only use tags that clearly apply to the content.
+      
+      Available tags and descriptions:
+      {tag_descriptions}
+      
+      Rows to tag:
+      {batch_text}
+      
+      For each row, provide the row index and semicolon-separated tags (or empty string if no tags apply).
+
+  validate_tags_quality:
+    user: |
+      Evaluate if these generated tags appropriately capture the thematic content of the transcript rows.
+      
+      Sample rows and their generated tags:
+      {samples}
+      
+      Rate as valid (true) if tags are relevant and helpful, invalid (false) if they need improvement.
