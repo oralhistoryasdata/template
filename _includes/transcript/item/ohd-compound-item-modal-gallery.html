@@ -148,8 +148,12 @@
         </div>
     </div>
     {% endfor %}
+{% if children.size > 4 %}
+    </div>
 </div>
+    {% else %}
 </div>
+     {% endif %}
 
 <script>
 function stopMedia(objectid, type) {
