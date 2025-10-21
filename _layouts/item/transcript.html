@@ -64,7 +64,7 @@ endcapture -%}
         {% endif %}
         <div id="transcript-metadata" class="no-print">
           {% include transcript/item/transcript-metadata.html %}
-          {% if children.size > 1 %}
+          {% if children.size > 0 %}
           <div id="child-objects" class="my-4">
     
             {% include transcript/item/ohd-compound-item-modal-gallery.html %}
