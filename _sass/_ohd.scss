@@ -31,6 +31,14 @@
     background-color: #212529 !important;
 }
 
+.legendTag, .transcriptTitle {
+    cursor: pointer;
+}
+.tableTimestamp {
+    width:10%;
+    vertical-align:top;
+}
+
 // tab to show/hide  filters options for transcripts
 
 .filter-tab {
@@ -95,7 +103,8 @@
         padding: 0 !important;
         overflow: visible;
         display: block;
-        font-size: 1.2rem;
+        font-size: 11pt; // Standard readable print size
+        line-height: 1.4;
     }
 
     .transcript-content {
@@ -103,6 +112,49 @@
         min-height: 5000px;
         overflow: visible;
         display: block;
+    }
+
+    // Hide timestamps completely in print
+    .timestamp {
+        display: none !important;
+    }
+
+    // Clean up container padding and borders
+    #contents-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    // Remove Bootstrap row layout for print
+    .line.row {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        page-break-inside: avoid;
+        margin-bottom: 0.75em !important;
+    }
+
+    // Ensure paragraphs flow naturally
+    .words {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 0 0.5em 0 !important;
+    }
+
+    // Make speaker names stand out
+    .words .fw-bold {
+        font-weight: 700 !important;
+        display: inline !important;
+    }
+
+    // Hide visualization and filters
+    #colorViz,
+    .no-print,
+    .d-print-none {
+        display: none !important;
     }
 
 }

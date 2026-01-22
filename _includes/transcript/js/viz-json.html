@@ -181,8 +181,8 @@
 
                 html += `
           <tr id="${transcriptId}row${segment.index}" class="${tagClasses}">
-            <td class="p-2" style="width:10%;vertical-align:top">
-              <a href="/items/${transcriptId}.html?line=${segment.index}" 
+            <td class="p-2 tableTimestamp">
+              <a href="/items/${transcriptId}.html?line=${transcriptId}${segment.index}" 
                   aria-label="jump to Line ${segment.index} from ${transcriptId}'s interview, opens in new tab" 
                   class="small btn-link text-dark" tabindex="-1">Line ${segment.index}</a>
             </td>
@@ -440,7 +440,7 @@
         console.log('Initializing transcript visualization...');
 
         // Set up legend click handlers that load data on first click
-        document.querySelectorAll(".legend").forEach(legend => {
+        document.querySelectorAll(".legendTag").forEach(legend => {
             legend.addEventListener('click', function () {
                 const cFilter = this.getAttribute("data-id");
                 loadDataAndFilter(cFilter);

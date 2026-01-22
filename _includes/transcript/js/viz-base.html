@@ -239,7 +239,7 @@ function makeParentSectionsVisible() {
 // Initialize event listeners and initial state
 document.addEventListener('DOMContentLoaded', function() {
   // Set up click handlers for filters
-  document.querySelectorAll(".legend").forEach(legend => {
+  document.querySelectorAll(".legendTag").forEach(legend => {
     legend.addEventListener('click', function() {
       const filterClass = this.getAttribute("data-id");
       codeFilter(filterClass);

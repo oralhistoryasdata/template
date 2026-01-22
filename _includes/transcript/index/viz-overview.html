@@ -10,7 +10,7 @@
  {%assign transcript-name = transcript[0] %}
  {% assign transcript_item = items | where_exp: 'item', 'item.objectid == transcript-name' | first %}
  <div id="{{transcript-name}}viz" class="vizdiv" style="height:{{rect-height}}%">
-   <a href="{{ '/visualization.html' | relative_url }}"><svg class="chart {{transcript-name}}" width="100%" height="100%" style="overflow: visible">
+   <a href="{{ '/visualization.html' | relative_url }}"><svg class="chart {{transcript-name}}" width="100%" height="100%">
      {% for item in transcript[1] %}
      {% assign my_integer = forloop.length %}
      {% assign my_float = my_integer | times: 1.0 %}
