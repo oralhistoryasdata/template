@@ -1,6 +1,6 @@
 <!-- cb: _includes/transcript/item/filters.html -->
 {% if trancheck.size > 1 %}
-<h2 id="transcript-section">Transcript</h2>
+{% unless has_index %}<h2 id="transcript-section">Transcript</h2>{% endunless %}
 {% if site.data.theme.search-and-filters == false %}
 <div style="height: 1px; width: 1px; opacity: 0">
     <div class="row my-3 sticky-top bg-white border-bottom border-left border-right d-print-none py-3 w-md-75"
@@ -11,7 +11,7 @@
 {% else %}
 <div class="row my-3 {% unless site.data.theme.search-and-filters-sticky == false %}sticky-top {% endunless %}bg-white border-bottom border-left border-right d-print-none py-3 w-md-75"
     id="filters-search">
-    <div class="col {% unless site.data.filters and uniqueSubjects %}d-none{% endunless %}">
+    <div class="col {% unless site.data.filters and uniqueSubjects.size > 0 %}d-none{% endunless %}">
         <!-- Enhanced label for screen readers -->
         <label for="filters" class="visually-hidden">Filter transcript by topic</label>
         <select id="filters" title="Filter by Topic" class="filters py-1 form-select border border-primary"
