@@ -1,0 +1,225 @@
+{%- comment -%}
+    Display index points as an accordion matching transcript layout style.
+    Reads from _data/indexes/[objectid].csv or _data/indexes/[object-transcript].csv
+
+    Each index point has: time (timestamp), title, description
+    Title and timestamp are visible; click title to expand description.
+{%- endcomment -%}
+
+{%- comment -%} Determine which index file to load {%- endcomment -%}
+{% if page.object-transcript contains ".csv" %}
+    {% assign index_file = page.object-transcript | remove: ".csv" %}
+{% elsif page.object-transcript %}
+    {% assign index_file = page.object-transcript %}
+{% else %}
+    {% assign index_file = page.objectid %}
+{% endif %}
+
+{%- comment -%} Try to load the index data {%- endcomment -%}
+{% assign index_points = site.data.indexes[index_file] %}
+
+{%- comment -%} Only display if we have index data {%- endcomment -%}
+{% if index_points and index_points.size > 0 %}
+{%- comment -%} Search box for index {%- endcomment -%}
+<div class="row my-3 bg-white border-bottom border-left border-right d-print-none py-3 w-md-75">
+    <div class="col-md-6">
+        <label for="indexSearch" class="visually-hidden">Search interview index</label>
+        <div class="input-group fs-5 mt-0 mt-md-0">
+            <input type="text" class="form-control border border-primary py-1" placeholder="Search index..."
+                aria-label="Search index" id="indexSearch" />
+            <div class="input-group-append">
+                <button class="rounded-right border border-primary btn btn-primary p-1" type="button"
+                    aria-label="Search index" id="indexSearchButton"
+                    onclick="searchIndex();">
+                    Go
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <button class="reset btn btn-sm btn-primary input-group-text float-end float-md-none mt-2 mt-md-0"
+            onclick="resetIndexSearch();" aria-label="Reset index search">
+            Reset Search
+        </button>
+    </div>
+    <div id="index-search-status" class="col-12 mt-2 d-none">
+        <p class="small text-muted mb-0"></p>
+    </div>
+</div>
+
+<div id="interview-index-content" class="accordion accordion-flush pe-md-5 pb-5 mb-5 border-bottom pdf-content">
+    {% for point in index_points %}
+    <div class="accordion-item border-0 py-1 index-item" data-index-content="{{ point.title | downcase }} {{ point.description | downcase }}">
+        <div class="accordion-header row py-2" id="indexHeading{{ forloop.index }}">
+            <div class="col-md-9 col-lg-7 col-print-12 pr-0 border-bottom">
+                <button class="accordion-button collapsed p-0 bg-transparent border-0 shadow-none text-start" type="button" data-bs-toggle="collapse" data-bs-target="#indexCollapse{{ forloop.index }}" aria-expanded="false" aria-controls="indexCollapse{{ forloop.index }}">
+                    <h3 class="h5 fw-bold mb-0 index-title">{{ point.title }}</h3>
+                </button>
+            </div>
+            <div class="col-12 col-md-2 mb-0 small text-center">
+                {% if av and point.time %}
+                {%- comment -%} Convert timestamp to seconds for media jumping {%- endcomment -%}
+                {% assign time_parts = point.time | remove: "[" | remove: "]" | split: ":" %}
+                {% if time_parts.size == 3 %}
+                    {% assign hours = time_parts[0] | times: 3600 %}
+                    {% assign minutes = time_parts[1] | times: 60 %}
+                    {% assign seconds = time_parts[2] | plus: 0 %}
+                    {% assign total_seconds = hours | plus: minutes | plus: seconds %}
+                {% elsif time_parts.size == 2 %}
+                    {% assign minutes = time_parts[0] | times: 60 %}
+                    {% assign seconds = time_parts[1] | plus: 0 %}
+                    {% assign total_seconds = minutes | plus: seconds %}
+                {% else %}
+                    {% assign total_seconds = time_parts[0] | plus: 0 %}
+                {% endif %}
+                <button
+                    type="button"
+                    title="Jump to {{ point.time }}"
+                    class="timestamp-link btn btn-link p-0"
+                    data-timestamp="{{ total_seconds }}"
+                    {% if av contains 'mp3' %}
+                        onclick="timestampMP3('{{ total_seconds }}');"
+                    {% elsif av contains 'youtube' %}
+                        onclick="seekTo({{ total_seconds }});"
+                    {% elsif av contains 'soundcloud' %}
+                        onclick="seekTo({{ total_seconds | times: 1000 }});"
+                    {% elsif av contains 'vimeo' %}
+                        onclick="vimeoPlayer.setCurrentTime({{ total_seconds }});"
+                    {% endif %}
+                    aria-label="Jump to {{ point.time }}"
+                >
+                    <span aria-hidden="true">{{ point.time }}</span>
+                </button>
+                {% else %}
+                {{ point.time }}
+                {% endif %}
+            </div>
+        </div>
+        <div id="indexCollapse{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="indexHeading{{ forloop.index }}" data-bs-parent="#interview-index-content">
+            <div class="accordion-body row">
+                <div class="col-md-10 col-lg-8 col-print-12">
+                    <p class="mb-0 index-description">{{ point.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+// Index search functionality
+function searchIndex() {
+    const searchTerm = document.getElementById('indexSearch').value.toLowerCase().trim();
+    const statusDiv = document.getElementById('index-search-status');
+    const statusText = statusDiv.querySelector('p');
+
+    if (!searchTerm) {
+        resetIndexSearch();
+        return;
+    }
+
+    const indexItems = document.querySelectorAll('.index-item');
+    let matchCount = 0;
+
+    // Remove previous highlights
+    document.querySelectorAll('.index-highlight').forEach(el => {
+        el.outerHTML = el.innerHTML;
+    });
+
+    indexItems.forEach(item => {
+        const content = item.getAttribute('data-index-content');
+        const title = item.querySelector('.index-title');
+        const description = item.querySelector('.index-description');
+        const accordionCollapse = item.querySelector('.accordion-collapse');
+        const accordionButton = item.querySelector('.accordion-button');
+
+        if (content.includes(searchTerm)) {
+            matchCount++;
+            item.style.display = '';
+
+            // Highlight matches in title
+            if (title.textContent.toLowerCase().includes(searchTerm)) {
+                highlightText(title, searchTerm);
+            }
+
+            // Highlight matches in description
+            if (description.textContent.toLowerCase().includes(searchTerm)) {
+                highlightText(description, searchTerm);
+                // Expand accordion to show match
+                accordionCollapse.classList.add('show');
+                accordionButton.classList.remove('collapsed');
+                accordionButton.setAttribute('aria-expanded', 'true');
+            }
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // Show status
+    statusDiv.classList.remove('d-none');
+    if (matchCount === 0) {
+        statusText.textContent = 'No results found';
+    } else {
+        statusText.textContent = `Found ${matchCount} ${matchCount === 1 ? 'result' : 'results'}`;
+    }
+}
+
+function highlightText(element, searchTerm) {
+    const text = element.textContent;
+    const regex = new RegExp(`(${escapeRegex(searchTerm)})`, 'gi');
+    const highlightedHTML = text.replace(regex, '<mark class="index-highlight bg-warning">$1</mark>');
+    element.innerHTML = highlightedHTML;
+}
+
+function escapeRegex(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function resetIndexSearch() {
+    const searchInput = document.getElementById('indexSearch');
+    const statusDiv = document.getElementById('index-search-status');
+    const indexItems = document.querySelectorAll('.index-item');
+
+    // Clear search input
+    searchInput.value = '';
+
+    // Hide status
+    statusDiv.classList.add('d-none');
+
+    // Show all items
+    indexItems.forEach(item => {
+        item.style.display = '';
+
+        // Collapse all accordions
+        const accordionCollapse = item.querySelector('.accordion-collapse');
+        const accordionButton = item.querySelector('.accordion-button');
+        accordionCollapse.classList.remove('show');
+        accordionButton.classList.add('collapsed');
+        accordionButton.setAttribute('aria-expanded', 'false');
+    });
+
+    // Remove highlights
+    document.querySelectorAll('.index-highlight').forEach(el => {
+        el.outerHTML = el.textContent;
+    });
+
+    // Re-render text content to remove any lingering HTML
+    document.querySelectorAll('.index-title, .index-description').forEach(el => {
+        const originalText = el.textContent;
+        el.textContent = originalText;
+    });
+}
+
+// Allow Enter key to trigger search
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('indexSearch');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchIndex();
+            }
+        });
+    }
+});
+</script>
+{% endif %}

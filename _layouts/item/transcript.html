@@ -15,8 +15,6 @@ gallery: true
 {% assign items = site.data.transcripts[page.objectid] %}
 {% endif %}
 
-{% assign trancheck = site.data.transcripts[page.objectid] | map: "words" | compact %}
-
 {%- comment -%} if using color-coded visualization find all words used in the subject metadata {%- endcomment -%}
 {% if site.data.filters %}
 {% include transcript/style/filter-style.html %}
@@ -76,7 +74,48 @@ endcapture -%}
         {% endif %}
   </div>
   </div>
+
+{%- comment -%} Check if index data exists for tabs {%- endcomment -%}
+{% if page.object-transcript contains ".csv" %}
+    {% assign index_file = page.object-transcript | remove: ".csv" %}
+{% elsif page.object-transcript %}
+    {% assign index_file = page.object-transcript %}
+{% else %}
+    {% assign index_file = page.objectid %}
+{% endif %}
+{% assign index_points = site.data.indexes[index_file] %}
+{% assign trancheck = items | map: "words" | compact %}
+
 <div class="step my-3" id="step1" >
-{% include transcript/item/transcript.html %}
+{% if index_points.size > 0 and trancheck.size > 1 %}
+{%- comment -%} Both index and transcript exist - show tabs {%- endcomment -%}
+{% assign has_index = true %}
+<ul class="nav nav-tabs mb-3" id="transcript-section" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="transcript-tab" data-bs-toggle="tab" data-bs-target="#transcript-content" type="button" role="tab" aria-controls="transcript-content" aria-selected="true">Transcript</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="index-tab" data-bs-toggle="tab" data-bs-target="#index-content" type="button" role="tab" aria-controls="index-content" aria-selected="false">Index <span class="badge bg-secondary">{{ index_points.size }}</span></button>
+  </li>
+</ul>
+<div class="tab-content" id="transcriptTabsContent">
+  <div class="tab-pane fade show active" id="transcript-content" role="tabpanel" aria-labelledby="transcript-tab">
+    {% include transcript/item/transcript.html %}
+  </div>
+  <div class="tab-pane fade" id="index-content" role="tabpanel" aria-labelledby="index-tab">
+    <h2 class="visually-hidden">Interview Index</h2>
+    {% include transcript/item/index-display.html %}
+  </div>
 </div>
- 
+{% elsif index_points.size > 0 %}
+{%- comment -%} Only index exists - show just index without tabs {%- endcomment -%}
+{% assign has_index = false %}
+<h2 id="transcript-section">Interview Index</h2>
+{% include transcript/item/index-display.html %}
+{% elsif trancheck.size > 1 %}
+{%- comment -%} Only transcript exists - show just transcript without tabs {%- endcomment -%}
+{% assign has_index = false %}
+{% include transcript/item/transcript.html %}
+{% endif %}
+</div>
+
