@@ -23,7 +23,7 @@ title: Oral History as Data Template/Demo
 tagline: Analyze and publish coded oral history and qualitative interviews
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "The Oral History as Data (OHD) tool is a static website generator that allows users to analyze and publish coded oral history or qualitative interview files. More information about the project and how to use it be found on [the project website](https://oralhistoryasdata.github.io/about.html)."
+description: "Oral History as Data (OHD) provides a static web framework for users to publish and analyze coded oral history and qualitative interviews on the web."
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: dcnb
 
@@ -66,6 +66,9 @@ organization-logo-nav: https://cdil.lib.uidaho.edu/assets/img/logo.png
 # JEKYLL_ENV=production jekyll build
 # (this is done automatically by gh-pages build)
 #
+# Library directory location. This allows you to customize where the standard assets are found.
+# provide a relative path in this repository or full url 
+lib-assets: /assets/lib
 # ignore stuff
 exclude: [docs/, Rakefile, rakelib/, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md]
 # compress CSS output
