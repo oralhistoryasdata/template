@@ -90,6 +90,7 @@ locations-stopwords: # set of subjects separated by ; that will be removed from 
 # MAP PAGE
 #
 # see _data/map-config.csv for field display options
+auto-center-map: true # have the map auto fit all features into its view
 latitude: 38.21805047796112 #to determine center of map
 longitude: -117.014185 #to determine center of map
 zoom-level: 3 # zoom level for map 
@@ -136,7 +137,7 @@ search-child-objects: true # true / false - if true, child objects will appear o
 # NAVBAR COLORS [optional!]
 # navbar text color
 # Choose from "navbar-light" for use with light background colors, or "navbar-dark" for dark background colors
-navbar-color: navbar-dark
+navbar-color: dark
 # navbar background color
 # Choose from bg-primary, bg-secondary, bg-success, bg-danger, bg-warning, bg-info, bg-light, bg-dark, bg-white
 navbar-background: bg-dark

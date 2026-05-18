@@ -2,7 +2,7 @@
 # TASK: generate_json
 #
 # create json files from Oral History as Data transcripts
-# requires ImageMagick installed!
+# 
 ###############################################################################
 
 # filepath: Rakefile
