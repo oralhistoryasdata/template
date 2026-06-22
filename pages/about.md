@@ -37,11 +37,4 @@ The [Oral History as Data (OHD)](https://github.com/oralhistoryasdata/) framewor
 
 - **[CollectionBuilder Documentation](https://collectionbuilder.github.io/docs/) -** OHD is built on top of a CollectionBuilder-CSV template, so any options used in CSV can be used here. 
 
-
 Please feel free to contact me with any questions. I'm happy to help. <dbecker@uidaho.edu>
-
-
- 
-
-
-
