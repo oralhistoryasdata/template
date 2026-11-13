@@ -1,0 +1,463 @@
+/* Topic Visualization: topic picker, per-person strips and passage list.
+   Linked directly from _layouts/visualization.html (no Sass import needed).
+   The strip colours are read from these variables by the script. */
+
+.topic-viz {
+    --tv-strip: #e6e9ed;           /* lines with no topic to show; topic colours come from the index */
+    --tv-muted: var(--bs-secondary-color, #6c757d);
+    --tv-border: var(--bs-border-color, #dee2e6);
+    --tv-focus: var(--bs-primary, #0d6efd);
+}
+
+.tv-summary {
+    color: var(--tv-muted);
+    font-size: 0.9rem;
+}
+
+/* ---------- topic picker ---------- */
+
+.tv-topics {
+    margin: 1.5rem 0;
+}
+
+.tv-topic-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tv-topic-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+    gap: 0.35rem 0.6rem;
+}
+
+.tv-topic {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0.3rem 0.5rem 0.45rem;
+    border: 1px solid var(--tv-border);
+    border-radius: 0.25rem;
+    background: var(--bs-body-bg, #fff);
+    color: inherit;
+    font-size: 0.875rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.tv-topic:hover {
+    border-color: var(--tv-muted);
+}
+
+.tv-topic:focus-visible,
+.tv-name:focus-visible {
+    outline: 2px solid var(--tv-focus);
+    outline-offset: 1px;
+}
+
+.tv-topic-swatch {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background: var(--tv-topic-color);
+}
+
+.tv-topic-label {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tv-topic-count {
+    color: var(--tv-muted);
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+}
+
+/* bar along the bottom edge: this topic's share of the largest topic */
+.tv-topic-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background: var(--tv-topic-color);
+}
+
+.tv-topic[aria-pressed="true"] {
+    border-color: #000;
+    box-shadow: inset 0 0 0 1px #000;
+    font-weight: 600;
+}
+
+/* with a topic selected the others fade to the strip colour, as their lines do */
+.tv-topic-list.has-selection .tv-topic:not([aria-pressed="true"]) .tv-topic-swatch {
+    background: var(--tv-strip);
+}
+
+/* ---------- strips ---------- */
+
+.tv-chart {
+    margin: 2rem 0;
+}
+
+.tv-chart-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.tv-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    margin-left: auto;
+    font-size: 0.875rem;
+}
+
+.tv-controls .form-select {
+    width: auto;
+}
+
+.tv-rows {
+    column-width: 27rem;
+    column-gap: 2rem;
+}
+
+.tv-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: var(--tv-row-h);
+    break-inside: avoid;
+}
+
+.tv-row[hidden] {
+    display: none;
+}
+
+.tv-name {
+    flex: 0 0 10.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font-size: var(--tv-name-size);
+    line-height: var(--tv-row-h);
+    text-align: left;
+}
+
+.tv-name-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tv-name:hover .tv-name-text {
+    text-decoration: underline;
+}
+
+.tv-name-count {
+    color: var(--tv-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.tv-row.is-selected .tv-name {
+    font-weight: 700;
+}
+
+.tv-row.is-dimmed {
+    opacity: 0.35;
+}
+
+.tv-strip {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+    height: var(--tv-strip-h);
+    cursor: pointer;
+}
+
+.tv-tooltip {
+    position: fixed;
+    z-index: 1080;
+    max-width: 22rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    background: #212529;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    pointer-events: none;
+}
+
+.tv-tooltip strong {
+    display: block;
+}
+
+.tv-tooltip .tv-tip-meta {
+    color: #ced4da;
+}
+
+/* ---------- passages ---------- */
+
+.tv-passages {
+    scroll-margin-top: 1rem;
+    margin: 2rem 0 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--tv-border);
+}
+
+.tv-passages:focus {
+    outline: none;
+}
+
+.tv-passages-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+}
+
+.tv-passage-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tv-interview {
+    border-bottom: 1px solid var(--tv-border);
+}
+
+.tv-interview > summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.45rem 0.25rem;
+    cursor: pointer;
+    list-style-position: inside;
+}
+
+.tv-interview > summary::before {
+    content: "▸";
+    flex: 0 0 auto;
+    color: var(--tv-muted);
+}
+
+.tv-interview[open] > summary::before {
+    content: "▾";
+}
+
+.tv-interview > summary::-webkit-details-marker {
+    display: none;
+}
+
+.tv-interview-title {
+    flex: 1 1 auto;
+    font-weight: 600;
+}
+
+.tv-interview-count {
+    flex: 0 0 auto;
+    color: var(--tv-muted);
+    font-size: 0.85rem;
+}
+
+.tv-interview-body {
+    padding: 0.25rem 0.25rem 1rem 1.25rem;
+}
+
+.tv-interview-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.tv-passage {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.tv-passage-line {
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.tv-passage p {
+    margin: 0;
+}
+
+/* ---------- compact row density ----------
+   The layout adds tv-density-<tier> from the number of interviews, so compact
+   strips stay readable in a small collection and tight in a large one.
+     roomy   10 or fewer     cozy  11-30     snug  31-100     tight  over 100 */
+
+.topic-viz,
+.tv-density-tight {
+    --tv-row-h: 1.25rem;
+    --tv-strip-h: 0.8rem;
+    --tv-name-size: 0.75rem;
+}
+
+.tv-density-snug {
+    --tv-row-h: 1.5rem;
+    --tv-strip-h: 1rem;
+    --tv-name-size: 0.8rem;
+}
+
+.tv-density-cozy {
+    --tv-row-h: 2rem;
+    --tv-strip-h: 1.35rem;
+    --tv-name-size: 0.85rem;
+}
+
+.tv-density-roomy {
+    --tv-row-h: 2.5rem;
+    --tv-strip-h: 1.75rem;
+    --tv-name-size: 0.95rem;
+}
+
+.tv-density-cozy .tv-row,
+.tv-density-roomy .tv-row {
+    margin-bottom: 0.25rem;
+}
+
+.tv-density-roomy .tv-name {
+    flex-basis: 13rem;
+}
+
+/* ---------- size modes (visualization-size in _data/theme.yml) ----------
+   compact: the strips above as-is, in columns, for large collections.
+   large:   one tall bar per interview with its name above, for smaller ones. */
+
+.tv-size-large .tv-rows {
+    column-width: auto;
+}
+
+.tv-size-large .tv-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+}
+
+.tv-size-large .tv-name {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.tv-size-large .tv-name-count {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.tv-size-large .tv-strip {
+    flex: 0 0 auto;
+    height: 3.5rem;
+}
+
+@media (max-width: 575.98px) {
+    .tv-rows {
+        column-width: auto;
+    }
+
+    .tv-size-compact .tv-row {
+        height: max(var(--tv-row-h), 1.75rem);
+    }
+
+    .tv-size-compact .tv-name {
+        flex-basis: 8rem;
+    }
+
+    .tv-size-large .tv-strip {
+        height: 2.5rem;
+    }
+
+    .tv-controls {
+        margin-left: 0;
+    }
+
+    .tv-passage {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+    }
+}
+
+/* ---------- print: passages only ---------- */
+
+@media print {
+    body > *:not(main) {
+        display: none !important;
+    }
+
+    .topic-viz {
+        max-width: none;
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    .tv-passages {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .tv-interview {
+        border: 0;
+    }
+
+    .tv-interview:not([open]),
+    .tv-print-one .tv-interview:not(.tv-print-target) {
+        display: none;
+    }
+
+    .tv-interview > summary {
+        padding: 0;
+        margin: 1.2em 0 0.5em;
+        font-size: 13pt;
+        break-after: avoid;
+    }
+
+    .tv-interview > summary::before {
+        content: none;
+    }
+
+    .tv-interview-body {
+        padding: 0;
+    }
+
+    .tv-passage {
+        grid-template-columns: 4rem 1fr;
+        break-inside: avoid;
+    }
+
+    .tv-passage a {
+        color: inherit;
+        text-decoration: none;
+    }
+}

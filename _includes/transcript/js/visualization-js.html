@@ -1,5 +1,583 @@
-{% if site.data.theme.json-generation %}
-{% include transcript/js/viz-json.html%}
-{% else %}
-{% include transcript/js/viz-base.html%}
-{% endif%}
+<script>
+/*
+ * Topic Visualization
+ *  - Loads one small index (which lines of which interview carry which topic)
+ *    and draws a strip per person on a canvas: their interviews side by side,
+ *    start to finish, every tagged line coloured by its topic(s). Selecting a
+ *    topic leaves only that topic's lines lit, as on the interview pages.
+ *  - Selecting a topic fetches that topic's passages (one file per topic) and
+ *    lists them by interview below. Passage rows are only built when an
+ *    interview is opened, so the page stays light for the largest topics.
+ *  - Hover a strip for the passage; select it to open that line of the interview.
+ *  - Select a person's name to narrow the passages to that person.
+ *  - URL: ?filter=<topic-slug>&id=<person or interview objectid>
+ * Data comes from _plugins/topic_viz_index.rb. Layout: _layouts/visualization.html.
+ * The Passages section is left out when transcript-contents is false in
+ * _data/theme.yml; everything that touches it checks it is there first.
+ */
+(function () {
+  'use strict';
+
+  var root = document.getElementById('topic-viz');
+  if (!root) return;
+
+  var SITE = root.getAttribute('data-root') || '';
+  var SOURCE = root.getAttribute('data-source');
+  var OPEN_BY_DEFAULT = 3;   // interviews unfolded when a topic is selected
+  var SNAP_PX = 4;           // how close the pointer must be to a mark to pick it up
+  var GAP = 2;               // px between a person's interviews
+
+  var $ = function (id) { return document.getElementById(id); };
+  var els = {
+    status: $('tv-status'), topics: $('tv-topic-list'), reset: $('tv-reset'),
+    summary: $('tv-summary'), sort: $('tv-sort'), hideEmpty: $('tv-hide-empty'),
+    rows: $('tv-rows'), passages: $('tv-passage-list'), passagesSummary: $('tv-passages-summary'),
+    clearPerson: $('tv-clear-person'), expand: $('tv-expand'), printAll: $('tv-print-all'),
+    tooltip: $('tv-tooltip'), contents: $('transcript-contents')
+  };
+
+  var data = null;           // parsed index
+  var cache = {};            // topic slug -> passages file
+  var state = { topic: null, only: null, sort: 'name', hideEmpty: false };
+  var requestId = 0;
+  var colors = {};
+
+  var fmt = function (n) { return Number(n).toLocaleString(); };
+  var plural = function (n, word) { return fmt(n) + ' ' + word + (n === 1 ? '' : 's'); };
+
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function announce(message) { els.status.textContent = message; }
+
+  // ---- data ---------------------------------------------------------------
+
+  function prepare(index) {
+    var people = index.people.map(function (p) {
+      return { id: p[0], name: p[1], interviews: [], lines: 0, row: null, canvas: null, layout: [] };
+    });
+    var interviews = index.interviews.map(function (i) {
+      var interview = { id: i[0], title: i[1], person: people[i[2]], n: i[3], tagged: i[4], tags: i[5] };
+      interview.person.interviews.push(interview);
+      interview.person.lines += interview.n;
+      return interview;
+    });
+    var tags = index.tags.map(function (t, i) {
+      return { index: i, slug: t[0], label: t[1], description: t[2], count: t[3], interviews: t[4], color: t[5] || '#808080' };
+    });
+    return { base: SITE + index.base, tags: tags, people: people, interviews: interviews };
+  }
+
+  function topicLines(interview) {
+    return state.topic ? (interview.tags[state.topic.index] || []) : interview.tagged;
+  }
+
+  // line -> the topics on it (indexes into data.tags), built once per interview
+  function lineTags(interview) {
+    if (!interview.byLine) {
+      interview.byLine = new Map();
+      Object.keys(interview.tags).forEach(function (key) {
+        interview.tags[key].forEach(function (line) {
+          var list = interview.byLine.get(line);
+          if (list) list.push(+key); else interview.byLine.set(line, [+key]);
+        });
+      });
+    }
+    return interview.byLine;
+  }
+
+  function personCount(person) {
+    return person.interviews.reduce(function (sum, interview) { return sum + topicLines(interview).length; }, 0);
+  }
+
+  function lineUrl(interview, line) {
+    return data.base + interview.id + '.html?line=' + encodeURIComponent(interview.id + line);
+  }
+
+  // Is this interview inside the current person/interview narrowing?
+  function inScope(interview) {
+    return !state.only || state.only === interview.person.id || state.only === interview.id;
+  }
+
+  // ---- topic picker -------------------------------------------------------
+
+  function buildTopics() {
+    var max = data.tags.length ? data.tags[0].count : 1;
+    els.topics.textContent = '';
+    data.tags.forEach(function (tag) {
+      var button = el('button', 'tv-topic');
+      button.type = 'button';
+      button.setAttribute('aria-pressed', 'false');
+      button.dataset.slug = tag.slug;
+      if (tag.description) button.title = tag.description;
+      button.style.setProperty('--tv-topic-color', tag.color);
+      button.appendChild(el('span', 'tv-topic-swatch'));
+      button.appendChild(el('span', 'tv-topic-label', tag.label));
+      var count = el('span', 'tv-topic-count', fmt(tag.count));
+      count.setAttribute('aria-label', plural(tag.count, 'passage'));
+      button.appendChild(count);
+      var bar = el('span', 'tv-topic-bar');
+      bar.style.width = Math.max(1, (tag.count / max) * 100) + '%';
+      button.appendChild(bar);
+      button.addEventListener('click', function () {
+        selectTopic(state.topic === tag ? null : tag);
+      });
+      tag.button = button;
+      els.topics.appendChild(button);
+    });
+  }
+
+  // ---- strips -------------------------------------------------------------
+
+  function buildRows() {
+    els.rows.textContent = '';
+    data.people.forEach(function (person) {
+      var row = el('div', 'tv-row');
+      var name = el('button', 'tv-name');
+      name.type = 'button';
+      name.appendChild(el('span', 'tv-name-text', person.name));
+      person.countEl = el('span', 'tv-name-count');
+      name.appendChild(person.countEl);
+      name.addEventListener('click', function () {
+        setOnly(state.only === person.id ? null : person.id, true);
+      });
+      var canvas = el('canvas', 'tv-strip');
+      canvas.setAttribute('aria-hidden', 'true');
+      canvas.addEventListener('pointermove', function (event) { hover(person, event); });
+      canvas.addEventListener('pointerleave', hideTooltip);
+      canvas.addEventListener('click', function (event) { activate(person, event); });
+      row.appendChild(name);
+      row.appendChild(canvas);
+      person.row = row;
+      person.nameButton = name;
+      person.canvas = canvas;
+    });
+    orderRows();
+  }
+
+  function orderRows() {
+    var people = data.people.slice();
+    people.forEach(function (person) { person.count = personCount(person); });
+    if (state.sort === 'count') {
+      people.sort(function (a, b) { return b.count - a.count || a.name.localeCompare(b.name); });
+    } else {
+      people.sort(function (a, b) { return a.name.localeCompare(b.name); });
+    }
+    var fragment = document.createDocumentFragment();
+    people.forEach(function (person) {
+      var selected = state.only && person.interviews.some(function (i) { return state.only === person.id || state.only === i.id; });
+      person.row.hidden = state.hideEmpty && person.count === 0;
+      person.row.classList.toggle('is-selected', !!selected);
+      person.row.classList.toggle('is-dimmed', !!state.only && !selected);
+      person.countEl.textContent = state.topic ? fmt(person.count) : '';
+      var label = person.name + (state.topic ? ', ' + plural(person.count, 'passage') + ' on ' + state.topic.label : '');
+      person.nameButton.setAttribute('aria-label', label + (selected ? '. Showing only this person; select to show everyone.' : '. Select to show only this person.'));
+      person.nameButton.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      fragment.appendChild(person.row);
+    });
+    els.rows.appendChild(fragment);
+    data.order = people;
+    drawAll();
+  }
+
+  function readColors() {
+    var style = getComputedStyle(root);
+    colors.strip = style.getPropertyValue('--tv-strip').trim() || '#e6e9ed';
+  }
+
+  function drawAll() {
+    data.people.forEach(function (person) { if (!person.row.hidden) draw(person); });
+  }
+
+  function draw(person) {
+    var canvas = person.canvas;
+    var width = canvas.clientWidth;
+    var height = canvas.clientHeight;
+    if (!width || !height) return;
+    var ratio = window.devicePixelRatio || 1;
+    if (canvas.width !== Math.round(width * ratio) || canvas.height !== Math.round(height * ratio)) {
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+    }
+    var ctx = canvas.getContext('2d');
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+
+    var usable = width - GAP * (person.interviews.length - 1);
+    var x = 0;
+    person.layout = person.interviews.map(function (interview) {
+      var w = Math.max(1, usable * (interview.n / (person.lines || 1)));
+      var segment = { interview: interview, x: x, w: w };
+      x += w + GAP;
+      return segment;
+    });
+
+    person.layout.forEach(function (segment) {
+      var interview = segment.interview;
+      ctx.fillStyle = colors.strip;
+      ctx.fillRect(segment.x, 0, segment.w, height);
+      var lines = topicLines(interview);
+      if (!lines.length) return;
+      var lineWidth = Math.max(1, segment.w / interview.n);
+      var byLine = state.topic ? null : lineTags(interview);
+      if (state.topic) ctx.fillStyle = state.topic.color;
+      for (var i = 0; i < lines.length; i++) {
+        var lx = Math.min(segment.x + (lines[i] / interview.n) * segment.w, segment.x + segment.w - lineWidth);
+        if (state.topic) {
+          ctx.fillRect(lx, 0, lineWidth, height);
+          continue;
+        }
+        // a line with several topics is split into one band per topic
+        var topics = byLine.get(lines[i]);
+        var band = height / topics.length;
+        for (var k = 0; k < topics.length; k++) {
+          ctx.fillStyle = data.tags[topics[k]].color;
+          ctx.fillRect(lx, k * band, lineWidth, band);
+        }
+      }
+    });
+  }
+
+  // Which interview and line is under the pointer? Snaps to the nearest mark.
+  function hit(person, event) {
+    var rect = person.canvas.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var segment = null;
+    for (var i = 0; i < person.layout.length; i++) {
+      var s = person.layout[i];
+      if (x >= s.x - GAP / 2 && x <= s.x + s.w + GAP / 2) { segment = s; break; }
+    }
+    if (!segment) return null;
+    var interview = segment.interview;
+    var line = Math.min(interview.n - 1, Math.max(0, Math.floor(((x - segment.x) / segment.w) * interview.n)));
+    var lines = topicLines(interview);
+    var tolerance = Math.ceil((SNAP_PX * interview.n) / segment.w);
+    var nearest = -1;
+    var lo = 0, hi = lines.length - 1;
+    while (lo <= hi) {
+      var mid = (lo + hi) >> 1;
+      if (lines[mid] < line) lo = mid + 1; else hi = mid - 1;
+    }
+    [lo - 1, lo].forEach(function (k) {
+      if (k < 0 || k >= lines.length) return;
+      if (nearest < 0 || Math.abs(lines[k] - line) < Math.abs(lines[nearest] - line)) nearest = k;
+    });
+    var marked = nearest >= 0 && Math.abs(lines[nearest] - line) <= tolerance;
+    return { interview: interview, line: marked ? lines[nearest] : line, marked: marked };
+  }
+
+  function findPassage(interview, line) {
+    var file = state.topic && cache[state.topic.slug];
+    var list = file && file.interviews[interview.id];
+    if (!list) return null;
+    var lo = 0, hi = list.length - 1;
+    while (lo <= hi) {
+      var mid = (lo + hi) >> 1;
+      if (list[mid][0] === line) return list[mid];
+      if (list[mid][0] < line) lo = mid + 1; else hi = mid - 1;
+    }
+    return null;
+  }
+
+  var lastTip = null;
+
+  function hover(person, event) {
+    var target = hit(person, event);
+    if (!target) { hideTooltip(); return; }
+    showTooltip(target, event);
+  }
+
+  function showTooltip(target, event) {
+    var tip = els.tooltip;
+    tip.textContent = '';
+    tip.appendChild(el('strong', null, target.interview.title));
+    var passage = target.marked ? findPassage(target.interview, target.line) : null;
+    var meta = passage && passage[1] ? passage[1] : 'Line ' + target.line;
+    if (target.marked) {
+      meta += ' · ' + (state.topic ? state.topic.label : (lineTags(target.interview).get(target.line) || [])
+        .map(function (k) { return data.tags[k].label; }).join(', '));
+    }
+    tip.appendChild(el('span', 'tv-tip-meta', meta));
+    if (passage && passage[3]) {
+      var words = passage[3].length > 180 ? passage[3].slice(0, 180).replace(/\s+\S*$/, '') + '…' : passage[3];
+      tip.appendChild(el('div', null, words));
+    }
+    tip.hidden = false;
+    var box = tip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, event.clientX - box.width / 2), window.innerWidth - box.width - 8);
+    var top = event.clientY - box.height - 14;
+    if (top < 8) top = event.clientY + 18;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+    lastTip = target.interview.id + ':' + target.line;
+  }
+
+  function hideTooltip() {
+    els.tooltip.hidden = true;
+    lastTip = null;
+  }
+
+  var pointerType = 'mouse';
+  root.addEventListener('pointerdown', function (event) { pointerType = event.pointerType || 'mouse'; }, true);
+
+  function activate(person, event) {
+    var target = hit(person, event);
+    if (!target) return;
+    // On touch there is no hover: the first tap shows what the mark is, the second opens it.
+    if (pointerType === 'touch' && lastTip !== target.interview.id + ':' + target.line) {
+      showTooltip(target, event);
+      return;
+    }
+    window.location.href = lineUrl(target.interview, target.line);
+  }
+
+  // ---- passages -----------------------------------------------------------
+
+  function renderBody(details) {
+    if (details.dataset.rendered) return;
+    details.dataset.rendered = 'true';
+    var interview = details.interview;
+    var list = cache[state.topic.slug].interviews[interview.id] || [];
+    var body = el('div', 'tv-interview-body');
+
+    var tools = el('div', 'tv-interview-tools d-print-none');
+    var open = el('a', null, 'Open interview');
+    open.href = data.base + interview.id + '.html';
+    tools.appendChild(open);
+    var print = el('button', 'btn btn-sm btn-outline-secondary', 'Print these passages');
+    print.type = 'button';
+    print.addEventListener('click', function () { printOne(details); });
+    tools.appendChild(print);
+    body.appendChild(tools);
+
+    list.forEach(function (passage) {
+      var item = el('div', 'tv-passage');
+      var link = el('a', 'tv-passage-line', passage[1] || 'Line ' + passage[0]);
+      link.href = lineUrl(interview, passage[0]);
+      link.setAttribute('aria-label', (passage[1] || 'Line ' + passage[0]) + ', open this moment in ' + interview.title);
+      item.appendChild(link);
+      var words = el('p');
+      if (passage[2]) words.appendChild(el('strong', null, passage[2] + ': '));
+      words.appendChild(document.createTextNode(passage[3]));
+      item.appendChild(words);
+      body.appendChild(item);
+    });
+    details.appendChild(body);
+  }
+
+  function renderPassages() {
+    var list = els.passages;
+    if (!list) return;
+    list.textContent = '';
+    els.expand.hidden = els.printAll.hidden = true;
+
+    var person = state.only && data.people.filter(function (p) {
+      return p.id === state.only || p.interviews.some(function (i) { return i.id === state.only; });
+    })[0];
+    els.clearPerson.hidden = !person;
+    if (person) els.clearPerson.textContent = 'Show everyone (now: ' + person.name + ')';
+
+    if (!state.topic) {
+      els.passagesSummary.textContent = '';
+      var hint = el('p', 'text-muted d-print-none', 'Select a topic above to list its passages.');
+      list.appendChild(hint);
+      return;
+    }
+    var file = cache[state.topic.slug];
+    if (!file) {
+      els.passagesSummary.textContent = '';
+      list.appendChild(el('p', 'text-muted', 'Loading passages…'));
+      return;
+    }
+
+    var total = 0;
+    var shown = [];
+    data.order.forEach(function (p) {
+      p.interviews.forEach(function (interview) {
+        var passages = file.interviews[interview.id];
+        if (!passages || !inScope(interview)) return;
+        total += passages.length;
+        shown.push(interview);
+      });
+    });
+
+    els.passagesSummary.textContent = state.topic.label + ': ' + plural(total, 'passage') + ' in ' +
+      plural(shown.length, 'interview') + (person ? ' with ' + person.name : '') + '.';
+    if (!shown.length) {
+      list.appendChild(el('p', 'text-muted', 'No passages on this topic here.'));
+      return;
+    }
+
+    var fragment = document.createDocumentFragment();
+    shown.forEach(function (interview, i) {
+      var details = el('details', 'tv-interview');
+      details.interview = interview;
+      var summary = el('summary');
+      summary.appendChild(el('span', 'tv-interview-title', interview.title));
+      summary.appendChild(el('span', 'tv-interview-count', plural(file.interviews[interview.id].length, 'passage')));
+      details.appendChild(summary);
+      details.addEventListener('toggle', function () { if (details.open) renderBody(details); });
+      if (i < OPEN_BY_DEFAULT) { renderBody(details); details.open = true; }
+      fragment.appendChild(details);
+    });
+    list.appendChild(fragment);
+
+    els.expand.hidden = shown.length <= OPEN_BY_DEFAULT;
+    els.expand.textContent = 'Expand all';
+    els.printAll.hidden = false;
+    els.printAll.textContent = 'Print all ' + plural(total, 'passage');
+  }
+
+  function openAll() {
+    if (!els.passages) return;
+    els.passages.querySelectorAll('details.tv-interview').forEach(function (details) {
+      renderBody(details);
+      details.open = true;
+    });
+  }
+
+  function printOne(details) {
+    root.classList.add('tv-print-one');
+    details.classList.add('tv-print-target');
+    var done = function () {
+      root.classList.remove('tv-print-one');
+      details.classList.remove('tv-print-target');
+      window.removeEventListener('afterprint', done);
+    };
+    window.addEventListener('afterprint', done);
+    window.print();
+  }
+
+  // ---- state --------------------------------------------------------------
+
+  function updateUrl() {
+    var params = new URLSearchParams(window.location.search);
+    if (state.topic) params.set('filter', state.topic.slug); else params.delete('filter');
+    if (state.only) params.set('id', state.only); else params.delete('id');
+    var query = params.toString();
+    window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : ''));
+  }
+
+  function updateSummary() {
+    if (state.topic) {
+      els.summary.textContent = state.topic.label + ': ' + plural(state.topic.count, 'passage') + ' in ' +
+        plural(state.topic.interviews, 'interview') + '.';
+    } else {
+      els.summary.textContent = plural(data.interviews.length, 'interview') + ' with ' +
+        plural(data.people.length, 'person').replace('persons', 'people') + '. Each line is colored by its topics.';
+    }
+    els.reset.hidden = !state.topic && !state.only;
+  }
+
+  function topicMessage() {
+    if (els.passagesSummary && els.passagesSummary.textContent) return els.passagesSummary.textContent;
+    return state.topic ? state.topic.label + ': ' + plural(state.topic.count, 'passage') + ' in ' +
+      plural(state.topic.interviews, 'interview') + '.' : '';
+  }
+
+  function selectTopic(tag, quiet) {
+    state.topic = tag;
+    data.tags.forEach(function (t) { t.button.setAttribute('aria-pressed', t === tag ? 'true' : 'false'); });
+    els.topics.classList.toggle('has-selection', !!tag);
+    updateSummary();
+    orderRows();
+    updateUrl();
+    renderPassages();
+    if (!tag) {
+      if (!quiet) announce('Topic cleared. Showing every topic.');
+      return;
+    }
+    if (cache[tag.slug]) {
+      if (!quiet) announce(topicMessage());
+      return;
+    }
+    var id = ++requestId;
+    fetch(SOURCE + '/' + tag.slug + '.json')
+      .then(function (response) {
+        if (!response.ok) throw new Error(response.status);
+        return response.json();
+      })
+      .then(function (file) {
+        cache[tag.slug] = file;
+        if (id !== requestId || state.topic !== tag) return;
+        renderPassages();
+        announce(topicMessage());
+      })
+      .catch(function () {
+        if (id !== requestId || state.topic !== tag) return;
+        if (!els.passages) return;
+        els.passages.textContent = '';
+        els.passages.appendChild(el('p', 'alert alert-danger', 'The passages for this topic could not be loaded. Please try again.'));
+      });
+  }
+
+  function setOnly(id, scroll) {
+    state.only = id;
+    updateSummary();
+    orderRows();
+    updateUrl();
+    renderPassages();
+    if (id && state.topic && scroll && els.contents) els.contents.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!id) announce('Showing everyone.');
+  }
+
+  function reset() {
+    state.only = null;
+    selectTopic(null, true);
+    announce('Reset. Showing every topic.');
+  }
+
+  // ---- start --------------------------------------------------------------
+
+  function start(index) {
+    data = prepare(index);
+    readColors();
+    buildTopics();
+    buildRows();
+
+    els.sort.addEventListener('change', function () { state.sort = els.sort.value; orderRows(); renderPassages(); });
+    els.hideEmpty.addEventListener('change', function () { state.hideEmpty = els.hideEmpty.checked; orderRows(); });
+    els.reset.addEventListener('click', reset);
+    if (els.passages) {
+      els.clearPerson.addEventListener('click', function () { setOnly(null); });
+      els.expand.addEventListener('click', openAll);
+      els.printAll.addEventListener('click', function () { openAll(); window.print(); });
+    }
+    window.addEventListener('scroll', hideTooltip, { passive: true });
+
+    var frame = 0;
+    var redraw = function () {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(drawAll);
+    };
+    if (window.ResizeObserver) new ResizeObserver(redraw).observe(els.rows);
+    else window.addEventListener('resize', redraw);
+
+    var params = new URLSearchParams(window.location.search);
+    var only = params.get('id');
+    if (only && (data.people.some(function (p) { return p.id === only; }) ||
+                 data.interviews.some(function (i) { return i.id === only; }))) {
+      state.only = only;
+    }
+    var slug = params.get('filter');
+    var tag = slug && data.tags.filter(function (t) { return t.slug === slug; })[0];
+    selectTopic(tag || null, true);
+  }
+
+  fetch(SOURCE + '/index.json')
+    .then(function (response) {
+      if (!response.ok) throw new Error(response.status);
+      return response.json();
+    })
+    .then(start)
+    .catch(function (error) {
+      console.error('Topic visualization:', error);
+      els.topics.textContent = '';
+      els.topics.appendChild(el('p', 'alert alert-danger', 'The topic data could not be loaded. Please refresh the page.'));
+    });
+})();
+</script>

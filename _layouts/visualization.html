@@ -1,128 +1,100 @@
 ---
+# Color-coded Topic Visualization
+# One bar (or strip) per interviewee showing where each topic comes up in their
+# interviews, with the matching passages listed (and printable) below.
+# Data is generated at build time by _plugins/topic_viz_index.rb, so the page
+# itself stays small however large the collection is.
+# Display size is set by "visualization-size" in _data/theme.yml (large | compact | auto).
 layout: default
 custom-foot: transcript/js/visualization-js.html
 ---
-{% include transcript/style/filter-style.html %}
-{% assign transcripts = site.data.transcripts | sort %}
-{% assign items = site.data[site.metadata] %}
+<link rel="stylesheet" href="{{ '/assets/css/topic-viz.css' | relative_url }}">
+{%- assign tv-size = site.data.theme.visualization-size | default: 'auto' | downcase | strip -%}
+{%- assign tv-count = site.data.topic_viz.interviews | default: site.data.transcripts.size -%}
+{%- if tv-size != 'large' and tv-size != 'compact' -%}
+  {%- assign tv-threshold = site.data.theme.visualization-compact-threshold | default: 30 -%}
+  {%- if tv-count > tv-threshold -%}{%- assign tv-size = 'compact' -%}{%- else -%}{%- assign tv-size = 'large' -%}{%- endif -%}
+{%- endif -%}
+{%- comment -%} Compact rows grow taller the fewer interviews there are (see assets/css/topic-viz.css) {%- endcomment -%}
+{%- if tv-count <= 10 -%}{%- assign tv-density = 'roomy' -%}
+{%- elsif tv-count <= 30 -%}{%- assign tv-density = 'cozy' -%}
+{%- elsif tv-count <= 100 -%}{%- assign tv-density = 'snug' -%}
+{%- else -%}{%- assign tv-density = 'tight' -%}{%- endif -%}
 
-<div class="container p-4 p-md-5">
-  {% unless site.data.theme.as-data == false %}
-    {% include transcript/filters-data-download-modal.html %}
-  {% endunless %}
-  
-  <h2 id="visualize-by-subject">Color-coded Subject Visualization</h2>
+<div class="container p-4 p-md-5 topic-viz tv-size-{{ tv-size }} tv-density-{{ tv-density }}" id="topic-viz"
+  data-root="{{ '' | relative_url }}"
+  data-source="{{ site.data.topic_viz.output | default: 'assets/data/topic-viz' | prepend: '/' | relative_url }}">
 
-  <p>Click a colored circle/subject to see corresponding sections of the interview transcripts. 
-    {% unless site.data.theme.transcript-contents == false %}
-      You can also filter by subject and view/print related <a href="#transcript-contents">contents</a> below.
+  <div class="d-print-none">
+    {% unless site.data.theme.as-data == false %}
+      {% include transcript/filters-data-download-modal.html %}
     {% endunless %}
-  </p>
+    {{ content }}
+  </div>
 
-  <div class="row" role="group" aria-labelledby="filterGroupLabel">
-    <div id="filterGroupLabel" class="visually-hidden d-none">Filter transcripts by subject</div>
-    {% for n in site.data.filters %}
-    <div class="col-md-3 col-4">
-      <svg class="legendTag" width="100%" height="25px" data-id="{{ n.tag | slugify }}"
-           aria-labelledby="legendTitle{{ forloop.index }}" role="button"
-           aria-label="Filter by {{ n.tag | escape }}" tabindex="0"
-           data-bs-toggle="tooltip" data-bs-placement="left"
-           title="{{ n.description | escape }}" aria-pressed="false">
-        <title id="legendTitle{{ forloop.index }}">Filter by {{ n.tag }}</title>
-        <circle cx="25" cy="10" r="10" class="{{ n.tag | slugify }}"></circle>
-        <text x="38" y="15">{{ n.tag }}</text>
-      </svg>
+  <noscript>
+    <p class="alert alert-warning">This visualization needs JavaScript. The <a href="{{ '/subjects.html' | relative_url }}">Subjects</a> page lists every subject without it.</p>
+  </noscript>
+
+  <div class="visually-hidden" aria-live="polite" id="tv-status"></div>
+
+  <section class="tv-topics d-print-none" aria-labelledby="tv-topics-heading">
+    <div class="d-flex flex-wrap align-items-baseline justify-content-between">
+      <h3 id="tv-topics-heading" class="h5">Topics</h3>
+      <div class="tv-topic-actions">
+        <button type="button" class="btn btn-sm btn-outline-secondary" id="tv-reset" hidden>Reset</button>
+        {% unless site.data.theme.transcript-contents == false %}
+        <a class="btn btn-sm btn-primary" href="#transcript-contents" id="tv-jump">Jump to passages <span aria-hidden="true">↓</span></a>
+        {% endunless %}
+      </div>
     </div>
-    {%- endfor -%}
-  </div>
-  
-  <a href="#transcript-contents" class="visually-hidden-focusable visually-hidden skip-link mb-3 d-inline-block p-2">
-    Skip to filtered transcript content
-  </a><br />
-  
-  <button id="reset" class="btn btn-lg btn-secondary float-right" role="button">Reset</button>
-  
-  <div class="visually-hidden" aria-live="polite" id="filter-status">
-    No filters currently applied.
-  </div>
-
-  <br /><br />
-
-  {% for transcript in transcripts %}
-  {% assign transcript-name = transcript[0] %}
-  {%- assign transcript_item = items | where_exp: 'item', 'item.objectid == transcript-name' | first -%}
-   <section class="vizdiv" aria-labelledby="header{{ transcript-name }}visualization">
-    <h3 id="header{{ transcript-name }}visualization" class="mt-4 toggle_int transcriptTitle {{ transcript-name }}" tabindex="-1" data-id="{{transcript-name}}" role="button" aria-hidden="true">{{ transcript_item.title | default: transcript-name }} <small>Click to filter</small></h3>
-    <svg class="chart {{transcript-name}}" width="100%" height="100px" role="img" aria-label="Visualization of interview segments" data-transcript-id="{{ transcript-name }}">
-      {%- for item in transcript[1] -%}
-      {%- assign my_integer = forloop.length -%}
-      {%- assign my_float = my_integer | times: 1.0 -%}
-      {%- assign rect-width = 100 | divided_by: my_float -%}
-      {%- assign tags = item.tags | split: ";" | compact | where_exp: 'tag', 'tag != " " and tag != ""' -%}
-      {%- capture tag_classes -%}{% for tag in tags %}{{ tag | slugify }} {% endfor %}{%- endcapture -%}
-      <a href="{{ forloop.index0 | prepend: transcript-name | prepend: '.html?line=' | prepend: transcript-name | prepend: '/items/' | relative_url }}" aria-label="Jump to line {{ forloop.index0 }} in the webpage for this transcript" tabindex="-1" aria-hidden="true" data-segment-id="{{ forloop.index0 }}">
-        <rect x="{{forloop.index0 | times: rect-width }}%" y="20" width="{{rect-width}}%" height="50" data-bs-toggle="tooltip" data-bs-placement="top" class="{{ tag_classes }}" data-segment-index="{{ forloop.index0 }}" tabindex="-1" aria-hidden="true"{% unless site.data.theme.json-generation %} title="{{ item.words | default: '...' | escape }}{% if item.tags %} (Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"{% endunless %}>
-        </rect>
-      </a>
-      {%- endfor -%}
-    </svg>
+    <div id="tv-topic-list" class="tv-topic-list" role="group" aria-labelledby="tv-topics-heading">
+      <p class="text-muted">Loading topics…</p>
+    </div>
   </section>
-  {%- endfor -%}
-</div>
 
-<br />
-<hr /><br />
-
-{% unless site.data.theme.transcript-contents == false %}
-{% if site.data.theme.json-generation %}
-<div class="container" id="transcript-contents">
-  <h2>Contents</h2>
-  <div id="transcript-content-container">
-    <div class="initial-message">
-      <p>Click on one of the colored circles above to load transcript data and filter by that subject.</p>
+  <section class="tv-chart d-print-none" aria-labelledby="tv-chart-heading">
+    <div class="tv-chart-head">
+      <h3 id="tv-chart-heading" class="h5 mb-0">Interviews</h3>
+      <p id="tv-summary" class="tv-summary mb-0"></p>
+      <div class="tv-controls">
+        <label class="form-label mb-0" for="tv-sort">Sort</label>
+        <select id="tv-sort" class="form-select form-select-sm">
+          <option value="name">Name A–Z</option>
+          <option value="count">Most passages</option>
+        </select>
+        <div class="form-check mb-0">
+          <input class="form-check-input" type="checkbox" id="tv-hide-empty">
+          <label class="form-check-label" for="tv-hide-empty">Hide interviews with no passages</label>
+        </div>
+      </div>
     </div>
-  </div>
+    <p class="visually-hidden">Each bar is one person's interviews, start to finish, with every tagged line colored by its topics. Selecting a topic leaves only that topic's lines colored.{% unless site.data.theme.transcript-contents == false %} The same passages are listed under Passages below.{% endunless %}</p>
+    <div id="tv-rows" class="tv-rows"></div>
+  </section>
+
+  {% unless site.data.theme.transcript-contents == false %}
+  <section id="transcript-contents" class="tv-passages" aria-labelledby="tv-passages-heading" tabindex="-1">
+    <div class="tv-passages-head">
+      <h3 id="tv-passages-heading" class="h4 mb-0">Passages</h3>
+      <div class="tv-passage-actions d-print-none">
+        <button type="button" class="btn btn-sm btn-outline-secondary" id="tv-clear-person" hidden></button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" id="tv-expand" hidden>Expand all</button>
+        <button type="button" class="btn btn-sm btn-primary" id="tv-print-all" hidden>Print</button>
+      </div>
+    </div>
+    <p id="tv-passages-summary" class="tv-summary"></p>
+    <div id="tv-passage-list">
+      <p class="text-muted d-print-none">Select a topic above to list its passages.</p>
+    </div>
+  </section>
+  {% endunless %}
+
+  <div id="tv-tooltip" class="tv-tooltip d-print-none" role="presentation" hidden></div>
 </div>
 
-<script>
-  // This script just defines which transcripts are available
-  // The actual content loading happens in visualization-json.js
-  window.availableTranscripts = [
-    {% for transcript in transcripts %}
-    {% assign transcript-name = transcript[0] %}
-    "{{ transcript-name }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ];
-</script>
-{% else %}
-<div class="container" id="transcript-contents">
-  <h2>Contents</h2>
-
-  {% for transcript in site.data.transcripts %}
-  {% assign transcript-name = transcript[0] %}
-  {% assign transcript_item = items | where_exp: 'item', 'item.objectid == transcript-name' | first %}
-  {% for item in transcript[1] %}
-  {% if forloop.first %}
-  <section class="contentsdiv" >
-    <h3 class="my-4 {{transcript-name}}"><a href="{{transcript-name | prepend: '/items/' | append: '.html' | relative_url }}">{{ transcript_item.interviewee | default: transcript_item.title }}</a></h3>
-    <table class="my-4 p-2 border {{transcript-name}} {%cycle 'bg-light','' %}">
-  {%- endif -%}
-      <tr id="{{transcript-name}}row{{ forloop.index0 }}" class="{{item.tags | replace: ";", " "}}">
-        <td class="p-2 tableTimestamp"><a href="{{ forloop.index0 | prepend: transcript-name | prepend: '.html?line=' | prepend: transcript-name | prepend: '/items/' | relative_url }}" aria-label="jump to Line {{ forloop.index0 }} from {{transcript-name}}'s interview" class="small btn-link text-dark" tabindex="-1">Line {{ forloop.index0 }}</a></td>
-        <td class="words p-2">
-          <div id="spoken">{%if item.speaker%}{{item.speaker | remove: ":"}}: {%endif%}{{item.words}}</div>
-        </td>
-      </tr>
-      {% if forloop.last%}</table>
-    </section>{%- endif -%}
-  {%- endfor -%}{%- endfor -%}
-  {%- endif -%}
-{%- endunless -%}
-
-<br />
-<hr /><br />
-<!-- Add download button for JSON data -->
-<div class="container mb-5">
+<div class="container mb-5 d-print-none">
+  <hr class="mb-4">
   <h3>Data Access</h3>
   {% include transcript/download-json-button.html %}
 </div>

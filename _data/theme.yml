@@ -16,13 +16,20 @@ search-and-filters-sticky: true ## true/false --> determines if the search and f
 # Visualization page / Oral History as Data Options 
 # 
 as-data: true ## true/false --> determines if the "As Data" button and modal that pops up if you click it will appear at the top right of the visualization page
-transcript-contents: true ## true/false --> determines if the contents of the individual interviews will appear and be filtered at the bottom of the visualization page (below the color coded portion)
+transcript-contents: true ## true/false --> determines if the Passages section (passages for the selected topic, grouped by interview and printable) appears below the color-coded bars on the visualization page
 
-### For Large Collections -- !!!! Warning ###
+# The visualization is drawn from small JSON files written at build time by _plugins/topic_viz_index.rb (no rake task needed),
+# so it stays fast for any collection size. Choose how the bars are displayed:
+visualization-size: compact ## large / compact / auto --> large = one tall bar per interview with its name above (best for smaller collections); compact = thin strips in columns (best for large collections); auto = picks by number of interviews
+visualization-compact-threshold: 25 ## with auto, switch to compact when there are more interviews than this
+# compact rows adjust to the collection size automatically: tallest with 10 or fewer interviews, then 11-30, 31-100, and thinnest over 100
+topic-viz-tags: filters ## filters / all --> filters = only the tags listed in _data/filters.csv; all = every tag found in the transcripts
+topic-viz-output: assets/data/topic-viz ## where the visualization's index and per-topic JSON files are written
 
-# If you turn the below option `json-generation` to true, you'll need to run the rake command `generate_json` -- that command will generate the necessary json files for your collection. 
-
-json-generation: false ## true/false --> defaults to false (see note below if you turn to true!). This determines if JSON files will be accessed for the visualization page. 
+### JSON downloads ###
+# If you turn the below option `json-generation` to true, you'll need to run the rake command `generate_json` -- that command will generate the json files for your collection.
+# This only affects the "Transcripts as JSON" download options; the visualization no longer uses it.
+json-generation: false ## true/false --> defaults to false. If true, the Data Access section offers per-transcript JSON downloads.
 
 
 

@@ -1,21 +1,74 @@
-{% assign viz-height = include.height | default: '400px' %}
-<div style="height:{{ viz-height }}; width:100%;">
- {% for transcript in site.data.transcripts %}
- {% assign height_integer = forloop.length %}
-     {% assign height_float = height_integer | times: 1.0 %}
-     {% if viz-height contains "%" %}{% assign viz-integer = viz-height | replace: "%","" %}{% assign viz-height-measure = "%" %}
-     {% elsif viz-height contains "px" %}{% assign viz-integer = viz-height | replace: "px","" %}{% assign viz-height-measure = "px" %}
-     {% else %}{% assign viz-integer = viz-height %}{% assign viz-height-measure = "px" %}{% endif %}
- {% assign rect-height = 100 | divided_by: height_float  %}
- {%assign transcript-name = transcript[0] %}
- {% assign transcript_item = items | where_exp: 'item', 'item.objectid == transcript-name' | first %}
- <div id="{{transcript-name}}viz" class="vizdiv" style="height:{{rect-height}}%">
-   <a href="{{ '/visualization.html' | relative_url }}"><svg class="chart {{transcript-name}}" width="100%" height="100%">
-     {% for item in transcript[1] %}
-     {% assign my_integer = forloop.length %}
-     {% assign my_float = my_integer | times: 1.0 %}
-     {% assign rect-width = 100 | divided_by: my_float  %}
-       <rect x="{{forloop.index0 | times: rect-width }}%" y="0" width="{{rect-width}}%" height="100%" data-bs-toggle="tooltip" data-bs-placement="top" class="{{item.tags | downcase | replace: ';', ' '}}" title=" {% if item.tags %}(Subjects: {{ item.tags | replace: ';', ', ' }}){%endif%}"></rect>
-     {%endfor%}</svg></a>
- </div>{%endfor%}
- </div>
+{%- comment -%}
+  Home page overview of the color-coded visualization: one band per interview,
+  every tagged line in its topic's color(s). Drawn on a canvas from the same
+  index.json the visualization page uses (_plugins/topic_viz_index.rb), so it
+  costs nothing at build time however many transcript lines there are.
+  Usage: include transcript/index/viz-overview.html height="450px"
+{%- endcomment -%}
+{%- assign viz-height = include.height | default: '400px' -%}
+{%- assign viz-source = site.data.topic_viz.output | default: 'assets/data/topic-viz' | prepend: '/' | relative_url -%}
+<a href="{{ '/visualization.html' | relative_url }}" class="d-block viz-overview" aria-label="Color-coded visualization of the topics in each interview. Open the visualization page.">
+  <canvas id="viz-overview-canvas" data-source="{{ viz-source }}" style="display:block; width:100%; height:{{ viz-height }};" aria-hidden="true"></canvas>
+</a>
+<script>
+(function () {
+  'use strict';
+  var canvas = document.getElementById('viz-overview-canvas');
+  if (!canvas || !window.fetch) return;
+  var BACKGROUND = '#000';  // lines with no topic
+  var GAP = 1;              // px between interviews
+  var index = null;
+
+  function draw() {
+    var width = canvas.clientWidth;
+    var height = canvas.clientHeight;
+    if (!index || !width || !height) return;
+    var ratio = window.devicePixelRatio || 1;
+    canvas.width = Math.round(width * ratio);
+    canvas.height = Math.round(height * ratio);
+    var ctx = canvas.getContext('2d');
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+
+    var interviews = index.interviews;
+    if (!interviews.length) return;
+    var rowHeight = (height - GAP * (interviews.length - 1)) / interviews.length;
+    interviews.forEach(function (interview, row) {
+      var n = interview[3] || 1;
+      var tags = interview[5];
+      var y = row * (rowHeight + GAP);
+      var lineWidth = Math.max(1, width / n);
+      ctx.fillStyle = BACKGROUND;
+      ctx.fillRect(0, y, width, rowHeight);
+
+      // line -> topics on it, so a line with several topics is split into bands
+      var byLine = {};
+      Object.keys(tags).forEach(function (key) {
+        tags[key].forEach(function (line) { (byLine[line] = byLine[line] || []).push(+key); });
+      });
+      Object.keys(byLine).forEach(function (line) {
+        var topics = byLine[line];
+        var x = Math.min((line / n) * width, width - lineWidth);
+        var band = rowHeight / topics.length;
+        topics.forEach(function (topic, k) {
+          ctx.fillStyle = (index.tags[topic] && index.tags[topic][5]) || '#808080';
+          ctx.fillRect(x, y + k * band, lineWidth, band);
+        });
+      });
+    });
+  }
+
+  fetch(canvas.getAttribute('data-source') + '/index.json')
+    .then(function (response) {
+      if (!response.ok) throw new Error(response.status);
+      return response.json();
+    })
+    .then(function (data) { index = data; draw(); })
+    .catch(function (error) { console.error('Visualization overview:', error); });
+
+  var frame = 0;
+  var redraw = function () { cancelAnimationFrame(frame); frame = requestAnimationFrame(draw); };
+  if (window.ResizeObserver) new ResizeObserver(redraw).observe(canvas);
+  else window.addEventListener('resize', redraw);
+})();
+</script>
