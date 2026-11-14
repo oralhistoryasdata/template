@@ -158,3 +158,39 @@
     }
 
 }
+
+/* ---------- small screens ----------
+   The site title and the interview's button row are the two things that pushed
+   pages wider than a phone screen (sideways scrolling). Let both wrap instead. */
+
+@media (max-width: 991.98px) {
+    header .navbar > .container > h1 {
+        min-width: 0;
+        flex: 1 1 0;
+    }
+
+    header .navbar-brand {
+        white-space: normal;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #transcript-metadata .btn-group.meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* buttons stand alone once they wrap, so give each its own rounded corners */
+    #transcript-metadata .btn-group.meta > .btn,
+    #transcript-metadata .btn-group.meta > .btn-group > .btn {
+        margin-left: 0;
+        border-radius: var(--bs-btn-border-radius);
+    }
+}
+
+/* long words or URLs in a transcript line wrap rather than widen the page */
+#contents-container .words {
+    overflow-wrap: anywhere;
+}

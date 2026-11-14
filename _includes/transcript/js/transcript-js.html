@@ -264,7 +264,7 @@ function scrollToLine(lineId) {
     });
     
     // Focus the element
-    targetElement.focus();
+    targetElement.focus({ preventScroll: true });
   }
   
   // Retract filters after scrolling if they're not already retracted

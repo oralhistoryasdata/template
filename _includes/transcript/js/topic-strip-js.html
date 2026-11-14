@@ -7,8 +7,9 @@
  *    into bands, as on the topic visualization page.
  *  - The topic filter, search and line jumps in transcript-js.html drive it through
  *    window.ohdStrip: setTopic(slug), setHits([line indexes]), setCurrent(element), clear().
- *  - Hover for the line; select a mark to scroll to it. On touch the first tap
- *    shows the line and the second goes to it.
+ *  - Hover for the line; select a mark to scroll to it. On touch a tap pins the
+ *    line with a "Go to this line" button; tapping it (or the same spot again)
+ *    scrolls there, tapping elsewhere dismisses it.
  */
 (function () {
   'use strict';
@@ -24,6 +25,8 @@
   if (resetButton) resetButton.addEventListener('click', function () { vizFilter('all'); });
 
   var SNAP_PX = 4;          // how close the pointer must be to a mark to pick it up
+  var TOUCH_SNAP_PX = 14;   // the same for a fingertip
+  var TOUCH_SAME_PX = 24;   // a second tap this close to the first goes to the line
   var HIT_COLOR = '#d00000'; // search matches
   var CURRENT_COLOR = '#000';
 
@@ -128,7 +131,8 @@
     var n = lines.length;
     var line = Math.min(n - 1, Math.max(0, Math.floor(((event.clientX - rect.left) / rect.width) * n)));
     var list = marked();
-    var tolerance = Math.ceil((SNAP_PX * n) / rect.width);
+    var snap = pointerType === 'touch' ? TOUCH_SNAP_PX : SNAP_PX;
+    var tolerance = Math.ceil((snap * n) / rect.width);
     var lo = 0, hi = list.length - 1;
     while (lo <= hi) {
       var mid = (lo + hi) >> 1;
@@ -142,10 +146,17 @@
     return nearest >= 0 && Math.abs(list[nearest] - line) <= tolerance ? list[nearest] : line;
   }
 
-  var lastTip = -1;
+  var pointerType = 'mouse';
+  var pinned = null;  // touch: { line, x, y } while a tapped line is shown
 
-  function showTooltip(i, event) {
+  function go(i) {
+    hideTooltip();
+    scrollToLine(lines[i].el.id);
+  }
+
+  function showTooltip(i, event, pin) {
     if (!tooltip) return;
+    tooltip.classList.toggle('is-pinned', !!pin);
     var line = lines[i];
     var stamp = line.el.querySelector('.timestamp');
     var words = line.el.querySelector('.words');
@@ -165,6 +176,14 @@
       body.textContent = text.length > 180 ? text.slice(0, 180).replace(/\s+\S*$/, '') + '…' : text;
       tooltip.appendChild(body);
     }
+    if (pin) {
+      var open = document.createElement('button');
+      open.type = 'button';
+      open.className = 'tv-tip-open';
+      open.textContent = 'Go to this line ↓';
+      open.addEventListener('click', function () { go(i); });
+      tooltip.appendChild(open);
+    }
     tooltip.hidden = false;
     var box = tooltip.getBoundingClientRect();
     var left = Math.min(Math.max(8, event.clientX - box.width / 2), window.innerWidth - box.width - 8);
@@ -172,29 +191,46 @@
     if (top < 8) top = event.clientY + 18;
     tooltip.style.left = left + 'px';
     tooltip.style.top = top + 'px';
-    lastTip = i;
   }
 
   function hideTooltip() {
-    if (tooltip) tooltip.hidden = true;
-    lastTip = -1;
+    if (tooltip) {
+      tooltip.hidden = true;
+      tooltip.classList.remove('is-pinned');
+    }
+    pinned = null;
   }
 
-  var pointerType = 'mouse';
   canvas.addEventListener('pointerdown', function (event) { pointerType = event.pointerType || 'mouse'; });
   canvas.addEventListener('pointermove', function (event) {
+    if (pointerType === 'touch' || event.pointerType === 'touch' || pinned) return;  // touch uses tap-to-pin
     var i = hit(event);
     if (i < 0) hideTooltip(); else showTooltip(i, event);
   });
-  canvas.addEventListener('pointerleave', hideTooltip);
+  // touch fires pointerleave after every tap; keep a pinned line up
+  canvas.addEventListener('pointerleave', function () { if (!pinned) hideTooltip(); });
   canvas.addEventListener('click', function (event) {
+    if (pointerType === 'touch') {
+      // a fingertip rarely lands on exactly the same line twice, so a second tap
+      // near the first goes to the pinned line
+      if (pinned && Math.abs(event.clientX - pinned.x) <= TOUCH_SAME_PX) { go(pinned.line); return; }
+      var tapped = hit(event);
+      if (tapped < 0) { hideTooltip(); return; }
+      showTooltip(tapped, event, true);
+      pinned = { line: tapped, x: event.clientX, y: window.scrollY };
+      return;
+    }
     var i = hit(event);
     if (i < 0) return;
-    if (pointerType === 'touch' && lastTip !== i) { showTooltip(i, event); return; }
-    hideTooltip();
-    scrollToLine(lines[i].el.id);
+    go(i);
   });
-  window.addEventListener('scroll', hideTooltip, { passive: true });
+  // a pinned (tapped) line survives the small scroll a tap can cause
+  window.addEventListener('scroll', function () {
+    if (!pinned || Math.abs(window.scrollY - pinned.y) > 40) hideTooltip();
+  }, { passive: true });
+  document.addEventListener('pointerdown', function (event) {
+    if (pinned && tooltip && !tooltip.contains(event.target) && event.target !== canvas) hideTooltip();
+  });
 
   function updateButtons() {
     Object.keys(topics).forEach(function (slug) {

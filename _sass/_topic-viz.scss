@@ -219,6 +219,33 @@
     display: block;
 }
 
+/* touch: a tapped mark stays up with a link to open it (see the scripts) */
+.tv-tooltip.is-pinned {
+    max-width: min(22rem, calc(100vw - 16px));
+    pointer-events: auto;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.tv-tooltip .tv-tip-open {
+    display: block;
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.55rem 0.5rem;   /* a comfortable fingertip target */
+    border: 0;
+    border-radius: 0.25rem;
+    background: #fff;
+    color: #212529;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* strips: let a tap register as a tap, without the double-tap zoom delay */
+.tv-strip,
+.tv-transcript-strip {
+    touch-action: manipulation;
+}
+
 /* ---------- passages ---------- */
 
 .tv-passages {
@@ -391,6 +418,15 @@
 @media (max-width: 575.98px) {
     .tv-rows {
         column-width: auto;
+    }
+
+    /* two topics per row, so the picker doesn't push the bars and transcript a screen down */
+    .tv-topic-list {
+        grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+    }
+
+    .tv-topic {
+        padding: 0.45rem 0.5rem 0.55rem;   /* a little taller for fingertips */
     }
 
     .tv-size-compact .tv-row {
