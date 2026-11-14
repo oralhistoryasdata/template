@@ -68,7 +68,7 @@ custom-foot: transcript/js/visualization-js.html
         </div>
       </div>
     </div>
-    <p class="visually-hidden">Each bar is one person's interviews, start to finish, with every tagged line colored by its topics. Selecting a topic leaves only that topic's lines colored.{% unless site.data.theme.transcript-contents == false %} The same passages are listed under Passages below.{% endunless %}</p>
+    <p class="visually-hidden">Each bar is {% if site.data.topic_viz.rows == 'title' %}one interview{% else %}one person's interviews{% endif %}, start to finish, with every tagged line colored by its topics. Selecting a topic leaves only that topic's lines colored.{% unless site.data.theme.transcript-contents == false %} The same passages are listed under Passages below.{% endunless %}</p>
     <div id="tv-rows" class="tv-rows"></div>
   </section>
 

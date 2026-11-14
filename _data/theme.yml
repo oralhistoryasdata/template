@@ -24,6 +24,7 @@ visualization-size: auto ## large / compact / auto --> large = one tall bar per 
 visualization-compact-threshold: 30 ## with auto, switch to compact when there are more interviews than this
 # compact rows adjust to the collection size automatically: tallest with 10 or fewer interviews, then 11-30, 31-100, and thinnest over 100
 topic-viz-tags: filters ## filters / all --> filters = only the tags listed in _data/filters.csv; all = every tag found in the transcripts
+topic-viz-label: auto ## auto / any metadata field (e.g. title) --> names each bar. auto = interviewee (or person_name on person records); another field, like title, gives each interview its own bar with "With <interviewee>" shown when it's selected; an empty value falls back to title
 topic-viz-output: assets/data/topic-viz ## where the visualization's index and per-topic JSON files are written
 
 ### JSON downloads ###

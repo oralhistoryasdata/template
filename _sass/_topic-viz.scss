@@ -215,6 +215,10 @@
     color: #ced4da;
 }
 
+.tv-tooltip .tv-tip-who {
+    display: block;
+}
+
 /* ---------- passages ---------- */
 
 .tv-passages {
@@ -466,6 +470,25 @@
     }
 }
 
+/* ---------- rows labelled by interview ----------
+   topic-viz-label set to a non-person field (e.g. title) in _data/theme.yml. Titles run
+   longer than names, so compact columns are wider and give the label more room
+   (full label on hover). */
+
+.tv-by-title.tv-size-compact .tv-rows {
+    column-width: 36rem;
+}
+
+.tv-by-title.tv-size-compact .tv-name {
+    flex-basis: 17rem;
+}
+
+@media (max-width: 575.98px) {
+    .tv-by-title.tv-size-compact .tv-name {
+        flex-basis: 9rem;
+    }
+}
+
 /* ---------- selected person ----------
    Selecting a name moves that row to the top (see orderRows in
    _includes/transcript/js/visualization-js.html), spans it across every column and
@@ -510,6 +533,19 @@
     padding: 0.05rem 0.45rem;
     font-size: 0.75rem;
     line-height: 1.4;
+}
+
+/* who is speaking, under the label (rows labelled by interview only) */
+.tv-row-who {
+    display: none;
+}
+
+.topic-viz .tv-row.is-selected .tv-row-who {
+    display: block;
+    grid-column: 1 / -1;
+    margin-top: -0.4rem;
+    color: var(--tv-muted);
+    font-size: 0.9rem;
 }
 
 .topic-viz .tv-row.is-selected .tv-strip {

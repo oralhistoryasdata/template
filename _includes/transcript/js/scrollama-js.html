@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle step 0 (top of page)
     if (stepIndex === 0) {
-      filterTab.classList.add('d-none');
+      if (filterTab) filterTab.classList.add('d-none');
       
       {% if site.data.theme.media-scroll == true %}
       if (upperElement.classList.contains("media-scroll-wrapper")) {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       {% endif %}
       
       {% unless site.data.theme.search-and-filters == false %}
-      if (filtersSearch.classList.contains("retracted")) {
+      if (filtersSearch && filtersSearch.classList.contains("retracted")) {
         filtersSearch.classList.remove("retracted");
       }
       {% endunless %}
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle step 1 (scrolled down)
     else if (stepIndex === 1) {
       {% unless site.data.theme.search-and-filters == false or site.data.theme.search-and-filters-sticky == false %}
-      filterTab.classList.remove('d-none');
+      if (filterTab) filterTab.classList.remove('d-none');
       {% endunless %}
       
       {% if site.data.theme.media-scroll == true %}

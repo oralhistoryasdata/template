@@ -46,6 +46,9 @@
   var fmt = function (n) { return Number(n).toLocaleString(); };
   var plural = function (n, word) { return fmt(n) + ' ' + word + (n === 1 ? '' : 's'); };
 
+  // what "show everyone" means for this collection's rows
+  function everyone() { return data && data.byTitle ? 'all interviews' : 'everyone'; }
+
   function el(tag, className, text) {
     var node = document.createElement(tag);
     if (className) node.className = className;
@@ -62,15 +65,18 @@
       return { id: p[0], name: p[1], interviews: [], lines: 0, row: null, canvas: null, layout: [] };
     });
     var interviews = index.interviews.map(function (i) {
-      var interview = { id: i[0], title: i[1], person: people[i[2]], n: i[3], tagged: i[4], tags: i[5] };
+      var interview = { id: i[0], title: i[1], person: people[i[2]], n: i[3], tagged: i[4], tags: i[5], interviewee: i[6] || '' };
       interview.person.interviews.push(interview);
       interview.person.lines += interview.n;
+      if (interview.interviewee && !interview.person.interviewee) interview.person.interviewee = interview.interviewee;
       return interview;
     });
     var tags = index.tags.map(function (t, i) {
       return { index: i, slug: t[0], label: t[1], description: t[2], count: t[3], interviews: t[4], color: t[5] || '#808080' };
     });
-    return { base: SITE + index.base, tags: tags, people: people, interviews: interviews };
+    // rows: 'title' when each row is one interview named by a non-person field
+    // (topic-viz-label: title, for example, in _data/theme.yml)
+    return { base: SITE + index.base, tags: tags, people: people, interviews: interviews, byTitle: index.rows === 'title' };
   }
 
   function topicLines(interview) {
@@ -141,6 +147,7 @@
       var name = el('button', 'tv-name');
       name.type = 'button';
       name.appendChild(el('span', 'tv-name-text', person.name));
+      name.title = person.name;  // the full label when the row cuts it short
       person.countEl = el('span', 'tv-name-count');
       name.appendChild(person.countEl);
       name.addEventListener('click', function () {
@@ -153,7 +160,7 @@
       var close = el('button', 'tv-unselect btn btn-sm btn-outline-secondary');
       close.type = 'button';
       close.textContent = 'Minimize';
-      close.setAttribute('aria-label', 'Minimize ' + person.name + ' and show everyone');
+      close.setAttribute('aria-label', 'Minimize ' + person.name + ' and show ' + everyone());
       close.addEventListener('click', function () {
         setOnly(null);
         person.nameButton.focus({ preventScroll: true });
@@ -165,6 +172,8 @@
       canvas.addEventListener('click', function (event) { activate(person, event); });
       row.appendChild(name);
       row.appendChild(close);
+      // rows labelled by title: who is speaking, shown under the title when the row is expanded
+      if (data.byTitle && person.interviewee && person.interviewee !== person.name) row.appendChild(el('span', 'tv-row-who', 'With ' + person.interviewee));
       row.appendChild(canvas);
       person.row = row;
       person.nameButton = name;
@@ -191,7 +200,8 @@
       person.row.classList.toggle('is-dimmed', !!state.only && !selected);
       person.countEl.textContent = state.topic ? fmt(person.count) : '';
       var label = person.name + (state.topic ? ', ' + plural(person.count, 'passage') + ' on ' + state.topic.label : '');
-      person.nameButton.setAttribute('aria-label', label + (selected ? '. Showing only this person; select to show everyone.' : '. Select to show only this person.'));
+      var one = data.byTitle ? 'this interview' : 'this person';
+      person.nameButton.setAttribute('aria-label', label + (selected ? '. Showing only ' + one + '; select to show ' + everyone() + '.' : '. Select to show only ' + one + '.'));
       person.nameButton.setAttribute('aria-pressed', selected ? 'true' : 'false');
       fragment.appendChild(person.row);
     });
@@ -312,6 +322,8 @@
     var tip = els.tooltip;
     tip.textContent = '';
     tip.appendChild(el('strong', null, target.interview.title));
+    // rows labelled by title: say who is speaking
+    if (data.byTitle && target.interview.interviewee && target.interview.interviewee !== target.interview.person.name) tip.appendChild(el('span', 'tv-tip-who', 'With ' + target.interview.interviewee));
     var passage = target.marked ? findPassage(target.interview, target.line) : null;
     var meta = passage && passage[1] ? passage[1] : 'Line ' + target.line;
     if (target.marked) {
@@ -396,7 +408,7 @@
       return p.id === state.only || p.interviews.some(function (i) { return i.id === state.only; });
     })[0];
     els.clearPerson.hidden = !person;
-    if (person) els.clearPerson.textContent = 'Show everyone (now: ' + person.name + ')';
+    if (person) els.clearPerson.textContent = 'Show ' + everyone() + ' (now: ' + person.name + ')';
 
     if (!state.topic) {
       els.passagesSummary.textContent = '';
@@ -423,7 +435,7 @@
     });
 
     els.passagesSummary.textContent = state.topic.label + ': ' + plural(total, 'passage') + ' in ' +
-      plural(shown.length, 'interview') + (person ? ' with ' + person.name : '') + '.';
+      (person && data.byTitle ? person.name : plural(shown.length, 'interview') + (person ? ' with ' + person.name : '')) + '.';
     if (!shown.length) {
       list.appendChild(el('p', 'text-muted', 'No passages on this topic here.'));
       return;
@@ -484,8 +496,8 @@
       els.summary.textContent = state.topic.label + ': ' + plural(state.topic.count, 'passage') + ' in ' +
         plural(state.topic.interviews, 'interview') + '.';
     } else {
-      els.summary.textContent = plural(data.interviews.length, 'interview') + ' with ' +
-        plural(data.people.length, 'person').replace('persons', 'people') + '. Each line is colored by its topics.';
+      els.summary.textContent = plural(data.interviews.length, 'interview') + (data.byTitle ? '' : ' with ' +
+        plural(data.people.length, 'person').replace('persons', 'people')) + '. Each line is colored by its topics.';
     }
     els.reset.hidden = !state.topic && !state.only;
   }
@@ -539,7 +551,7 @@
     updateUrl();
     renderPassages();
     if (id && state.topic && scroll && els.contents) els.contents.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (!id) announce('Showing everyone.');
+    if (!id) announce('Showing ' + everyone() + '.');
   }
 
   function reset() {
@@ -552,6 +564,7 @@
 
   function start(index) {
     data = prepare(index);
+    root.classList.toggle('tv-by-title', data.byTitle);
     readColors();
     buildTopics();
     buildRows();

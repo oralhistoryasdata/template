@@ -23,9 +23,13 @@
 #   topic-viz-output: assets/data/topic-viz
 #   topic-viz-transcripts: transcripts   (folder in _data holding the transcript CSVs)
 #   topic-viz-item-path: items           (folder of interview pages; auto-detected from page_gen)
+#   topic-viz-label: auto                (metadata field that names each row; see row_label. A field
+#                                         other than interviewee/person_name, e.g. title, gives every
+#                                         interview its own row, with the interviewee shown beneath)
 #
 
 require 'json'
+require 'cgi'
 require 'fileutils'
 
 module TopicViz
@@ -76,8 +80,25 @@ module TopicViz
     DEFAULTS = {
       'topic-viz-tags' => 'filters',
       'topic-viz-output' => 'assets/data/topic-viz',
-      'topic-viz-transcripts' => 'transcripts'
+      'topic-viz-transcripts' => 'transcripts',
+      'topic-viz-label' => 'auto'
     }.freeze
+
+    # Fields tried in order for a row's name with topic-viz-label: auto.
+    AUTO_LABEL = {
+      person: %w[person_name title],   # a display_template: person record
+      interview: %w[interviewee title] # an interview with no person record
+    }.freeze
+
+    # Label settings that name rows after people; any other field names each interview.
+    PEOPLE_LABELS = %w[auto interviewee person_name].freeze
+
+    # true when topic-viz-label names rows by something other than a person (e.g. title):
+    # then every interview is its own row and the page says who is speaking beneath it.
+    def self.by_interview?(setting)
+      field = setting.to_s.strip.downcase
+      !field.empty? && !PEOPLE_LABELS.include?(field)
+    end
 
     def generate(site)
       theme = site.data['theme'].is_a?(Hash) ? site.data['theme'] : {}
@@ -91,7 +112,7 @@ module TopicViz
 
       filters = load_filters(site)
       only_filters = cfg['topic-viz-tags'].to_s.strip.downcase == 'filters'
-      items, people = load_metadata(site)
+      items, people = load_metadata(site, cfg['topic-viz-label'])
 
       tags = {}       # slug => { spellings, lines (count), interviews, passages }
       interviews = [] # one entry per transcript, in id order
@@ -129,14 +150,16 @@ module TopicViz
             tag['count'] += 1
             by_tag[slug] << line
             (tag['passages'][objectid] ||= []) << [
-              line, row['timestamp'].to_s.strip, row['speaker'].to_s.strip.sub(/:\z/, ''), row['words'].to_s.strip
+              # transcripts may hold HTML entities (&#8212;); the page shows passages as plain text
+              line, row['timestamp'].to_s.strip, CGI.unescapeHTML(row['speaker'].to_s.strip.sub(/:\z/, '')),
+              CGI.unescapeHTML(row['words'].to_s.strip)
             ]
           end
           tagged << line unless slugs.empty?
         end
 
         interviews << {
-          'id' => objectid, 'title' => item['title'], 'person' => item['person'],
+          'id' => objectid, 'title' => item['title'], 'person' => item['person'], 'interviewee' => item['interviewee'],
           'n' => rows.size, 'tagged' => tagged, 'by_tag' => by_tag
         }
       end
@@ -173,7 +196,17 @@ module TopicViz
 
     # items:  objectid => { 'title', 'person' (id of the row the interview is grouped under) }
     # people: id => display name
-    def load_metadata(site)
+    # A row's name: with topic-viz-label: auto, the first filled-in field of
+    # AUTO_LABEL; with a field name (e.g. title), that field. Either way an empty
+    # value falls back to title, and only then to the objectid.
+    def row_label(row, kind, setting)
+      field = setting.to_s.strip.downcase
+      fields = field.empty? || field == 'auto' ? AUTO_LABEL[kind] : [field, 'title']
+      fields.map { |name| row[name].to_s.strip }.find { |value| !value.empty? } ||
+        row['objectid'].to_s.strip
+    end
+
+    def load_metadata(site, label_setting)
       metadata = site.data[site.config['metadata'].to_s]
       items = {}
       people = {}
@@ -184,8 +217,7 @@ module TopicViz
         next if id.empty?
 
         if row['display_template'].to_s.strip == 'person'
-          name = row['person_name'].to_s.strip
-          people[id] = name.empty? ? row['title'].to_s.strip : name
+          people[id] = row_label(row, :person, label_setting)
         end
       end
 
@@ -195,19 +227,20 @@ module TopicViz
 
         title = row['title'].to_s.strip
         person = row['personid'].to_s.strip
-        # An interview with no person record stands as its own row,
-        # labelled by the interviewee when there is one.
-        unless people.key?(person)
+        # An interview with no person record stands as its own row.
+        # With a non-person label (e.g. title) every interview is its own row too.
+        if Generator.by_interview?(label_setting) || !people.key?(person)
           person = id
-          interviewee = row['interviewee'].to_s.strip
-          people[id] ||= [interviewee, title, id].find { |name| !name.empty? }
+          people[id] = row_label(row, :interview, label_setting)
         end
-        items[id] = { 'title' => title.empty? ? id : title, 'person' => person }
+        items[id] = { 'title' => title.empty? ? id : title, 'person' => person,
+                      'interviewee' => row['interviewee'].to_s.strip }
       end
       [items, people]
     end
 
     def publish(site, cfg, tags, interviews, people, filters)
+      by_interview = Generator.by_interview?(cfg['topic-viz-label'])
       out_dir = cfg['topic-viz-output'].to_s.gsub(%r{\A/+|/+\z}, '')
 
       ordered = tags.sort_by { |slug, tag| [-tag['count'], slug] }
@@ -228,6 +261,8 @@ module TopicViz
       person_index = used_people.each_with_index.to_h
       index = {
         'base' => item_base(site),
+        # 'title': each row is one interview, named by a non-person field; 'name': rows are people
+        'rows' => by_interview ? 'title' : 'name',
         'tags' => tag_rows,
         'people' => used_people.map { |id| [id, people[id].to_s.empty? ? id : people[id]] },
         'interviews' => interviews.map do |interview|
@@ -235,7 +270,7 @@ module TopicViz
             interview['id'], interview['title'], person_index[interview['person']], interview['n'],
             interview['tagged'],
             interview['by_tag'].to_h { |slug, lines| [tag_index[slug], lines] }
-          ]
+          ].tap { |entry| entry << interview['interviewee'].to_s if by_interview } # who is speaking
         end
       }
       site.static_files << GeneratedFile.new(site, out_dir, 'index.json', JSON.generate(index))
@@ -245,7 +280,8 @@ module TopicViz
         site.static_files << GeneratedFile.new(site, out_dir, "#{slug}.json", JSON.generate(payload))
       end
 
-      site.data['topic_viz'] = { 'tags' => tag_rows.size, 'interviews' => interviews.size, 'output' => out_dir }
+      site.data['topic_viz'] = { 'tags' => tag_rows.size, 'interviews' => interviews.size, 'output' => out_dir,
+                                 'rows' => by_interview ? 'title' : 'name' }
       Jekyll.logger.info 'Topic Viz:', "#{tags.values.sum { |tag| tag['count'] }} tagged passages across " \
                                        "#{tag_rows.size} tags and #{interviews.size} interviews."
     end

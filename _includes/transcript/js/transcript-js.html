@@ -386,15 +386,16 @@ function init() {
 
           {% unless site.data.theme.search-and-filters == false %}
             // add event listener so that when tab is clicked, filters element retracts up the page
-            filterTab.addEventListener('click', function () {
+            if (filterTab && filtersSearch) filterTab.addEventListener('click', function () {
             filtersSearch.classList.toggle('retracted');
               });
           {% endunless %}
         // listener for the scroll to top button clickc
-        document.getElementById('scroll-to-top').addEventListener('click', function () {
+        var scrollTopButton = document.getElementById('scroll-to-top');
+        if (scrollTopButton) scrollTopButton.addEventListener('click', function () {
           {% unless site.data.theme.search-and-filters == false %}
             // if scroll-to-top button clicked and filters are retracted, un retract them
-            if (filtersSearch.classList.contains("retracted")) {
+            if (filtersSearch && filtersSearch.classList.contains("retracted")) {
                 filtersSearch.classList.remove("retracted"); }
           {% endunless %}
           {% if site.data.theme.media-scroll == true %}
