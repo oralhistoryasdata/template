@@ -9,6 +9,8 @@
  *    lists them by interview below. Passage rows are only built when an
  *    interview is opened, so the page stays light for the largest topics.
  *  - Hover a strip for the passage; select it to open that line of the interview.
+ *    On touch, a tap pins the passage with an "Open" link; tapping it (or the
+ *    same spot again) opens the line, tapping elsewhere dismisses it.
  *  - Select a person's name to narrow the passages to that person; their row
  *    moves to the top, spans the full width and grows taller.
  *  - URL: ?filter=<topic-slug>&id=<person or interview objectid>
@@ -26,6 +28,8 @@
   var SOURCE = root.getAttribute('data-source');
   var OPEN_BY_DEFAULT = 3;   // interviews unfolded when a topic is selected
   var SNAP_PX = 4;           // how close the pointer must be to a mark to pick it up
+  var TOUCH_SNAP_PX = 14;    // the same for a fingertip
+  var TOUCH_SAME_PX = 24;    // a second tap this close to the first opens the passage
   var GAP = 2;               // px between a person's interviews
 
   var $ = function (id) { return document.getElementById(id); };
@@ -168,7 +172,8 @@
       var canvas = el('canvas', 'tv-strip');
       canvas.setAttribute('aria-hidden', 'true');
       canvas.addEventListener('pointermove', function (event) { hover(person, event); });
-      canvas.addEventListener('pointerleave', hideTooltip);
+      // touch fires pointerleave after every tap; keep a pinned passage up
+      canvas.addEventListener('pointerleave', function () { if (!pinned) hideTooltip(); });
       canvas.addEventListener('click', function (event) { activate(person, event); });
       row.appendChild(name);
       row.appendChild(close);
@@ -282,7 +287,8 @@
     var interview = segment.interview;
     var line = Math.min(interview.n - 1, Math.max(0, Math.floor(((x - segment.x) / segment.w) * interview.n)));
     var lines = topicLines(interview);
-    var tolerance = Math.ceil((SNAP_PX * interview.n) / segment.w);
+    var snap = pointerType === 'touch' ? TOUCH_SNAP_PX : SNAP_PX;
+    var tolerance = Math.ceil((snap * interview.n) / segment.w);
     var nearest = -1;
     var lo = 0, hi = lines.length - 1;
     while (lo <= hi) {
@@ -310,17 +316,19 @@
     return null;
   }
 
-  var lastTip = null;
+  var pinned = null;   // touch: { person, target, x } while a tapped passage is shown
 
   function hover(person, event) {
+    if (pointerType === 'touch' || pinned) return;  // touch uses tap-to-pin instead
     var target = hit(person, event);
     if (!target) { hideTooltip(); return; }
     showTooltip(target, event);
   }
 
-  function showTooltip(target, event) {
+  function showTooltip(target, event, pin) {
     var tip = els.tooltip;
     tip.textContent = '';
+    tip.classList.toggle('is-pinned', !!pin);
     tip.appendChild(el('strong', null, target.interview.title));
     // rows labelled by title: say who is speaking
     if (data.byTitle && target.interview.interviewee && target.interview.interviewee !== target.interview.person.name) tip.appendChild(el('span', 'tv-tip-who', 'With ' + target.interview.interviewee));
@@ -335,6 +343,11 @@
       var words = passage[3].length > 180 ? passage[3].slice(0, 180).replace(/\s+\S*$/, '') + '…' : passage[3];
       tip.appendChild(el('div', null, words));
     }
+    if (pin) {
+      var open = el('a', 'tv-tip-open', 'Open this moment in the interview →');
+      open.href = lineUrl(target.interview, target.line);
+      tip.appendChild(open);
+    }
     tip.hidden = false;
     var box = tip.getBoundingClientRect();
     var left = Math.min(Math.max(8, event.clientX - box.width / 2), window.innerWidth - box.width - 8);
@@ -342,25 +355,34 @@
     if (top < 8) top = event.clientY + 18;
     tip.style.left = left + 'px';
     tip.style.top = top + 'px';
-    lastTip = target.interview.id + ':' + target.line;
   }
 
   function hideTooltip() {
     els.tooltip.hidden = true;
-    lastTip = null;
+    els.tooltip.classList.remove('is-pinned');
+    pinned = null;
   }
 
   var pointerType = 'mouse';
   root.addEventListener('pointerdown', function (event) { pointerType = event.pointerType || 'mouse'; }, true);
 
   function activate(person, event) {
-    var target = hit(person, event);
-    if (!target) return;
-    // On touch there is no hover: the first tap shows what the mark is, the second opens it.
-    if (pointerType === 'touch' && lastTip !== target.interview.id + ':' + target.line) {
-      showTooltip(target, event);
+    // On touch there is no hover: the first tap pins what the mark is, with an Open link.
+    // A second tap on (about) the same spot opens it, since a fingertip rarely lands
+    // on exactly the same line twice.
+    if (pointerType === 'touch') {
+      if (pinned && pinned.person === person && Math.abs(event.clientX - pinned.x) <= TOUCH_SAME_PX) {
+        window.location.href = lineUrl(pinned.target.interview, pinned.target.line);
+        return;
+      }
+      var tapped = hit(person, event);
+      if (!tapped) { hideTooltip(); return; }
+      showTooltip(tapped, event, true);
+      pinned = { person: person, target: tapped, x: event.clientX, y: window.scrollY };
       return;
     }
+    var target = hit(person, event);
+    if (!target) return;
     window.location.href = lineUrl(target.interview, target.line);
   }
 
@@ -577,7 +599,14 @@
       els.expand.addEventListener('click', openAll);
       els.printAll.addEventListener('click', function () { openAll(); window.print(); });
     }
-    window.addEventListener('scroll', hideTooltip, { passive: true });
+    // a pinned (tapped) passage survives the small scroll a tap can cause
+    window.addEventListener('scroll', function () {
+      if (!pinned || Math.abs(window.scrollY - pinned.y) > 40) hideTooltip();
+    }, { passive: true });
+    // tapping anywhere but the strips or the passage itself dismisses it
+    document.addEventListener('pointerdown', function (event) {
+      if (pinned && !els.tooltip.contains(event.target) && !event.target.classList.contains('tv-strip')) hideTooltip();
+    });
 
     var frame = 0;
     var redraw = function () {

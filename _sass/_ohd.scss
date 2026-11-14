@@ -158,3 +158,66 @@
     }
 
 }
+
+/* ---------- small screens ----------
+   The site title and the interview's button row are the two things that pushed
+   pages wider than a phone screen (sideways scrolling). Let both wrap instead. */
+
+@media (max-width: 991.98px) {
+    header .navbar > .container > h1 {
+        min-width: 0;
+        flex: 1 1 0;
+    }
+
+    header .navbar-brand {
+        white-space: normal;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #transcript-metadata .btn-group.meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* buttons stand alone once they wrap, so give each its own rounded corners */
+    #transcript-metadata .btn-group.meta > .btn,
+    #transcript-metadata .btn-group.meta > .btn-group > .btn {
+        margin-left: 0;
+        border-radius: var(--bs-btn-border-radius);
+    }
+}
+
+/* long words or URLs in a transcript line wrap rather than widen the page */
+#contents-container .words {
+    overflow-wrap: anywhere;
+}
+
+/* sticky transcript search bar on phones (markup: _includes/transcript/item/filters.html):
+   one row of menu + search, and a small show/hide tab that covers less of the text */
+@media (max-width: 767.98px) {
+    #filters-search .filters,
+    #filters-search #quicksearch {
+        min-width: 0;
+        text-overflow: ellipsis;
+    }
+
+    #filters-search #goButton {
+        padding-left: 0.6rem !important;
+        padding-right: 0.6rem !important;
+    }
+
+    #filters-search .filter-tab {
+        width: auto;
+        bottom: -12px;
+        padding: 0.15rem 0.75rem !important;
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    #filters-search #linecount {
+        font-size: 0.85rem;
+    }
+}
