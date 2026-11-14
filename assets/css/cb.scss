@@ -42,5 +42,8 @@ $theme-link-color: {{ site.data.theme.link-color | default: '""' }};
 /* pull in Oral History as Data styles to override everything but Custom style changes */
 @use "ohd";
 
+/* topic visualization page and the interview page topic bar */
+@use "topic-viz";
+
 /* pull in custom styles to override everything else */
 @use "custom";

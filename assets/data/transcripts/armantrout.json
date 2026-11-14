@@ -1,0 +1,5020 @@
+{
+  "title": "Interview with Rae Armantrout",
+  "interviewee": "Rae Armantrout",
+  "interviewer": "Devin Becker",
+  "date": "2014-03-27T00:00:00+00:00",
+  "subjects": [
+    "poetry"
+  ],
+  "segments": [
+    {
+      "id": "armantrout_0",
+      "index": 0,
+      "speaker": "Devin Becker",
+      "words": "And there we go with that. This could be a good set up.",
+      "tags": [],
+      "timestamp": "[0:00]"
+    },
+    {
+      "id": "armantrout_1",
+      "index": 1,
+      "speaker": null,
+      "words": "Good.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_2",
+      "index": 2,
+      "speaker": null,
+      "words": "So, three parts to the interview. First part will be kind of how you're working now, with the computer and back and forth&#8212;kind of a brief short-answer questions. This comes out of a survey a colleague of mine and I did with a lot of kind of emerging poets about three years ago. It was like an online survey just to see how people are saving and organizing their work.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_3",
+      "index": 3,
+      "speaker": null,
+      "words": "So that will be kind of a couple of pages, but fairly quick.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_4",
+      "index": 4,
+      "speaker": null,
+      "words": "And then we'll talk kind of more overarchingly about your professional career and about how the processes for you have changed, have not changed with. Some idea, you know, with some sort of focus on how the computer impacted that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_5",
+      "index": 5,
+      "speaker": null,
+      "words": "Then, we'll talk a little bit about the computer in general, and a little bit about correspondence and teaching, and ask a few plunk questions at the end just to see what you think about computers&#8212;which is such a large question&#8212;but it gets somewhat repetitive at times. So, if you think you've answered already, say, \"Skip it,\" or you know, \"Let's go.\"",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_6",
+      "index": 6,
+      "speaker": "Rae Armantrout",
+      "words": "About how long will it take?",
+      "tags": [],
+      "timestamp": "[01:09]"
+    },
+    {
+      "id": "armantrout_7",
+      "index": 7,
+      "speaker": "DB",
+      "words": "It'll take about an hour and fifteen minutes.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_8",
+      "index": 8,
+      "speaker": "RA",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_9",
+      "index": 9,
+      "speaker": "DB",
+      "words": "And if, you know, need a break at any time, no problem.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_10",
+      "index": 10,
+      "speaker": "RA:",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_11",
+      "index": 11,
+      "speaker": "DB",
+      "words": "So, yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_12",
+      "index": 12,
+      "speaker": null,
+      "words": "So, can we begin?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_13",
+      "index": 13,
+      "speaker": "RA",
+      "words": "Sure.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_14",
+      "index": 14,
+      "speaker": "DB",
+      "words": "If you wouldn't mind stating your name, your date of birth, and the location we're at right now.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_15",
+      "index": 15,
+      "speaker": "RA",
+      "words": "OK. Ray Armantrout (1:29), April 13th, 1947, and we are at my home in Norman Heights, San Diego.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_16",
+      "index": 16,
+      "speaker": "DB",
+      "words": "Alright. So, I'm going to first ask about how you compose currently. So what genres do you work in?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_17",
+      "index": 17,
+      "speaker": "RA",
+      "words": "Mostly poetry.",
+      "tags": [],
+      "timestamp": "[01:43]"
+    },
+    {
+      "id": "armantrout_18",
+      "index": 18,
+      "speaker": "DB",
+      "words": "Mostly poetry.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_19",
+      "index": 19,
+      "speaker": "RA",
+      "words": "Once in a while I write an essay, but mostly poetry.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_20",
+      "index": 20,
+      "speaker": "DB",
+      "words": "OK. And what kind of devices&#8212;what kind of computer devices&#8212;do you own or have access to for your writing?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_21",
+      "index": 21,
+      "speaker": "RA",
+      "words": "Well, really just two. I have an iPad and I have a Dell computer upstairs.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_22",
+      "index": 22,
+      "speaker": "RA",
+      "words": "Oh, and I have one at work, too. Also a Dell.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_23",
+      "index": 23,
+      "speaker": "DB",
+      "words": "Do you use the one at work very often for actually writing?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_24",
+      "index": 24,
+      "speaker": "RA",
+      "words": "Actually, no. So...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_25",
+      "index": 25,
+      "speaker": "DB",
+      "words": "No, OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_26",
+      "index": 26,
+      "speaker": null,
+      "words": "So, the operating systems are&#8212;you've got a Mac, and you have a PC?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_27",
+      "index": 27,
+      "speaker": "RA",
+      "words": "Uh-hmm.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_28",
+      "index": 28,
+      "speaker": "DB",
+      "words": "And do you work on one of these devices primarily?",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_29",
+      "index": 29,
+      "speaker": "RA",
+      "words": "Well, actually, I probably work primarily in this old school device called \"notebook\" where I, you know, fill pages with illegible text, and then once I start to think that my text is coming together, very often I'll do a version of it&#8212;just type it into the iPad. And I can show you. I'll send it to myself. Sometimes, I'll send it to my friend, Ron Silliman (2:54). And you know, I mean, I like to know how he'll respond to it&#8212;but it's also kind of a lazy way of saving a record of it.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_30",
+      "index": 30,
+      "speaker": "DB",
+      "words": "Yeah, yeah.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_31",
+      "index": 31,
+      "speaker": "RA",
+      "words": "Because I send it to myself, too.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_32",
+      "index": 32,
+      "speaker": null,
+      "words": "And then once I've done that a bit, and I have several versions, I'll go upstairs and start working on the computer.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_33",
+      "index": 33,
+      "speaker": "DB",
+      "words": "Oh, OK.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": "[3:13]"
+    },
+    {
+      "id": "armantrout_34",
+      "index": 34,
+      "speaker": null,
+      "words": "So, you've answered my next question&#8212;you're working between notebooks and digital devices&#8212;?",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_35",
+      "index": 35,
+      "speaker": "RA",
+      "words": "Uh-hmm.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_36",
+      "index": 36,
+      "speaker": "DB",
+      "words": "&#8212;and is there ever a point where you print out the poem?",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_37",
+      "index": 37,
+      "speaker": "RA",
+      "words": "Oh, yeah.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_38",
+      "index": 38,
+      "speaker": "DB",
+      "words": "OK. Will that be at a point, like, after you've reached your upstairs computer?",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_39",
+      "index": 39,
+      "speaker": "RA",
+      "words": "Yeah, yeah.",
+      "tags": [
+        "paper",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_40",
+      "index": 40,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_41",
+      "index": 41,
+      "speaker": "RA",
+      "words": "I mean, I've got&#8212;well, I don't know how many versions I've got that I could show&#8212;I don't know. Are you interested in seeing printout versions, versions on here of anything I've been working on recently? Because we could do that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_42",
+      "index": 42,
+      "speaker": null,
+      "words": "Let's see.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_43",
+      "index": 43,
+      "speaker": null,
+      "words": "These...these might not be versions, but I could find versions. How do you want to do that?",
+      "tags": [],
+      "timestamp": "[3:53]"
+    },
+    {
+      "id": "armantrout_44",
+      "index": 44,
+      "speaker": "DB",
+      "words": "Well, I think right now we can just talk about it and then at the end, I've got a camera, too. I can just take some pictures of that, and have it kind of as photographs&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_45",
+      "index": 45,
+      "speaker": "RA",
+      "words": "Sure.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_46",
+      "index": 46,
+      "speaker": "DB",
+      "words": "&#8212;which I think that's probably the best way.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_47",
+      "index": 47,
+      "speaker": null,
+      "words": "So and then, how do you save your pre-writing, your notes there?",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_48",
+      "index": 48,
+      "speaker": "RA",
+      "words": "I have a bunch of these filling up my shelves. Right now, I have way too many. A couple of times, I've sold or donated my papers to archives including Stanford and also at UC-San Diego. And when I do, I also include these.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_49",
+      "index": 49,
+      "speaker": "DB",
+      "words": "You include those?",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_50",
+      "index": 50,
+      "speaker": "RA",
+      "words": "Hmm",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_51",
+      "index": 51,
+      "speaker": "DB",
+      "words": "OK. How many? Do you have any idea how many you've probably gone through?",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_52",
+      "index": 52,
+      "speaker": "RA",
+      "words": "Hundreds.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_53",
+      "index": 53,
+      "speaker": "DB",
+      "words": "Hundreds?",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_54",
+      "index": 54,
+      "speaker": "RA",
+      "words": "Maybe thousands.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_55",
+      "index": 55,
+      "speaker": "DB",
+      "words": "OK. Do you always go for the same kind of size?",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_56",
+      "index": 56,
+      "speaker": "RA",
+      "words": "Yeah, pretty much.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_57",
+      "index": 57,
+      "speaker": "DB",
+      "words": "Pretty much?",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_58",
+      "index": 58,
+      "speaker": "RA",
+      "words": "I'd like it to be able to fit in my purse because I take it with me, and sometimes I write at a café, or, you know, someplace out in the world. So, I want to be able to stick it in my purse&#8212;",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_59",
+      "index": 59,
+      "speaker": "DB",
+      "words": "Right.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_60",
+      "index": 60,
+      "speaker": "RA",
+      "words": "&#8212;-riding the airplane, or whatever.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_61",
+      "index": 61,
+      "speaker": null,
+      "words": "So, it's nice if it's about this size, and it's nice if it's flexible.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": "[5:00]"
+    },
+    {
+      "id": "armantrout_62",
+      "index": 62,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_63",
+      "index": 63,
+      "speaker": "RA:",
+      "words": "And it's nice if it's not expensive.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_64",
+      "index": 64,
+      "speaker": "DB",
+      "words": "Yeah, yeah because you have to buy so many of them.",
+      "tags": [
+        "paper",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_65",
+      "index": 65,
+      "speaker": null,
+      "words": "So, in terms of your digital files, what format do you usually work in?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_66",
+      "index": 66,
+      "speaker": "RA",
+      "words": ".docx.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_67",
+      "index": 67,
+      "speaker": "DB",
+      "words": "OK, .docx.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_68",
+      "index": 68,
+      "speaker": null,
+      "words": "As you're working in those formats, do you save drafts of the individual documents, or do you save over those drafts?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_69",
+      "index": 69,
+      "speaker": "RA",
+      "words": "I mostly save over, which is not a good idea. But sometimes I have printed out drafts, and I save drafts. I probably do not save all of them, which is not great, but I save a number of them and then eventually, I'll probably give them to the library.",
+      "tags": [
+        "files",
+        "between",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_70",
+      "index": 70,
+      "speaker": "DB",
+      "words": "OK. And then you're emailing them back?",
+      "tags": [
+        "files",
+        "between",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_71",
+      "index": 71,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [
+        "files",
+        "between",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_72",
+      "index": 72,
+      "speaker": "DB",
+      "words": "So, that's sort of a draft as well?",
+      "tags": [
+        "files",
+        "between",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_73",
+      "index": 73,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [
+        "files",
+        "between",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_74",
+      "index": 74,
+      "speaker": "DB",
+      "words": "And what are your naming conventions for your files?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_75",
+      "index": 75,
+      "speaker": "RA:",
+      "words": "I just name it&#8212;I mean&#8212;whatever the title of the poem.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_76",
+      "index": 76,
+      "speaker": "DB",
+      "words": "Whatever the title is?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_77",
+      "index": 77,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_78",
+      "index": 78,
+      "speaker": "DB",
+      "words": "And then if it's a draft?",
+      "tags": [
+        "files",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_79",
+      "index": 79,
+      "speaker": "RA",
+      "words": "I number them. Sometimes, I'll have, you know, \"such-and-such a title one,\" \"such-and-such a title two,\"... But when it gets too confusing, sometimes I'll just erase the old ones. So, I'm not a very good curator of my own history that way.",
+      "tags": [
+        "files",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_80",
+      "index": 80,
+      "speaker": "DB",
+      "words": "Yeah? And you do save some paper copies of those drafts?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_81",
+      "index": 81,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_82",
+      "index": 82,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_83",
+      "index": 83,
+      "speaker": null,
+      "words": "Do you back up your digital files any way?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_84",
+      "index": 84,
+      "speaker": "RA",
+      "words": "Not as much as I should. I mean, I do have a back up on a zip drive, but I haven't backed-up for several months. So, I'm careless.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_85",
+      "index": 85,
+      "speaker": "DB",
+      "words": "And then when you're sending these emails back and forth, is it like a Gmail or some sort of something like that?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_86",
+      "index": 86,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_87",
+      "index": 87,
+      "speaker": "DB",
+      "words": "So, you could go back and find them that way in some way?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_88",
+      "index": 88,
+      "speaker": "RA",
+      "words": "Yeah, yes.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_89",
+      "index": 89,
+      "speaker": "DB:",
+      "words": " So, you're not using Dropbox or any other Cloud-based&#8212;?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_90",
+      "index": 90,
+      "speaker": "RA",
+      "words": "No. I have Dropbox, but I am not using it for this. I'm using it for a class that I've been teaching with someone.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_91",
+      "index": 91,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_92",
+      "index": 92,
+      "speaker": "RA",
+      "words": "But, I could use it that way. I mean, it's something to think about.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_93",
+      "index": 93,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_94",
+      "index": 94,
+      "speaker": null,
+      "words": "As a digital archivist, I might have some suggestions. Do you ever have files saved in more than one location?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_95",
+      "index": 95,
+      "speaker": "RA",
+      "words": "No. Well, the zip drive and the computer hard drive.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_96",
+      "index": 96,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_97",
+      "index": 97,
+      "speaker": "RA",
+      "words": "That would be it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_98",
+      "index": 98,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_99",
+      "index": 99,
+      "speaker": "RA",
+      "words": "And paper. That would be it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_100",
+      "index": 100,
+      "speaker": "DB",
+      "words": "And then when you're finished with a piece, how do you&#8212;is there anything special that you do for that file?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_101",
+      "index": 101,
+      "speaker": "RA",
+      "words": "No, I pretty much know which is the finest&#8212;the final version. And if I start to get confused, like I say, I just erase the others, which is probably a bad idea, but&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_102",
+      "index": 102,
+      "speaker": "DB",
+      "words": "And then what about the final version&#8212;like the books and the journals&#8212;do you save those?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_103",
+      "index": 103,
+      "speaker": "RA",
+      "words": "Well, what happens&#8212;this is what I do:",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_104",
+      "index": 104,
+      "speaker": "RA",
+      "words": "I'm going to take these out because these new papers are not very significant. Those are copies that I took with me to give a reading somewhere. So that's why they're loose.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_105",
+      "index": 105,
+      "speaker": "RA",
+      "words": "But this is the manuscript that I'm working on now. These are really old-fashioned. These are called thesis binders. This one is all beaten up. But you can't really even buy them. You used to be able to buy them in stationary stores.",
+      "tags": [
+        "mss",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_106",
+      "index": 106,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "mss",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_107",
+      "index": 107,
+      "speaker": "RA",
+      "words": "Lyn Hejinian (8:26) in Berkeley knows. I guess she has a whole bunch of them. I don't think even she can get them anymore, but she doesn't use them anymore and she has a big stack, and so, she sends them to me.",
+      "tags": [
+        "mss",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_108",
+      "index": 108,
+      "speaker": "DB",
+      "words": "Oh, that's nice.",
+      "tags": [
+        "mss",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_109",
+      "index": 109,
+      "speaker": "RA",
+      "words": "So, this is really old school. But the way I use it is, it helps me order&#8212;not only keep the poems for the manuscript, but I order the manuscript this way. I mean, I kind of decide what reads well by trying the poems out in different places&#8212;",
+      "tags": [
+        "mss",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_110",
+      "index": 110,
+      "speaker": "RA",
+      "words": "&#8212;within this manuscript so that I don't do that thing you hear about writers doing about spreading the pages all over the floor, or all over the walls, or something.",
+      "tags": [
+        "mss",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_111",
+      "index": 111,
+      "speaker": "DB",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_112",
+      "index": 112,
+      "speaker": "RA",
+      "words": "Because I've already been deciding as I went along by where I place them in this thesis binder.",
+      "tags": [
+        "mss",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_113",
+      "index": 113,
+      "speaker": "DB",
+      "words": "OK. And so, will you be working on many poems at the same time?",
+      "tags": [
+        "mss",
+        "revision"
+      ],
+      "timestamp": "[9:09]"
+    },
+    {
+      "id": "armantrout_114",
+      "index": 114,
+      "speaker": "RA",
+      "words": "No, not usually.",
+      "tags": [
+        "mss",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_115",
+      "index": 115,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [
+        "mss",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_116",
+      "index": 116,
+      "speaker": "RA",
+      "words": "Almost never. I'm kind of, you know, obsessive when I start something. I just work on it until I finish it. I mean, once in a while I give up on something for a while and set it aside, and go on to something else, and then go back to it. But I'm not actively working on two things at a time.",
+      "tags": [
+        "mss",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_117",
+      "index": 117,
+      "speaker": "DB:",
+      "words": " OK. And so, just to be clear then, if you finish a piece, you would then go to your&#8212;you would print it out and then take it to this thesis binder, put it in a place where you think it may fit&#8212;",
+      "tags": [
+        "mss",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_118",
+      "index": 118,
+      "speaker": "RA",
+      "words": "Yes",
+      "tags": [
+        "mss",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_119",
+      "index": 119,
+      "speaker": "DB:",
+      "words": " &#8212;with the rest that are working, and then once you have what you would&#8212;how do you know when you have a collection, then?",
+      "tags": [
+        "mss",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_120",
+      "index": 120,
+      "speaker": "RA",
+      "words": "Well, it used to be that I had a collection when I had enough poems for a book, but it seems as",
+      "tags": [
+        "mss",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_121",
+      "index": 121,
+      "speaker": "RA",
+      "words": "if I'm writing more now. So, I get to make some more choices&#8212;I get to cut things&#8212;cut a manuscript down, save some things for later. So, I get to make some decisions about how the poems work with each other and it's kind of intuitive",
+      "tags": [
+        "mss",
+        "highlight"
+      ],
+      "timestamp": "[10:00]"
+    },
+    {
+      "id": "armantrout_122",
+      "index": 122,
+      "speaker": "DB",
+      "words": "OK. Have you ever received or sought out information about methods for digitally archiving your work?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_123",
+      "index": 123,
+      "speaker": "RA",
+      "words": "No.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_124",
+      "index": 124,
+      "speaker": "DB",
+      "words": "No? OK. Those are the short answer. And I think we did cover kind of the \"nuts-and-bolts\" of your current practice, so that's good. So, in this section, we're going to kind of talk about sort of three areas of your writing talk about the different stages",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_125",
+      "index": 125,
+      "speaker": "RA",
+      "words": "Sure.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_126",
+      "index": 126,
+      "speaker": "DB:",
+      "words": "So, how long have you been writing professionally, is the question?",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_127",
+      "index": 127,
+      "speaker": "RA",
+      "words": "Well you know&#8212;for poets, that's a hard question.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_128",
+      "index": 128,
+      "speaker": "DB",
+      "words": "Yeah. How long have you been&#8212;",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_129",
+      "index": 129,
+      "speaker": "RA",
+      "words": "Taking it seriously?",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_130",
+      "index": 130,
+      "speaker": "DB",
+      "words": "Yeah, maybe that's the better way of putting it.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_131",
+      "index": 131,
+      "speaker": "RA",
+      "words": "Since I was a senior in college, really.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_132",
+      "index": 132,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_133",
+      "index": 133,
+      "speaker": "RA",
+      "words": "I think I had my first poem published in a national magazine shortly after I graduated from college, and then I just continued to publish in magazines. I had my first book was published when I was thirty, and I've been publishing books ever since. And I suppose that now you could say, or&#8212;hmm, when would it&#8212;? If by a professional, you mean somebody who actually makes money and has a reputation, I guess I've been in that category maybe for twenty-five years, or something.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_134",
+      "index": 134,
+      "speaker": "DB",
+      "words": "OK, I think I should change the question.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_135",
+      "index": 135,
+      "speaker": "RA",
+      "words": "For poets.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_136",
+      "index": 136,
+      "speaker": "DB",
+      "words": "Yeah. Would you please describe, kind of, the arc of your career? Like where you started? I would say&#8212;",
+      "tags": [
+        "career"
+      ],
+      "timestamp": "[12:34]"
+    },
+    {
+      "id": "armantrout_137",
+      "index": 137,
+      "speaker": null,
+      "words": "(Phone rings)",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_138",
+      "index": 138,
+      "speaker": "DB",
+      "words": "Wait for a second. If you need to answer that, it's fine.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_139",
+      "index": 139,
+      "speaker": "RA",
+      "words": "Yeah, let me hear who it is.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_140",
+      "index": 140,
+      "speaker": "DB",
+      "words": "Sure.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_141",
+      "index": 141,
+      "speaker": "RA",
+      "words": "Probably I don't need to answer, but if it's someone I really want to talk to&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_142",
+      "index": 142,
+      "speaker": null,
+      "words": "Bad timing.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_143",
+      "index": 143,
+      "speaker": "DB",
+      "words": "It's OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_144",
+      "index": 144,
+      "speaker": "RA",
+      "words": "It ought to pick up after this, or maybe they'll give up. Of course I didn't answer. It's probably a sales call anyway.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_145",
+      "index": 145,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_146",
+      "index": 146,
+      "speaker": "RA",
+      "words": "OK, what were you saying?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_147",
+      "index": 147,
+      "speaker": "DB",
+      "words": "OK. So, if you wouldn't mind describing the arc of your career from when you started sort of seriously writing until now, just sort of a general overview. So, you know, just to start the interview.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_148",
+      "index": 148,
+      "speaker": "RA",
+      "words": "Alright.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_149",
+      "index": 149,
+      "speaker": null,
+      "words": "I was interested in poetry since childhood. My mother read poetry to me. I wrote when I was a little kid, then I kind of stopped for a while. And then I started again in college and I was reading the poet Denise Levertov (13:37).",
+      "tags": [
+        "career"
+      ],
+      "timestamp": "[13:24]"
+    },
+    {
+      "id": "armantrout_150",
+      "index": 150,
+      "speaker": null,
+      "words": "Oh, and I&#8212;I grew up here in San Diego, actually, and then I went to San Diego State for two years, and I was reading the poet Denise Levertov. And then I transferred to Berkeley, and she was teaching there. So, I took a class with her, and through that experience, I met my friend Ron Silliman (13:56), who's a poet&#8212;the one I send poems to, who's still a friend of mine. And then I came back here, and then I moved to San Francisco to go to grad school and he was living there. And through him and also through the grad program, I met other poets. And there was&#8212;you know, San Francisco is a good literary town. So, there was quite a community of poets in San Francisco, and I eventually was friends with poets who became&#8212;came to be known as the \"Language Poets\" (scare quotes), the West Coast Language poets anyway, which would include Barret Watten, and Bob Perelman, and Lyn Hejinian, and Kit Robinson, and Ron Silliman and Carla Harryman (14:41), among others.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_151",
+      "index": 151,
+      "speaker": null,
+      "words": "And I went to a lot of readings series and participated in small press publications, and had a very active literary life&#8212;like I said, publishing magazines and journals&#8212;and",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_152",
+      "index": 152,
+      "speaker": null,
+      "words": "my first publisher was someone that we knew there. It was called the Figures Press and his name was Jeff Young. And so, that book came out in an edition of a very small press&#8212;an edition of five hundred copies, which&#8212;I gave a lot of them away to my friends and such.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": "[15:00]"
+    },
+    {
+      "id": "armantrout_153",
+      "index": 153,
+      "speaker": null,
+      "words": "And then at the end of the seventies (this was in the seventies) At the end of the seventies, I got pregnant and it just didn't seem like we were going to be able to keep living in San Francisco and raise a kid because, kind of like now&#8212;I guess it's more extreme now&#8212;but there was gentrification and yuppification going on then. And suddenly the rents were getting out of reach for us (especially if we had a kid, because you can't be so hand-to-mouth with a kid). And then my mother lived here and was willing to babysit and also Chuck got an offer of a job here that would have benefits and health insurance and all. So, we ended up back here. I was not very happy to come back here because then (and this is going to get to a topic that you like), then that was really isolating. Because that was before email, right?",
+      "tags": [
+        "career"
+      ],
+      "timestamp": "[15:25]"
+    },
+    {
+      "id": "armantrout_154",
+      "index": 154,
+      "speaker": "DB",
+      "words": "Yeah, yeah.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_155",
+      "index": 155,
+      "speaker": "RA",
+      "words": "That was even before I had a computer. So, it just felt like, you know, kind of falling off a cliff. I mean, there were some poets here and I got to know them gradually&#8212;Jerome Rothenberg, and David Anton (16:22), and Michael Davidson&#8212;but not that many people of my generation really.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_156",
+      "index": 156,
+      "speaker": null,
+      "words": "So, I had lengthy correspondences actually on paper with the people back in San Francisco&#8212;not all of them but some of them. I can't believe it now, how much time we spent writing long letters out by hand, or typing them on typewriters.",
+      "tags": [
+        "correspondence",
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_157",
+      "index": 157,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_158",
+      "index": 158,
+      "speaker": "RA",
+      "words": "It seems surreal now that everything goes so fast. I mean, who would do that? But we did. And so, some of those letters are in archives now.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_159",
+      "index": 159,
+      "speaker": null,
+      "words": "And meanwhile, I kept sending work out to journals. Lyn Hejinian (17:03) in the Bay Area had a small press and she published my second book which was a chap book called The Invention of Hunger.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": "[17:03]"
+    },
+    {
+      "id": "armantrout_160",
+      "index": 160,
+      "speaker": "DB",
+      "words": "And what press is that?",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_161",
+      "index": 161,
+      "speaker": "RA",
+      "words": "It was Tuumba, T-U-U-M-B-A. Kind of, you know, a letterpress. And then, my third book&#8212;which was my second full-length book–-was published by Burning Deck in Providence.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_162",
+      "index": 162,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_163",
+      "index": 163,
+      "speaker": "RA",
+      "words": "So, that was my first kind of, you know, outside my immediate coterie publication.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_164",
+      "index": 164,
+      "speaker": "DB",
+      "words": "Yeah",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_165",
+      "index": 165,
+      "speaker": "RA",
+      "words": "Still a small press, but&#8212;",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_166",
+      "index": 166,
+      "speaker": null,
+      "words": "&#8212;and then I started publishing with the Los Angeles publisher Sun and Moon, who also published people like Lyn Hejinian and Charles Bernstein (17:50). You know, it was a very active press then. It changed&#8212;he changed it to Green Integer, and I do have a book out on Green Integer, too&#8212;but the focus became, for him, became more re-publishing classics that had, you know, gone off copyright.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_167",
+      "index": 167,
+      "speaker": null,
+      "words": "So, about that time, fortuitously, I got picked up by Wesleyan. At that time I was already fairly well known, at least, in the kind of small press world. I'd been in some anthologies. But I think that being published by Wesleyan and having a selected come out with them in 2001 really kind of gave my career, so to speak, a boost, and things have just picked up since then including my pace of writing. So that, since 2001&#8212;",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_168",
+      "index": 168,
+      "speaker": null,
+      "words": "&#8212;well, in 2001, I published two books. I published one with Green Integer called the Pretext, and then the selected with Wesleyan, which was called Veil. And then in 2004, I had Up to Speed. In 2007, I had Next Life. In 2009, I had Burst. In 2011, I had Money Shot. And then in 2013, I had Just Sayings.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_169",
+      "index": 169,
+      "speaker": null,
+      "words": "So, yeah.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_170",
+      "index": 170,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_171",
+      "index": 171,
+      "speaker": "RA",
+      "words": "A spurt.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_172",
+      "index": 172,
+      "speaker": "DB",
+      "words": "Yeah, that's great.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_173",
+      "index": 173,
+      "speaker": null,
+      "words": "And then during that time, were you supporting yourself by teaching, mostly?",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_174",
+      "index": 174,
+      "speaker": "RA",
+      "words": "Yeah. When we first came down here, Chuck was one of the managers of the bookstore at San Diego State, and I got, about a year after we got here, I got a part-time teaching job at UC San Diego. At first, it was kind of on and off, and then after that, it was regular but adjunct.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_175",
+      "index": 175,
+      "speaker": null,
+      "words": "I did that for many years. It wasn't until the early 2000s that I got a, you know, \"real\" tenured job at UCSD.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_176",
+      "index": 176,
+      "speaker": "DB",
+      "words": "OK. So, I guess, we want to kind of move in to talking about the different \"spots\" of processes for you and how it changed over the course of your career. So, in terms of like when you first started writing seriously and were kind of doing the pre-writing, the generative work for these poems, how did that look? What was the process for that?",
+      "tags": [
+        "change",
+        "paper",
+        "highlight"
+      ],
+      "timestamp": "[20:00]"
+    },
+    {
+      "id": "armantrout_177",
+      "index": 177,
+      "speaker": "RA",
+      "words": "Well, I think, I always used a notebook. You know, I couldn't tell you exactly what the notebooks looked like way back then, but I always wrote by hand. I think I wrote by hand then&#8212;I'm sure I did longer, took me longer to write a poem, and it also stayed in the hand-written phase longer because back then, when you left the hand-written phase, you had to go to a typewriter. You're too young to know about typewriters, but they were enormously irritating because if you made any mistakes, you had to either start over or put whiteout on it, or you know, etcetera. And then, you would make a copy. I mean, you would print it out and if you wanted another copy, you'd have to type it again. I mean, right?",
+      "tags": [
+        "change",
+        "paper",
+        "highlight"
+      ],
+      "timestamp": "[20:14]"
+    },
+    {
+      "id": "armantrout_178",
+      "index": 178,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_179",
+      "index": 179,
+      "speaker": "RA",
+      "words": "So, I mean, there's a limit to that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_180",
+      "index": 180,
+      "speaker": null,
+      "words": "So, you would kind of just do without when you thought you had pretty much finished version. You might be wrong, but you know...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_181",
+      "index": 181,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_182",
+      "index": 182,
+      "speaker": "RA",
+      "words": "Still.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_183",
+      "index": 183,
+      "speaker": "DB",
+      "words": "When you were working in the notebook, was it usually in a certain spot? Or could that be wherever you were? Was it just&#8212;",
+      "tags": [
+        "paper",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_184",
+      "index": 184,
+      "speaker": "RA",
+      "words": "Well, it would&#8212;I did it a lot at home, but sometimes outside.",
+      "tags": [
+        "paper",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_185",
+      "index": 185,
+      "speaker": "DB",
+      "words": "Outside. And was it something where you&#8212;had a line or an idea that then you would write down?",
+      "tags": [
+        "paper",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_186",
+      "index": 186,
+      "speaker": "RA",
+      "words": "Yeah, I mean, I often start that way&#8212;then, and still, you know. I can&#8212;just something that I hear or see, sort of peaks my interest. It could be something I read, and I'll write down a passage, or I'll write down something I overhear someone say, or even on television, I could hear something that I write down.",
+      "tags": [
+        "paper",
+        "prompt",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_187",
+      "index": 187,
+      "speaker": null,
+      "words": "And I kind of collect those things like a magpie until something starts to take off.",
+      "tags": [
+        "paper",
+        "prompt",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_188",
+      "index": 188,
+      "speaker": "DB",
+      "words": "OK. And in the beginning part of your career, then, how&#8212;at what point would you go to the typewriter? Like when would you kind of feel like, \"OK, this really needs to be typed?\"",
+      "tags": [
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_189",
+      "index": 189,
+      "speaker": "RA",
+      "words": "Well, I guess, when I thought it was good enough to keep and good enough to maybe send a copy to someone to see what they thought, either an editor or a friend. So, that's pretty far along.",
+      "tags": [
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_190",
+      "index": 190,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_191",
+      "index": 191,
+      "speaker": null,
+      "words": "So, would you&#8212;were you doing revisions within the notebook as well?",
+      "tags": [
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_192",
+      "index": 192,
+      "speaker": "RA",
+      "words": "Uh-hmm.",
+      "tags": [
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_193",
+      "index": 193,
+      "speaker": "DB",
+      "words": "And what type of revisions did it sort of start as? I mean, was it&#8212;would you just be crossing out and rewriting? Or would you&#8212;?",
+      "tags": [
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_194",
+      "index": 194,
+      "speaker": "RA",
+      "words": "I don't know if I would cross out. I think I would just, you know, go to another page and rewrite.",
+      "tags": [
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_195",
+      "index": 195,
+      "speaker": "DB",
+      "words": "OK. So, when did the computer start to enter in to this process?",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_196",
+      "index": 196,
+      "speaker": "RA",
+      "words": "Let's see. When did I first get a computer?",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_197",
+      "index": 197,
+      "speaker": null,
+      "words": "The first thing I got was one of those IBM Selectrics that was sort of computerized, where you could make&#8212;you could save, and make a number of copies. But shortly after I got that, I was able to get my first computer. So, that became sort of redundant instantly.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_198",
+      "index": 198,
+      "speaker": null,
+      "words": "I'm trying to think what year it was. I mean, it was probably only...when did...you tell me. When did desktops with word processing become available? It wasn't a Word. It was like Word Perfect, or Word&#8212;",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_199",
+      "index": 199,
+      "speaker": "DB",
+      "words": "Word computers.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_200",
+      "index": 200,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_201",
+      "index": 201,
+      "speaker": "DB",
+      "words": "So, like mid-80's sort of?",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_202",
+      "index": 202,
+      "speaker": "RA",
+      "words": "Yeah, maybe&#8212;",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_203",
+      "index": 203,
+      "speaker": "DB",
+      "words": "&#8212;later than that?",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_204",
+      "index": 204,
+      "speaker": "RA",
+      "words": "&#8212;later, maybe. Yeah. I think I got that Selectric in the mid-80's, maybe, you know&#8212;I probably got the computer by the late-80's, and I don't think I got internet until&#8212;there wasn't internet that you could get until the early 90's, probably.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_205",
+      "index": 205,
+      "speaker": "DB",
+      "words": "Yeah",
+      "tags": [
+        "early"
+      ],
+      "timestamp": "[23:34]"
+    },
+    {
+      "id": "armantrout_206",
+      "index": 206,
+      "speaker": "RA",
+      "words": "It's incredible now, to think!",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_207",
+      "index": 207,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_208",
+      "index": 208,
+      "speaker": null,
+      "words": "How did&#8212;so, how did that first computer come about? I mean, did you know a friend who had a computer and then go after that, or how'd you&#8212;?",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_209",
+      "index": 209,
+      "speaker": "RA",
+      "words": "Yeah. I think, again, Ron Silliman (23:56) who worked in the computer industry&#8212;he worked as a marketer in the computer industry&#8212;he had one. I mean, he didn't live near me at that point, but we were in touch and he had one before I did.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_210",
+      "index": 210,
+      "speaker": null,
+      "words": "But I guess, you know, really, I mean everyone was getting it at about the same time.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_211",
+      "index": 211,
+      "speaker": "DB",
+      "words": "Uh-hmm. So, you got a computer",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_212",
+      "index": 212,
+      "speaker": "RA",
+      "words": "I don't remember. I mean, I guess it was gradual. I still, like I say, work in notebooks but I am sure that I started going from the notebook to the computer sooner than I would have on a typewriter, I am sure. But I don't have a clear memory of it.",
+      "tags": [
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_213",
+      "index": 213,
+      "speaker": null,
+      "words": "What I do have a clear memory of is how the internet changed things. Because then you could send someone something and say, \"What do you think? I don't know about this last line, what do you think?\"",
+      "tags": [
+        "change",
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_214",
+      "index": 214,
+      "speaker": null,
+      "words": "I mean, you could have that kind of conversation.",
+      "tags": [
+        "change",
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_215",
+      "index": 215,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "change",
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_216",
+      "index": 216,
+      "speaker": "RA",
+      "words": "And if you do that in a letter&#8212;which I did, but by the time you got the letter back you'd already made up your mind&#8212;",
+      "tags": [
+        "change",
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": "[25:00]"
+    },
+    {
+      "id": "armantrout_217",
+      "index": 217,
+      "speaker": "DB",
+      "words": "Right, right. So, in the early part when you were sending these by letters, you did that only a little bit and it didn't&#8212;how did you establish&#8212;?",
+      "tags": [
+        "change",
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_218",
+      "index": 218,
+      "speaker": "RA",
+      "words": "I think I did. I mean, I would type something up and send it, usually to a couple of people&#8212;two or three people&#8212;and I would get responses back. But it certainly&#8212;I mean, now we're so used to kind of this instant dialogue, instant gratification. Sometimes I think that that's, you know, maybe that's why I'm writing faster now. Really, it is the stimulation of that.",
+      "tags": [
+        "change",
+        "correspondence",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_219",
+      "index": 219,
+      "speaker": null,
+      "words": "Because I'm still not&#8212;I guess, I'm insecure enough that I'm not comfortable in saying something is finished until somebody has said that they at least think it's interesting. I mean, it doesn't always have to be Ron. Sometimes I send it to somebody else, but I have to have, like, somebody's approval&#8212;not a 100% approval but, like, somebody has to think, \"Oh, this is OK\"&#8212;before I'll put it in a book. So that's sort of an integral part of the process. So obviously, if you could do that and get an answer in a day or two, well, you know.",
+      "tags": [
+        "change",
+        "correspondence",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_220",
+      "index": 220,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_221",
+      "index": 221,
+      "speaker": "RA",
+      "words": "Right.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_222",
+      "index": 222,
+      "speaker": "DB",
+      "words": "Right.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_223",
+      "index": 223,
+      "speaker": "RA",
+      "words": "So then I decide, at that point, whether I still need to revise.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_224",
+      "index": 224,
+      "speaker": "DB",
+      "words": "So, in the&#8212;like when the internet first starts coming and you start working, and kind of sending these things back and forth&#8212;was it just Ron Silliman (26:31) who was your kind of partner?",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_225",
+      "index": 225,
+      "speaker": "RA",
+      "words": "No.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_226",
+      "index": 226,
+      "speaker": "DB",
+      "words": "Few more?",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_227",
+      "index": 227,
+      "speaker": "RA",
+      "words": "I use to send them to more people. Lyn Hejinian, at first, and Bob Perelman, at first, and Lydia Davis, the fiction writer&#8212;she's a friend of mine. And later, Fanny Howe, too.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_228",
+      "index": 228,
+      "speaker": null,
+      "words": "Now, I mostly just send them to Ron, and once in a while, to Lydia. Very rarely to Lyn Hejinian, but still once in a while, like maybe twice a year.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_229",
+      "index": 229,
+      "speaker": null,
+      "words": "So, kind of that number of people has sort of shrunk.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_230",
+      "index": 230,
+      "speaker": "DB",
+      "words": "So you're looking for some sort of affirmation?",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": "[27:05]"
+    },
+    {
+      "id": "armantrout_231",
+      "index": 231,
+      "speaker": "RA",
+      "words": "Yeah",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_232",
+      "index": 232,
+      "speaker": "DB",
+      "words": "Interesting, yeah. Do they give like specific line feedback? Or do they usually just give sort of&#8212;",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_233",
+      "index": 233,
+      "speaker": "RA",
+      "words": "Ron does.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_234",
+      "index": 234,
+      "speaker": "DB:",
+      "words": "OK.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_235",
+      "index": 235,
+      "speaker": "RA",
+      "words": "I mean, it all&#8212;I could show you. This, I guess, is the kind of&#8212;my screen is dirty&#8212;kind of thing you might want to see.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_236",
+      "index": 236,
+      "speaker": null,
+      "words": "So, let me go to my \"Mail,\" and I'll go to my&#8212;",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_237",
+      "index": 237,
+      "speaker": "DB",
+      "words": "Sure.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_238",
+      "index": 238,
+      "speaker": "RA",
+      "words": "&#8212;\"Sent Mail,\" and you can see some of these.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_239",
+      "index": 239,
+      "speaker": null,
+      "words": "Oh, this actually has to do with the internet.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_240",
+      "index": 240,
+      "speaker": null,
+      "words": "I sent Ron a poem that mentions messages I was getting&#8212;it's actually in a poem from mileage.com&#8212;that I thought were funny. Well, so, Ron writes back. He said, \"Not sure you need the Q and A at the end\"&#8212;I had a sort of \"interviewing myself\" bit at the end&#8212;\"Not sure you need the Q and A at the end, but other than the problems with the url\"&#8212;he thought that since I was saying Mileage.com, which he says is a phishing site &#8212;he thought that, if that was ever published in an online journal, and somebody hit on it, clicked it, that I could be in trouble for that, which I don't know if that's true. He says, \"You know that mileage.com is a phishing site. It sends malware to your PC if you follow through.\" And then I, at some point, wrote back. I said, \"I don't do that.\"",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_241",
+      "index": 241,
+      "speaker": "RA:",
+      "words": "So, you know, that's just some of the kinds of&#8212;so there I am, there I am sending something to him and having a correspondence with him.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_242",
+      "index": 242,
+      "speaker": null,
+      "words": "Let's see.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_243",
+      "index": 243,
+      "speaker": null,
+      "words": "Here I am sending something to myself, just to kind of preserve it. Same poem but it has a different title with that point&#8212;there is mileage.com lit up.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_244",
+      "index": 244,
+      "speaker": "DB",
+      "words": "Oh, yeah!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_245",
+      "index": 245,
+      "speaker": "RA",
+      "words": "Yeah, because it lights up if you&#8212;it doesn't on my computer, but it does if you do it on the iPad.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_246",
+      "index": 246,
+      "speaker": "DB",
+      "words": "It does it in Apple.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_247",
+      "index": 247,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_248",
+      "index": 248,
+      "speaker": "DB:",
+      "words": " Right! So, did you write that on your iPad?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_249",
+      "index": 249,
+      "speaker": "RA",
+      "words": "Well, like always, I started here and I moved it to the iPad, and then I moved it to the computer&#8212;-but I was sending&#8212;I think I start writing&#8212;usually, I write in the morning, sitting over there. And I don't want to be running up and down the stairs, so then after I'll just go, \"You know, this looks good enough to kind of type.\" So, I'll type it here. And if I don't yet feel like sharing it with someone, I'll just send it to myself because that's a way of saving it.",
+      "tags": [
+        "prompt",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_250",
+      "index": 250,
+      "speaker": "DB",
+      "words": "And that's when you could move it to your&#8212;",
+      "tags": [
+        "prompt",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_251",
+      "index": 251,
+      "speaker": "RA",
+      "words": "Yeah",
+      "tags": [
+        "prompt",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_252",
+      "index": 252,
+      "speaker": "DB",
+      "words": "&#8212;other computer?",
+      "tags": [
+        "prompt",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_253",
+      "index": 253,
+      "speaker": "RA",
+      "words": "Uh-hmm.",
+      "tags": [
+        "prompt",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_254",
+      "index": 254,
+      "speaker": "DB",
+      "words": "And so when did you start using the iPad?",
+      "tags": [
+        "prompt",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_255",
+      "index": 255,
+      "speaker": "RA",
+      "words": "Gee, again, I got an iPhone maybe three years ago, and I got the iPad maybe two years ago. I don't know. Time's a blur.",
+      "tags": [
+        "prompt",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": "[30:00]"
+    },
+    {
+      "id": "armantrout_256",
+      "index": 256,
+      "speaker": "DB",
+      "words": "Okay. So&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_257",
+      "index": 257,
+      "speaker": "RA",
+      "words": "It's an old one, though.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_258",
+      "index": 258,
+      "speaker": "DB",
+      "words": "So it's been a couple years, two or three years. Did you ever work on the iPhone, too?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_259",
+      "index": 259,
+      "speaker": "RA",
+      "words": "No, too tiny.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_260",
+      "index": 260,
+      "speaker": "DB",
+      "words": "Too small of a typing format.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_261",
+      "index": 261,
+      "speaker": null,
+      "words": "So then, back to the revision correspondence. Do you think that&#8212;why do you think that Ron Silliman (30:29) has kind of been the constant of all that?",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_262",
+      "index": 262,
+      "speaker": "RA",
+      "words": "Well, because he's very confident about what he says, first of all, and he's also very specific. He doesn't always say why he thinks what he thinks, which drives me crazy, but he gives me something to bounce off.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": "[30:33]"
+    },
+    {
+      "id": "armantrout_263",
+      "index": 263,
+      "speaker": "DB",
+      "words": "Yeah, and is he very prompt in responding?",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_264",
+      "index": 264,
+      "speaker": "RA",
+      "words": "Often. Not always. Sometimes it's right away, sometimes it's not for days, depends on how busy he is.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_265",
+      "index": 265,
+      "speaker": "DB",
+      "words": "Yeah, and does he reciprocate? Does he send you things over?",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_266",
+      "index": 266,
+      "speaker": "RA",
+      "words": "He never has. He doesn't like to do that. Other people have.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_267",
+      "index": 267,
+      "speaker": null,
+      "words": "So, you know, that's fine with me, but&#8212;he writes really, really long, kind of book-length things, and he doesn't revise much. He doesn't revise like I do. He just has a different kind of practice, and he seems to be very invested in his own certainty about things more than I am. But some other people will send me things. Lydia Davis sends me things and Fanny Howe (31:25) once in awhile sends me things.",
+      "tags": [
+        "correspondence",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_268",
+      "index": 268,
+      "speaker": "DB",
+      "words": "And how did you kind of develop your revision process, from the beginning, I guess?",
+      "tags": [
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_269",
+      "index": 269,
+      "speaker": "RA",
+      "words": "Well, I guess, I was just always looking for the best word, for instance, and it didn't always come to me right away. But also I will just get parts of things and I know that they're not finished, you know, and then I just try to see what can connect and I'll go one way, one direction and try to connect, you know, B to A. And then B doesn't quite connect to A, so then I'll go on to C and see if that connects to A.",
+      "tags": [
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_270",
+      "index": 270,
+      "speaker": "DB",
+      "words": "And has that been pretty constant throughout?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_271",
+      "index": 271,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_272",
+      "index": 272,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_273",
+      "index": 273,
+      "speaker": null,
+      "words": "Have there been any big changes in the way you've approached kind of pushing the poem to its finished state throughout the time?",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_274",
+      "index": 274,
+      "speaker": "RA",
+      "words": "Well, I bet there have, but you know, I was as much of a stranger to my twenty-four year-old self as you are, almost.",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_275",
+      "index": 275,
+      "speaker": "DB",
+      "words": "Well, you did mention, though, that with the internet and with email becoming more&#8212;giving more easily available correspondence&#8212;you did start to speed up in the work. And do you think that's the only reason, or do you think it also has something to do with maybe moving onto more of a national scene?",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_276",
+      "index": 276,
+      "speaker": "RA",
+      "words": "It could be that. It could be knowing that I have a supporting publisher. It could be just practice, you know, just that I have a better idea of what works now, you know&#8212;what works for me.",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_277",
+      "index": 277,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": "[33:00]"
+    },
+    {
+      "id": "armantrout_278",
+      "index": 278,
+      "speaker": null,
+      "words": "And I know you don't&#8212;I think in one of your other interviews you said you don't really have, like, any intentions in revising your work, but are there primary things for different pieces that you're driven by? Like, are some driven more by sound, some driven more by meaning, some driven more by connecting the parts to the whole or disconnecting the parts to the whole?",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_279",
+      "index": 279,
+      "speaker": "RA",
+      "words": "All of those things equally, you know. I mean, I am very interested in sound, and sounds&#8212;certain sounds can really bother me, or I could get stuck on one certain sound. So yeah, meaning is important to me, too. In terms of connecting parts because, as you know, if you've looked at my work, it often&#8212;",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_280",
+      "index": 280,
+      "speaker": "DB",
+      "words": "&#8212;in sections?",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_281",
+      "index": 281,
+      "speaker": "RA",
+      "words": "&#8212;in sections.",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_282",
+      "index": 282,
+      "speaker": "DB",
+      "words": "Yeah, absolutely.",
+      "tags": [
+        "change",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_283",
+      "index": 283,
+      "speaker": "RA",
+      "words": "And so, the sections might be written on different days; often are. And they often come from different sources or different inspirations, and&#8212;so then, the question is how they link in. And you kind of&#8212;at least if you're me, I shouldn't say \"you\", but \"I\"&#8212;want there to be some kind of possible perceptible connection, but I also want it to be surprising. I want it to kind of go somewhere that you didn't expect it to go, or that I didn't expect it to go. So, sometimes the first thing I come up with is too obvious and sometimes what I come up with is too random. It's like Goldilocks and the Three Bears.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_284",
+      "index": 284,
+      "speaker": "DB",
+      "words": "Has that sort of looking for that surprising turn, or idea, been a constant throughout? I mean, has that been something that's been driving you since you started writing?",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_285",
+      "index": 285,
+      "speaker": "RA",
+      "words": "I've probably become more conscious of it, but I think so, yeah.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_286",
+      "index": 286,
+      "speaker": "DB",
+      "words": "And how do&#8212;so, could you talk a little bit about how, as you say, a lot of your poems are in sections and how those sections kind of come to be a whole? I mean, could there be several different days, and then in between those different sections become different poems?",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_287",
+      "index": 287,
+      "speaker": "RA",
+      "words": "Sometimes that happens, yeah. I mean&#8212;",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": "[35:00]"
+    },
+    {
+      "id": "armantrout_288",
+      "index": 288,
+      "speaker": "DB",
+      "words": "Is it just a&#8212;do you just start to see connections? Does it&#8212;?",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_289",
+      "index": 289,
+      "speaker": "RA",
+      "words": "Yeah, and sometimes I have an idea of what I want vaguely, but I don't know exactly where I'm going to get it or what the specifics are. But I&#8212;sometimes I have just a gut feeling about the direction that I want to go, and other times I don't, and then I just have to be surprised and just know that I want something and should keep my eyes open for it.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_290",
+      "index": 290,
+      "speaker": "DB",
+      "words": "And do you&#8212;I mean, there's a certain point where you say within the emails that you get some sort of affirmation. But then personally, when do you feel like a sense of, \"Oh! That's surprising!\" Is there like an \"Aha!\" moment?",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_291",
+      "index": 291,
+      "speaker": "RA",
+      "words": "Yeah, sure.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_292",
+      "index": 292,
+      "speaker": null,
+      "words": "Yeah, you have to please yourself first.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_293",
+      "index": 293,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_294",
+      "index": 294,
+      "speaker": "RA",
+      "words": "And I think one reason that I tend to send poems out is that I will be dissatisfied and fool with things forever unless somebody goes, \"Hey, that's good.\"",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_295",
+      "index": 295,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_296",
+      "index": 296,
+      "speaker": "RA",
+      "words": "I mean, I'll go, \"Maybe it's not good. Maybe I should do something else.\" So, you know, I think that's why I need somebody to give me a kind of endpoint and say, \"Cut it out now.\"",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_297",
+      "index": 297,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_298",
+      "index": 298,
+      "speaker": "RA",
+      "words": "I mean, sometimes I know, but sometimes I can be insecure and just fiddle.",
+      "tags": [
+        "change",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_299",
+      "index": 299,
+      "speaker": "DB",
+      "words": "Right. And then I guess is there any way&#8212;do you, once the poem kind of reaches the thesis binder stage, is there any time that you start to see the ways those are working and go back and revise there? Or once it's there it's usually kind of off limits?",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_300",
+      "index": 300,
+      "speaker": "RA",
+      "words": "Well, I wouldn't say it's off limits, but I don't usually revise them, but I have. I mean it has happened that I've suddenly seen how something could be better and, you know, gone away from it, gone back to it and went, \"Oh that could be better.\"",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_301",
+      "index": 301,
+      "speaker": null,
+      "words": "But I would say that's, you know, maybe one time in twenty.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_302",
+      "index": 302,
+      "speaker": "DB",
+      "words": "So they're more rare.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_303",
+      "index": 303,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": "[36:58]"
+    },
+    {
+      "id": "armantrout_304",
+      "index": 304,
+      "speaker": "DB",
+      "words": "And when did you start using the thesis binders?",
+      "tags": [
+        "early",
+        "paper",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_305",
+      "index": 305,
+      "speaker": "RA",
+      "words": "Long time ago&#8212;maybe twenty, twenty-five years ago. They used to be easy to find, but now, like I said, they're antique&#8212;old school.",
+      "tags": [
+        "early",
+        "paper",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_306",
+      "index": 306,
+      "speaker": "DB",
+      "words": "Yeah, and before, when you were first putting your first collections together, how did that work? How was that looking?",
+      "tags": [
+        "early",
+        "paper",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_307",
+      "index": 307,
+      "speaker": "RA",
+      "words": "I might have had one even then. Because everyone used to. This is what used to happen. People&#8212;everyone used to bring these to a reading and just read from them. I don't even do that anymore because they're too heavy to carry. I just print them out. But that's what people used to do, so, everyone had one.",
+      "tags": [
+        "early",
+        "paper",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_308",
+      "index": 308,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_309",
+      "index": 309,
+      "speaker": null,
+      "words": "So we've talked about how the other people&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_310",
+      "index": 310,
+      "speaker": null,
+      "words": "Is there any other role that other people play in the process of your revisions? Are there any other people that are important to those, to the kind of finding the finish pieces?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_311",
+      "index": 311,
+      "speaker": "RA",
+      "words": "Well, I think not really except sometimes my editor gives me a little bit of guidance&#8212;not about individual poems but about the order of poems within the manuscript. I usually think I know, but sometimes she has a different idea that she runs by me and we consider that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_312",
+      "index": 312,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_313",
+      "index": 313,
+      "speaker": null,
+      "words": "And then, sort of moving on to the organizational&#8212; what I call organizational/archival&#8212;and we've kind of covered some of this, but when you were first&#8212;so in the early days before the computers, when you kind of hit that, what would you say a final piece is? You'd send it out, would you also keep a printed page?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_314",
+      "index": 314,
+      "speaker": "RA",
+      "words": "Oh, sure.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_315",
+      "index": 315,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_316",
+      "index": 316,
+      "speaker": null,
+      "words": "And that would be in&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_317",
+      "index": 317,
+      "speaker": "RA",
+      "words": "In thesis binders.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_318",
+      "index": 318,
+      "speaker": "DB",
+      "words": "&#8212;and how would you communicate with your publisher with those?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_319",
+      "index": 319,
+      "speaker": "RA",
+      "words": "I suppose we had to communicate by snail mail, how else was there?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_320",
+      "index": 320,
+      "speaker": "DB",
+      "words": "Right, and so you would collect those all&#8212;would you make a copy of it before you send it off?",
+      "tags": [],
+      "timestamp": "[38:38]"
+    },
+    {
+      "id": "armantrout_321",
+      "index": 321,
+      "speaker": "RA",
+      "words": "Oh, yeah. I probably Xeroxed it. I mean, there were Xerox machines.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_322",
+      "index": 322,
+      "speaker": "DB",
+      "words": "Yeah, OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_323",
+      "index": 323,
+      "speaker": null,
+      "words": "And once things were published, and things, did you start to kind of keep an archive&#8212;and archive of your work at that point? I mean, did you have boxes with your papers in it even at the beginning, or did that start to come more gradually?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_324",
+      "index": 324,
+      "speaker": "RA",
+      "words": "That came more gradually. I mean, I wish that I had kept my letters right from the beginning, because I had letters from George Oppen (39:10) and I had letter from Robert Creeley (39:12). It really took me awhile to realize that this was going to be worth anything.",
+      "tags": [
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_325",
+      "index": 325,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_326",
+      "index": 326,
+      "speaker": "RA",
+      "words": "It took seeing some of my friend&#8212;the way some of my friends took it seriously, like Lyn Hejinian (39:27), and organized things, and treated it as if it was all worthwhile.",
+      "tags": [
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_327",
+      "index": 327,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_328",
+      "index": 328,
+      "speaker": "RA",
+      "words": "But I didn't, you know, I didn't come from an intellectual family or background, and so it wasn't natural really for me, and I had to learn it.",
+      "tags": [
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_329",
+      "index": 329,
+      "speaker": "DB",
+      "words": "I'm interested in that, and like how did&#8212;so, the lessons were just from watching them do that, or were they from the conversations? I mean, did you just sort of notice that Lyn Hejinian (40:00) sort of had, like, kept things better?",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": "[40:00]"
+    },
+    {
+      "id": "armantrout_330",
+      "index": 330,
+      "speaker": "RA",
+      "words": "Well, I think at some point she sold her papers and I went, \"Oh, people sell their papers and they get money.\" And also I would notice that she wrote letters as if she was writing for an archive. I mean, she would kind of give you the back story that you already knew, and I'm going, \"What? Who is she talking to?\" The archive!",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_331",
+      "index": 331,
+      "speaker": "DB",
+      "words": "I never thought of that as being one of the correspondents, but that's a good point.",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_332",
+      "index": 332,
+      "speaker": null,
+      "words": "Yeah, and so, I guess&#8212;",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_333",
+      "index": 333,
+      "speaker": "RA",
+      "words": "I still don't do that. But I think email has pretty much ended that for most people. Now, people just shoot off emails and so I don't know what's happening to archives.",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_334",
+      "index": 334,
+      "speaker": "DB",
+      "words": "Yeah, I know, right? I mean, is there any way you try to save your emails? Are there any that you&#8212;?",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_335",
+      "index": 335,
+      "speaker": "RA",
+      "words": "I have saved emails, and even printed them out and given them to libraries, but I just&#8212;I think Ron saves everything. So, everything I send to him gets saved. That's how I look at it. He's my archivist.",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_336",
+      "index": 336,
+      "speaker": null,
+      "words": "I mean, I only&#8212;you know, there's only so much space in my house.",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_337",
+      "index": 337,
+      "speaker": "DB",
+      "words": "Oh, yeah.",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_338",
+      "index": 338,
+      "speaker": "RA",
+      "words": "I know you can save things on your hard drive and give your hard drive to a library, but God knows what's on my hard drive. So, so far I've just&#8212;what I do now is, if there's anything that seems especially interesting or valuable, I'll print it out and keep it.",
+      "tags": [
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_339",
+      "index": 339,
+      "speaker": "DB",
+      "words": "And did you&#8212;like when you first started writing the emails back and forth, and kind of like general correspondence, what was the sort of tenor of those? Did it still feel more like a letter? I mean, did you notice a gradual change?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_340",
+      "index": 340,
+      "speaker": "RA",
+      "words": "Yeah. I mean, sure, letters were letters and&#8212;I should go look up my old letters. I could go to an archive and look at them.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_341",
+      "index": 341,
+      "speaker": null,
+      "words": "Yeah, I think you would talk about various things&#8212;how your life was going and then you would say, \"And by the way I wrote this\" include it&#8212;but you would be catching up. Sure, now we catch up all the time, you know.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_342",
+      "index": 342,
+      "speaker": "DB",
+      "words": "Right, so, kind of constantly. Are you on any social media things?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_343",
+      "index": 343,
+      "speaker": "RA",
+      "words": "I'm on Facebook.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_344",
+      "index": 344,
+      "speaker": "DB",
+      "words": "You do Facebook.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_345",
+      "index": 345,
+      "speaker": "RA",
+      "words": "And I'm also on Twitter, but I don't tweet much.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_346",
+      "index": 346,
+      "speaker": "DB",
+      "words": "Just follow whatever's going on?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_347",
+      "index": 347,
+      "speaker": "RA",
+      "words": "A few things, yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_348",
+      "index": 348,
+      "speaker": "DB",
+      "words": "A little bit?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_349",
+      "index": 349,
+      "speaker": "RA",
+      "words": "Yeah, but sure, I'm on Facebook and that's how I get some of my news.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_350",
+      "index": 350,
+      "speaker": "DB",
+      "words": "Yeah, yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_351",
+      "index": 351,
+      "speaker": null,
+      "words": "Do you remember your first email? Or any of that sort of thing? Sort of nostalgic, but&#8212;?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_352",
+      "index": 352,
+      "speaker": "RA",
+      "words": "I don't remember my first email. I remember that Ron said that I had \"ramped up quickly.\" That was flattering, so I remember it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_353",
+      "index": 353,
+      "speaker": "DB",
+      "words": "Were you first given an email because of your work&#8212;because of UCSD? Was that your first?",
+      "tags": [],
+      "timestamp": "[42:31]"
+    },
+    {
+      "id": "armantrout_354",
+      "index": 354,
+      "speaker": "RA",
+      "words": "No, I got it on my own and when my son was still living here, and he helped me set everything up. I mean, you know, he was probably fourteen or something. So that's why I have a really stupid&#8212;I mean, my university address&#8212;I guess you wrote me at my university address? Or did you write me&#8212;?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_355",
+      "index": 355,
+      "speaker": "DB",
+      "words": "Yeah, I think both. You gave me the other one because you were traveling.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_356",
+      "index": 356,
+      "speaker": "RA",
+      "words": "Which is really stupid because it's \"RAEA100900.\" I shouldn't say that anything my son said was stupid, but he was only about fourteen and I guess he thought that was&#8212;I feel like I'm James Bond or something with that email address, but whatever.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_357",
+      "index": 357,
+      "speaker": "DB",
+      "words": "Let me see here&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_358",
+      "index": 358,
+      "speaker": null,
+      "words": "So, I mean, it seems to me like, in sort of talking about the progression, that the main difference&#8212;the main change&#8212;has really just been the kind of speed with which email allows you to kind of get to a point where you think things are solid enough for a collection.",
+      "tags": [
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_359",
+      "index": 359,
+      "speaker": "RA:",
+      "words": "Yeah",
+      "tags": [
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_360",
+      "index": 360,
+      "speaker": "DB",
+      "words": "Is there anything else you can think of that really changed as technology changed, or do you feel like for the most part&#8212;not that the type writer and computer are the same&#8212;but that the relationship between the notebook and those sort of typing procedures were similar?",
+      "tags": [
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_361",
+      "index": 361,
+      "speaker": "RA",
+      "words": "Well, I was never a great typist, so I was always making mistakes. So, it was always frustrating. Of course sometimes I hate my computer, too. I mean, it's not a question of the typing issue, but just&#8212;you know, we all hate our computers.",
+      "tags": [
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_362",
+      "index": 362,
+      "speaker": "DB:",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_363",
+      "index": 363,
+      "speaker": "RA",
+      "words": "They're slow. Whatever. Sometimes I'm yelling at my computer, \"What did you just do?\" You know, it'll lose a document and I'll go, \"What? I did what? It's gone!\" You know?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_364",
+      "index": 364,
+      "speaker": "DB",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_365",
+      "index": 365,
+      "speaker": "RA",
+      "words": "So, I have kind of an adversarial relationship with it, but I use it all the time.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_366",
+      "index": 366,
+      "speaker": "DB",
+      "words": "And if you lost something, then you would go back&#8212;what would be your first move?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_367",
+      "index": 367,
+      "speaker": "RA",
+      "words": "Well, supposedly you can hit&#8212;I think it's CTRL-X&#8212;and get it back, but that doesn't work very well for me.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_368",
+      "index": 368,
+      "speaker": "DB",
+      "words": "Would you go back to an email? I mean like if you&#8212;?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_369",
+      "index": 369,
+      "speaker": "RA",
+      "words": "Well, if I sent an email, sure.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_370",
+      "index": 370,
+      "speaker": "DB",
+      "words": "What does the revision, if it's just you on your upstairs computer, what does that revision look like? I mean, are you moving things around a lot or are you&#8212;is it more just sort of reading and then deleting and inserting new words?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_371",
+      "index": 371,
+      "speaker": "RA",
+      "words": "Yeah, that would be it.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_372",
+      "index": 372,
+      "speaker": "DB",
+      "words": "Mostly. Do you read them out loud to yourself?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_373",
+      "index": 373,
+      "speaker": "RA",
+      "words": "Yeah, always.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": "[45:00]"
+    },
+    {
+      "id": "armantrout_374",
+      "index": 374,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_375",
+      "index": 375,
+      "speaker": null,
+      "words": "When do you start doing that?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_376",
+      "index": 376,
+      "speaker": "RA",
+      "words": "In the notebook.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_377",
+      "index": 377,
+      "speaker": "DB",
+      "words": "In the notebook. And so&#8212;well, can you talk a little bit more about how that works? I mean, is it something that as you're writing the first line, you're reading out loud, or is it like you finish something?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_378",
+      "index": 378,
+      "speaker": "RA",
+      "words": "I probably&#8212;well, in between&#8212;not the first line, but I'd probably have to have a few lines before I thought it was worth reading them out loud.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_379",
+      "index": 379,
+      "speaker": null,
+      "words": "Let's see...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_380",
+      "index": 380,
+      "speaker": null,
+      "words": "I should get to something bad that changed a lot, but then that would be embarrassing.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_381",
+      "index": 381,
+      "speaker": "DB",
+      "words": "We're only being recorded by like four devices, so&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_382",
+      "index": 382,
+      "speaker": "RA",
+      "words": "Yeah, right.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_383",
+      "index": 383,
+      "speaker": null,
+      "words": "I don't know what to do here because the things that I start out writing change so much.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_384",
+      "index": 384,
+      "speaker": null,
+      "words": "Let's see.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_385",
+      "index": 385,
+      "speaker": null,
+      "words": "I can get to a poem that's finished, and I can read a little bit from my journal that were the beginning of it, I guess.",
+      "tags": [],
+      "timestamp": "[46:00]"
+    },
+    {
+      "id": "armantrout_386",
+      "index": 386,
+      "speaker": "DB",
+      "words": "OK, yeah, that'd be great.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_387",
+      "index": 387,
+      "speaker": "RA",
+      "words": "OK, although the beginning is going to be very bad&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_388",
+      "index": 388,
+      "speaker": "DB",
+      "words": "Give the rest of us hope!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_389",
+      "index": 389,
+      "speaker": "RA",
+      "words": "&#8212;you can stand that. OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_390",
+      "index": 390,
+      "speaker": null,
+      "words": "So, this is in two parts, and I think this part is working on&#8212;first of all, it's very hard to read my hand writing, even for me to read it when I'm looking back at something I wrote a while ago now.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_391",
+      "index": 391,
+      "speaker": null,
+      "words": "That's bad.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_392",
+      "index": 392,
+      "speaker": null,
+      "words": "OK, there is&#8212;is it okay if I read the poem, or is that a waste of time?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_393",
+      "index": 393,
+      "speaker": "DB",
+      "words": "No! Absolutely.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_394",
+      "index": 394,
+      "speaker": "RA",
+      "words": "OK, so, this is called \"Particular:\"",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_395",
+      "index": 395,
+      "speaker": null,
+      "words": "Rough, squat, bent, crabbed, cranky. A cranky person who is over enthusiastic about a particular topic. To be particular is to be choosy. A particle is a body whose extent and internal structure, if any, are irrelevant. You there, let's dispense with these properties of matter such anachronistic clothes as ghosts wear. Let's be mirrors, facing mirrors. Fall in love.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_396",
+      "index": 396,
+      "speaker": null,
+      "words": "OK, so, here's some build up to that, which really doesn't sound like a poem at all. OK, this is embarrassing but:",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_397",
+      "index": 397,
+      "speaker": null,
+      "words": "To love, you show yourself willing to erase yourself. Make yourself blank together for a few moments&#8212;see, this is just prose&#8212;\"in order to reflect the other.\" That ended up being, \"Let's be mirrors facing mirrors. Fall in love.\"",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_398",
+      "index": 398,
+      "speaker": null,
+      "words": "Two cloudless skies, no earth between. The young do it best, now everyone has lost the trick of it. For love, they emptied&#8212;",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_399",
+      "index": 399,
+      "speaker": null,
+      "words": "&#8212;and then I guess I'm rewriting:",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_400",
+      "index": 400,
+      "speaker": null,
+      "words": "For love, they emptied themselves. Mirrors reflecting mirrors.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_401",
+      "index": 401,
+      "speaker": null,
+      "words": "So, that gets a bit of that.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_402",
+      "index": 402,
+      "speaker": null,
+      "words": "The young, two cloudless skies, nothing between. Not like us, condensed into these peculiar shapes. For love they emptied themselves&#8212;",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_403",
+      "index": 403,
+      "speaker": null,
+      "words": "&#8212;and this is starting over again:",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_404",
+      "index": 404,
+      "speaker": null,
+      "words": "&#8212;\"until they're mirrors reflecting mirrors. The young unlike us, who have assumed these peculiar shapes, they forget everything until they're mirrors reflecting mirrors, the young open channels\"&#8212;",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_405",
+      "index": 405,
+      "speaker": null,
+      "words": "&#8212;I took that out eventually",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_406",
+      "index": 406,
+      "speaker": null,
+      "words": "&#8212;\"through which charges flow, not us. They forget everything until they're mirrors reflecting mirrors, they fall in love. The trick young can do, unlike us with our definite opinions and habits, these properties and mass change, spin\"&#8212;",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_407",
+      "index": 407,
+      "speaker": null,
+      "words": "&#8212;so that gets to where I was talking about a particle is a body. So that's like subatomic, right?",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_408",
+      "index": 408,
+      "speaker": null,
+      "words": "&#8212;\"its extended internal structure, if any are irrelevant, let's dispense with these properties of matter.\"",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_409",
+      "index": 409,
+      "speaker": null,
+      "words": "So anyway, here I'm starting to get in to that. \"These properties and mass charge spin are like the clothes that ghosts wear.\" Well, that gets in to here, except there's no simile. It just goes:",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_410",
+      "index": 410,
+      "speaker": null,
+      "words": "Let's dispense with these properties of matter. Such anachronistic clothes as ghosts wear. Let's be mirrors facing mirrors.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_411",
+      "index": 411,
+      "speaker": null,
+      "words": "You can see how some of that worked into that.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": "[49:28]"
+    },
+    {
+      "id": "armantrout_412",
+      "index": 412,
+      "speaker": "DB",
+      "words": "Yeah, absolutely! And then&#8212;so, it kind of moves, not quite chronologically, but sequentially, and it's not even a winnowing; it's an addition and subtraction, and addition&#8212;",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_413",
+      "index": 413,
+      "speaker": "RA",
+      "words": "Now this is stuff not even Ron Silliman sees because I wouldn't send anything that inchoate to anyone.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_414",
+      "index": 414,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_415",
+      "index": 415,
+      "speaker": "RA",
+      "words": "So, now, you're seeing something, you're hearing something, that nobody has&#8212;",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_416",
+      "index": 416,
+      "speaker": "DB",
+      "words": "Yeah. No, it's fascinating. And then so, at a certain point when you move to that, does that sort of stop in the journal, in the notebook?",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_417",
+      "index": 417,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": "[50:00]"
+    },
+    {
+      "id": "armantrout_418",
+      "index": 418,
+      "speaker": "DB",
+      "words": "I mean, in the next poem?",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_419",
+      "index": 419,
+      "speaker": "RA",
+      "words": "Once I move to this, then I seldom go back to the notebook.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_420",
+      "index": 420,
+      "speaker": "DB",
+      "words": "OK. But then the next page, then, would be the next poem that you work on, essentially?",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_421",
+      "index": 421,
+      "speaker": "RA",
+      "words": "Yeah, unless I decide that, say, the last part of this is bad and then I might start over in the notebook.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_422",
+      "index": 422,
+      "speaker": "DB",
+      "words": "And so the type of revision, then, that happens on the iPad&#8212;? I mean, it's not as easy to kind of move things around there. What usually occurs?",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_423",
+      "index": 423,
+      "speaker": "RA",
+      "words": "Fortunately for me my poems don't have a lot of words and they have short lines, so I just back things out and start over. I just do that.",
+      "tags": [
+        "highlight",
+        "prompt",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_424",
+      "index": 424,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_425",
+      "index": 425,
+      "speaker": null,
+      "words": "Is there any sort of formatting that you use, either here or on your PC, that you kind of developed? Like do you have a certain font that you use or anything like that, or is that not really a concern of yours?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_426",
+      "index": 426,
+      "speaker": "RA",
+      "words": "That's not really a concern.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_427",
+      "index": 427,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_428",
+      "index": 428,
+      "speaker": "RA",
+      "words": "I mean, I wouldn't want to hate a font but I'm okay with the standard font.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_429",
+      "index": 429,
+      "speaker": "DB",
+      "words": "Yeah. And then I guess I'm wondering, then, before there were&#8212;before you had the iPad&#8212;you would just take the notebook up to your computer and write it down there?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_430",
+      "index": 430,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_431",
+      "index": 431,
+      "speaker": "DB",
+      "words": "That would be the thing?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_432",
+      "index": 432,
+      "speaker": "RA",
+      "words": "Sure, of course.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_433",
+      "index": 433,
+      "speaker": "DB",
+      "words": "So, it's almost like an ease of place, almost.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_434",
+      "index": 434,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_435",
+      "index": 435,
+      "speaker": "DB",
+      "words": "More than anything else.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_436",
+      "index": 436,
+      "speaker": "RA",
+      "words": "Absolutely, because I'm just comfortable in this room and I would just stay there with my coffee playing around here for quite a while. So, I think that's just, you know, habit.",
+      "tags": [],
+      "timestamp": "[51:24]"
+    },
+    {
+      "id": "armantrout_437",
+      "index": 437,
+      "speaker": "DB",
+      "words": "Yeah, yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_438",
+      "index": 438,
+      "speaker": null,
+      "words": "Do you use the&#8212;when you're connected up there, is the internet always connected as well? Are you always connected to the internet?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_439",
+      "index": 439,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_440",
+      "index": 440,
+      "speaker": "DB",
+      "words": "Are you doing any, are you using it for research purposes or reference purposes when you're up there?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_441",
+      "index": 441,
+      "speaker": "RA",
+      "words": "Yeah, I mean in terms of my teaching&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_442",
+      "index": 442,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_443",
+      "index": 443,
+      "speaker": "RA",
+      "words": "&#8212;because I'm preparing to teach this class I've never taught before, and I'm going to be teaching it with a guy, with a physicist, where it's called Poetry for Physicists&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_444",
+      "index": 444,
+      "speaker": "DB",
+      "words": "That's great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_445",
+      "index": 445,
+      "speaker": "RA",
+      "words": "&#8212;and he's been getting a lot press lately. I don't know if you've seen it. Bryan Keating (52:01), he was involved with the discovery at the South Pole?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_446",
+      "index": 446,
+      "speaker": "DB",
+      "words": "Yeah, yeah, absolutely!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_447",
+      "index": 447,
+      "speaker": "RA",
+      "words": "Yeah, yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_448",
+      "index": 448,
+      "speaker": "DB",
+      "words": "Oh, wow!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_449",
+      "index": 449,
+      "speaker": "RA",
+      "words": "And he's interested in poetry!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_450",
+      "index": 450,
+      "speaker": null,
+      "words": "So anyway, I'm doing research for that, and I was just&#8212;I'm using some ancient poets like Lucretius, who wrote about science, you know. I mean, he wrote&#8212;the ancient Greeks like Lucretius knew about&#8212;or, not knew but hypothesized the existence of atoms and the void. So, I was just doing some research about him on the computer and then printing them out.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_451",
+      "index": 451,
+      "speaker": null,
+      "words": "Yeah, so, sure.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_452",
+      "index": 452,
+      "speaker": "DB",
+      "words": "Yeah, I know. When I was reading your work and read about those kinds of things&#8212;discovery or confirmation of the Inflation Theory, I was like, \"I would really like to see a poem by Rae Armantrout about this.\"",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_453",
+      "index": 453,
+      "speaker": "RA",
+      "words": "Well, turns out he's my bud!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_454",
+      "index": 454,
+      "speaker": "DB",
+      "words": "Yeah, that's awesome! Yeah, that's a good&#8212;and how long have you been in conversation with him?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_455",
+      "index": 455,
+      "speaker": "RA",
+      "words": "I dedicated a poem to him in this book. So, I've been in conversation with him for, I don't know, maybe three years? So the poem called \"Accounts\" is based on a conversation that we had.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_456",
+      "index": 456,
+      "speaker": "DB",
+      "words": "And what are his books?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_457",
+      "index": 457,
+      "speaker": "RA",
+      "words": "Here it is. See? \"For Bryan Keating.\" (53:18)",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_458",
+      "index": 458,
+      "speaker": "DB",
+      "words": "Oh, cool! OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_459",
+      "index": 459,
+      "speaker": "RA",
+      "words": "I don't think scientists&#8212;I mean, he's an astrophysicist. They don't write books.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_460",
+      "index": 460,
+      "speaker": "DB",
+      "words": "You mentioned somebody that&#8212;there was some, like, more popular science writer that you were reading&#8212;?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_461",
+      "index": 461,
+      "speaker": "RA",
+      "words": "You know I read Brian Greene, different Brian&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_462",
+      "index": 462,
+      "speaker": "DB",
+      "words": "Yeah, I was getting confused because of the Brian's.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_463",
+      "index": 463,
+      "speaker": null,
+      "words": "And how long has that been a sort of subject of fascination for you?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_464",
+      "index": 464,
+      "speaker": "RA",
+      "words": "I think&#8212;the first time I did anything with particle physics was really when it first became popularized, like when The Tao of Physics came out in the 80's. And at first I thought it was just kind of absurd, all the particles, and I thought it was just like, \"How many angels can stamd on the head of a pin?\" or whatever. But I was still reading it and sort of interested in it, and then I guess starting with my book Up To Speed in 2004, I've taken a more sustained interest in it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_465",
+      "index": 465,
+      "speaker": "DB",
+      "words": "What's this class going to look like overall? Do you have like a shape to it?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_466",
+      "index": 466,
+      "speaker": "RA",
+      "words": "Yeah. I mean, I've never team-taught before, but some days I'll be talking&#8212;I've chosen poems that either have something to do with cosmology or physics in some way, or that have to do with objectivity and subjectivity and theories of mind. Or then, in a different way, going off of kind of Chaos Theory where complexity can be&#8212;can grow from the iteration of simple rules. I'm using some poets like,",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_467",
+      "index": 467,
+      "speaker": null,
+      "words": "well, like Ron Silliman, and like Jackson Macklow (55:01), and like Christian Bök, that (Indiscernible, 55:05) poet who use constraints, or rules, to generate poems and have math in their poems, you know, not as a subject but as a generative principle.",
+      "tags": [],
+      "timestamp": "[55:00]"
+    },
+    {
+      "id": "armantrout_468",
+      "index": 468,
+      "speaker": "DB",
+      "words": "Right.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_469",
+      "index": 469,
+      "speaker": "RA",
+      "words": "So I'm doing some of that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_470",
+      "index": 470,
+      "speaker": null,
+      "words": "And Brian is, you know, he likes poetry but he's not exactly up to the avant-garde, shall we say? He likes sonnets and such, so we have a bit of that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_471",
+      "index": 471,
+      "speaker": "DB",
+      "words": "OK, and will it be a class in which you ask the students to write, or is it more&#8212;?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_472",
+      "index": 472,
+      "speaker": "RA",
+      "words": "It's not really a writing class.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_473",
+      "index": 473,
+      "speaker": "DB",
+      "words": "&#8212;survey?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_474",
+      "index": 474,
+      "speaker": "RA",
+      "words": "I mean, they're going to write one poem and they're going to write a couple of essays and there's going to be a couple of tests, and it's mostly a reading and discussion course.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_475",
+      "index": 475,
+      "speaker": "DB",
+      "words": "OK, and its next fall?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_476",
+      "index": 476,
+      "speaker": "RA",
+      "words": "No, it's in the spring. It starts in a week.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_477",
+      "index": 477,
+      "speaker": "DB",
+      "words": "Oh, right!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_478",
+      "index": 478,
+      "speaker": "RA",
+      "words": "It starts next Tuesday.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_479",
+      "index": 479,
+      "speaker": "DB",
+      "words": "You guys are quarters.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_480",
+      "index": 480,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_481",
+      "index": 481,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_482",
+      "index": 482,
+      "speaker": null,
+      "words": "So, let me see here.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_483",
+      "index": 483,
+      "speaker": null,
+      "words": "We're fairly well along, almost done actually.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_484",
+      "index": 484,
+      "speaker": null,
+      "words": "Are there any other&#8212;I mean, these are kind of&#8212;I don't know how far you want to get in to this, but in terms of teaching, when did that sort of email and computer start to kind of take over that? I mean, sort of like the 2000's, early 2000's?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_485",
+      "index": 485,
+      "speaker": "RA",
+      "words": "Email? I think that was in the 90's, wasn't it?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_486",
+      "index": 486,
+      "speaker": "DB",
+      "words": "Yeah, yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_487",
+      "index": 487,
+      "speaker": null,
+      "words": "And has that&#8212;do you feel like that's changed how you approach students and how you approach your classes?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_488",
+      "index": 488,
+      "speaker": "RA",
+      "words": "Well, yeah. Now your students can always find you. It certainly made it easier to write a syllabus having a computer&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_489",
+      "index": 489,
+      "speaker": "DB",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_490",
+      "index": 490,
+      "speaker": "RA",
+      "words": "&#8212;and, you know, you can constantly email your students and remind them of what they're supposed to be doing. I think its just made things easier for everyone.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_491",
+      "index": 491,
+      "speaker": "DB",
+      "words": "Do you see any sort of differences in understanding of your students now as to your students like, say, fifteen or twenty years ago?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_492",
+      "index": 492,
+      "speaker": "RA",
+      "words": "Well, I think that, you know, certainly students do gradually change. I think that when you teach young people, you kind of, sort of stay in that world. You hear their expressions&#8212;I'm not saying I'm a digital native by a long shot&#8212;but you know, you sort of hear the way they talk and you get a bit of their mind set, and you know, you know their lingo. In a way that, I think, when I retire, I might miss that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_493",
+      "index": 493,
+      "speaker": "DB",
+      "words": "Yeah, yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_494",
+      "index": 494,
+      "speaker": "RA",
+      "words": "But still, if something goes wrong with my computer I have to get my son to help me.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_495",
+      "index": 495,
+      "speaker": "DB",
+      "words": "So, that's actually&#8212;I've found that this has been kind of a theme. Do you have somebody who comes in and helps you if you have any computer problems?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_496",
+      "index": 496,
+      "speaker": "RA",
+      "words": "Yeah, he lives in Seattle, but he's walked me through things on the phone.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_497",
+      "index": 497,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_498",
+      "index": 498,
+      "speaker": null,
+      "words": "And has he set up&#8212;did he set up your computer when you first got it and stuff like that?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_499",
+      "index": 499,
+      "speaker": "RA",
+      "words": "Yeah.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_500",
+      "index": 500,
+      "speaker": "DB",
+      "words": "OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_501",
+      "index": 501,
+      "speaker": "RA",
+      "words": "And he was 14. He's built a computer, even.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_502",
+      "index": 502,
+      "speaker": "DB",
+      "words": "Oh, is he working&#8212;if he's in Seattle, is he working in the computer industry?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_503",
+      "index": 503,
+      "speaker": "RA",
+      "words": "No, he's a scientist but he's not in the computer industry. He's a biologist.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_504",
+      "index": 504,
+      "speaker": "DB",
+      "words": "Oh, OK.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_505",
+      "index": 505,
+      "speaker": null,
+      "words": "So, I'm fairly well through. We've covered pretty much what I liked to cover. I do have my blunt questions at the end. So, is there any sort of overarching thing that you think has changed with the advent of computers in terms of writing? I mean, do you see a sort of maybe change in tone, a change in tenor, a change in ideas that have been&#8212;?",
+      "tags": [
+        "change"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_506",
+      "index": 506,
+      "speaker": "RA",
+      "words": "Well, yeah. I mean, the fact that I've just recently wrote a poem that references Mileage.com&#8212;",
+      "tags": [
+        "change"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_507",
+      "index": 507,
+      "speaker": "DB",
+      "words": "Right.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_508",
+      "index": 508,
+      "speaker": "RA",
+      "words": "&#8212;and if I could bring up that section of it for you, anyway, because it's certainly something that would not have been written had there not been computers. It goes: \"Protect your identities says mileage.com, three times today as if it knew something. I may want to fly cheap, cruise in luxury, buy a walk-in tub, and burial insurance.\"",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_509",
+      "index": 509,
+      "speaker": null,
+      "words": "Yeah, they try to sell you things.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_510",
+      "index": 510,
+      "speaker": null,
+      "words": "So yeah, I mean, I think that that gets into the content of the work, and then there are groups of poets who work in that realm kind of specifically and almost exclusively&#8212;like the Flarf poets, for instance, just do what they call \"Google mining.\"",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_511",
+      "index": 511,
+      "speaker": "DB",
+      "words": "Yeah, and what's&#8212;what do you&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_512",
+      "index": 512,
+      "speaker": "RA",
+      "words": "And also of course, there are digital poets. There's digital poetry where people write poems especially for the computer, where the&#8212;I don't know, the words fall off the screen at different rates, and such.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_513",
+      "index": 513,
+      "speaker": "DB",
+      "words": "Yeah, do you do&#8212;if you were willing to be reading poems for whatever reason, do you find that you're reading them a lot more on your screen than you used to?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_514",
+      "index": 514,
+      "speaker": "RA",
+      "words": "I don't like to read on the screen. I mean, I do read things on the screen, but if I'm judging a contest or something, which I sometimes do, I ask for hard copies. Or if I get them on the screen, I print them because I just don't like to read on the screen. I mean, I don't want to sit up there on a hard chair. I don't want to look at that light&#8212;",
+      "tags": [
+        "printdig"
+      ],
+      "timestamp": "[1:00:00]"
+    },
+    {
+      "id": "armantrout_515",
+      "index": 515,
+      "speaker": "DB",
+      "words": "Right.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_516",
+      "index": 516,
+      "speaker": "RA",
+      "words": "You know?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_517",
+      "index": 517,
+      "speaker": "DB",
+      "words": "No, I think that's pretty typical.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_518",
+      "index": 518,
+      "speaker": null,
+      "words": "OK, I think that's good, Rae.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_519",
+      "index": 519,
+      "speaker": null,
+      "words": "Thank you very much.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_520",
+      "index": 520,
+      "speaker": "RA",
+      "words": "Alright, this was painless.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_521",
+      "index": 521,
+      "speaker": "DB",
+      "words": "Yeah! Alright.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_522",
+      "index": 522,
+      "speaker": null,
+      "words": "Just at an hour.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_523",
+      "index": 523,
+      "speaker": "RA",
+      "words": "Good.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "armantrout_524",
+      "index": 524,
+      "speaker": "DB",
+      "words": "Good.",
+      "tags": [],
+      "timestamp": null
+    }
+  ],
+  "metadata": {
+    "totalSegments": 525,
+    "description": "Oral history interview with poet Rae Armantrout included as part of CTRL+Shift project",
+    "location": "San Diego, CA",
+    "source": "CTRL+Shift, Center for Digital Inquiry and Learning, University of Idaho Library, https://ctrl-shift.org/"
+  }
+}

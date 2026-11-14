@@ -1,0 +1,256 @@
+<script>
+/*
+ * Interview topic bar (canvas #colorViz, markup in _includes/transcript/item/transcript-viz.html).
+ *  - Reads the transcript lines already on the page (.line in #contents-container,
+ *    each classed with its topic slugs) and draws them start to finish, every
+ *    tagged line colored by its topic(s); a line with several topics is split
+ *    into bands, as on the topic visualization page.
+ *  - The topic filter, search and line jumps in transcript-js.html drive it through
+ *    window.ohdStrip: setTopic(slug), setHits([line indexes]), setCurrent(element), clear().
+ *  - Hover for the line; select a mark to scroll to it. On touch the first tap
+ *    shows the line and the second goes to it.
+ */
+(function () {
+  'use strict';
+
+  var canvas = document.getElementById('colorViz');
+  var topicList = document.getElementById('tv-transcript-topics');
+  var tooltip = document.getElementById('tv-tooltip');
+  var across = document.getElementById('tv-across');
+  var resetButton = document.getElementById('tv-transcript-reset');
+  if (!canvas) return;
+
+  // shown while a topic or search is active; clears both, as the Reset Filters button does
+  if (resetButton) resetButton.addEventListener('click', function () { vizFilter('all'); });
+
+  var SNAP_PX = 4;          // how close the pointer must be to a mark to pick it up
+  var HIT_COLOR = '#d00000'; // search matches
+  var CURRENT_COLOR = '#000';
+
+  var topics = Object.create(null); // slug -> { label, color, button, count, lines }
+  var lines = [];           // [{ el, tags: [slug] }] in transcript order
+  var byId = {};            // line element id -> index
+  var tagged = [];          // indexes of lines with at least one shown topic
+  var state = { topic: null, hits: null, current: -1 };
+  var ready = false;
+  var stripColor = '#e6e9ed';
+
+  if (topicList) {
+    Array.prototype.forEach.call(topicList.querySelectorAll('.tv-topic'), function (button) {
+      topics[button.dataset.slug] = { label: button.dataset.label, color: button.dataset.color, button: button, count: 0, lines: [] };
+      button.addEventListener('click', function () {
+        if (state.topic === button.dataset.slug) vizFilter('all');
+        else filterLines(button.dataset.slug);
+      });
+    });
+  }
+
+  function read() {
+    var container = document.getElementById('contents-container');
+    if (!container) return;
+    Array.prototype.forEach.call(container.querySelectorAll('.line'), function (el, i) {
+      var tags = [];
+      el.classList.forEach(function (name) { if (topics[name]) tags.push(name); });
+      lines.push({ el: el, tags: tags });
+      byId[el.id] = i;
+      if (tags.length) tagged.push(i);
+      tags.forEach(function (slug) { topics[slug].count++; topics[slug].lines.push(i); });
+    });
+    Object.keys(topics).forEach(function (slug) {
+      var topic = topics[slug];
+      var count = topic.button.querySelector('.tv-topic-count');
+      count.textContent = topic.count.toLocaleString();
+      topic.button.setAttribute('aria-label', topic.label + ', ' + topic.count + (topic.count === 1 ? ' line' : ' lines') + '. Select to filter the transcript.');
+      if (!topic.count) topic.button.hidden = true;
+    });
+    var style = getComputedStyle(canvas);
+    stripColor = style.getPropertyValue('--tv-strip').trim() || stripColor;
+    ready = true;
+  }
+
+  // the lines a mark can be picked up from right now
+  function marked() {
+    if (state.hits) return state.hits;
+    if (state.topic && topics[state.topic]) return topics[state.topic].lines;
+    return tagged;
+  }
+
+  function draw() {
+    if (!ready) return;
+    var width = canvas.clientWidth;
+    var height = canvas.clientHeight;
+    if (!width || !height) return;
+    var ratio = window.devicePixelRatio || 1;
+    if (canvas.width !== Math.round(width * ratio) || canvas.height !== Math.round(height * ratio)) {
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+    }
+    var ctx = canvas.getContext('2d');
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = stripColor;
+    ctx.fillRect(0, 0, width, height);
+
+    var n = lines.length || 1;
+    var lineWidth = Math.max(1, width / n);
+    var x = function (i) { return Math.min((i / n) * width, width - lineWidth); };
+
+    if (state.hits) {
+      ctx.fillStyle = HIT_COLOR;
+      state.hits.forEach(function (i) { ctx.fillRect(x(i), 0, lineWidth, height); });
+    } else if (state.topic && topics[state.topic]) {
+      ctx.fillStyle = topics[state.topic].color;
+      topics[state.topic].lines.forEach(function (i) { ctx.fillRect(x(i), 0, lineWidth, height); });
+    } else {
+      tagged.forEach(function (i) {
+        var tags = lines[i].tags;
+        var band = height / tags.length;
+        tags.forEach(function (slug, k) {
+          ctx.fillStyle = topics[slug].color;
+          ctx.fillRect(x(i), k * band, lineWidth, band);
+        });
+      });
+    }
+
+    if (state.current >= 0) {
+      // the line last jumped to: a dark tick above and below the bar
+      ctx.fillStyle = CURRENT_COLOR;
+      var cx = x(state.current) + lineWidth / 2 - 1;
+      ctx.fillRect(cx, 0, 2, Math.min(6, height / 4));
+      ctx.fillRect(cx, height - Math.min(6, height / 4), 2, Math.min(6, height / 4));
+    }
+  }
+
+  // Which line is under the pointer? Snaps to the nearest mark.
+  function hit(event) {
+    if (!ready || !lines.length) return -1;
+    var rect = canvas.getBoundingClientRect();
+    var n = lines.length;
+    var line = Math.min(n - 1, Math.max(0, Math.floor(((event.clientX - rect.left) / rect.width) * n)));
+    var list = marked();
+    var tolerance = Math.ceil((SNAP_PX * n) / rect.width);
+    var lo = 0, hi = list.length - 1;
+    while (lo <= hi) {
+      var mid = (lo + hi) >> 1;
+      if (list[mid] < line) lo = mid + 1; else hi = mid - 1;
+    }
+    var nearest = -1;
+    [lo - 1, lo].forEach(function (k) {
+      if (k < 0 || k >= list.length) return;
+      if (nearest < 0 || Math.abs(list[k] - line) < Math.abs(list[nearest] - line)) nearest = k;
+    });
+    return nearest >= 0 && Math.abs(list[nearest] - line) <= tolerance ? list[nearest] : line;
+  }
+
+  var lastTip = -1;
+
+  function showTooltip(i, event) {
+    if (!tooltip) return;
+    var line = lines[i];
+    var stamp = line.el.querySelector('.timestamp');
+    var words = line.el.querySelector('.words');
+    var text = words ? words.textContent.replace(/\s+/g, ' ').trim() : '';
+    tooltip.textContent = '';
+    var head = document.createElement('strong');
+    head.textContent = (stamp && stamp.textContent.trim()) || 'Line ' + i;
+    tooltip.appendChild(head);
+    if (line.tags.length) {
+      var meta = document.createElement('span');
+      meta.className = 'tv-tip-meta';
+      meta.textContent = line.tags.map(function (slug) { return topics[slug].label; }).join(', ');
+      tooltip.appendChild(meta);
+    }
+    if (text) {
+      var body = document.createElement('div');
+      body.textContent = text.length > 180 ? text.slice(0, 180).replace(/\s+\S*$/, '') + '…' : text;
+      tooltip.appendChild(body);
+    }
+    tooltip.hidden = false;
+    var box = tooltip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, event.clientX - box.width / 2), window.innerWidth - box.width - 8);
+    var top = event.clientY - box.height - 14;
+    if (top < 8) top = event.clientY + 18;
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+    lastTip = i;
+  }
+
+  function hideTooltip() {
+    if (tooltip) tooltip.hidden = true;
+    lastTip = -1;
+  }
+
+  var pointerType = 'mouse';
+  canvas.addEventListener('pointerdown', function (event) { pointerType = event.pointerType || 'mouse'; });
+  canvas.addEventListener('pointermove', function (event) {
+    var i = hit(event);
+    if (i < 0) hideTooltip(); else showTooltip(i, event);
+  });
+  canvas.addEventListener('pointerleave', hideTooltip);
+  canvas.addEventListener('click', function (event) {
+    var i = hit(event);
+    if (i < 0) return;
+    if (pointerType === 'touch' && lastTip !== i) { showTooltip(i, event); return; }
+    hideTooltip();
+    scrollToLine(lines[i].el.id);
+  });
+  window.addEventListener('scroll', hideTooltip, { passive: true });
+
+  function updateButtons() {
+    Object.keys(topics).forEach(function (slug) {
+      topics[slug].button.setAttribute('aria-pressed', state.topic === slug ? 'true' : 'false');
+    });
+    if (topicList) topicList.classList.toggle('has-selection', !!state.topic);
+    if (resetButton) {
+      resetButton.hidden = !state.topic && !state.hits;
+      resetButton.setAttribute('aria-label', state.hits ? 'Reset: clear the search' : 'Reset: show every topic');
+    }
+    if (across) {
+      var topic = state.topic && topics[state.topic];
+      across.href = across.dataset.href + (topic ? '&filter=' + encodeURIComponent(state.topic) : '');
+      across.firstChild.textContent = topic ? 'See ' + topic.label + ' across all interviews ' : 'See these topics across all interviews ';
+    }
+  }
+
+  var frame = 0;
+  function redraw() {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(draw);
+  }
+
+  window.ohdStrip = {
+    setTopic: function (slug) {
+      state.topic = slug && topics[slug] ? slug : null;
+      state.hits = null;
+      updateButtons();
+      redraw();
+    },
+    setHits: function (indexes) {
+      state.hits = indexes ? indexes.slice().sort(function (a, b) { return a - b; }) : null;
+      if (state.hits) state.topic = null;
+      updateButtons();
+      redraw();
+    },
+    setCurrent: function (el) {
+      state.current = el && byId.hasOwnProperty(el.id) ? byId[el.id] : -1;
+      redraw();
+    },
+    clear: function () {
+      state.topic = null;
+      state.hits = null;
+      state.current = -1;
+      updateButtons();
+      redraw();
+    }
+  };
+
+  // registered before transcript-js.html's listener, so the bar is ready when it
+  // applies ?filter= / ?q= / ?line= from the URL
+  document.addEventListener('DOMContentLoaded', function () {
+    read();
+    draw();
+    if (window.ResizeObserver) new ResizeObserver(redraw).observe(canvas);
+    else window.addEventListener('resize', redraw);
+  });
+})();
+</script>

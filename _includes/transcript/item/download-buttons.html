@@ -6,7 +6,7 @@
       Item Info
     </button>
     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#metadata-modal">View Full Metadata</a></li>
+      <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#metadata-modal">View Full Metadata</button></li>
       {% if page.date %}{%- capture year -%}{% if page.date contains "-" %}{{ page.date | split: "-" | first }}{% elsif page.date contains "/" %}{{ page.date | split: "/" | last }}{% else %}{{ page.date }}{% endif %}{%- endcapture -%}
       <li><a class="dropdown-item" href="{{ year | strip | prepend: '/timeline.html#y' | relative_url }}">View on Timeline</a></li>
       {% endif %}
@@ -29,6 +29,9 @@
 {% if trancheck.size > 1 %}
 <a target="_blank" rel="noopener" onclick="preparePDF()" class="btn btn-outline-dark">Generate PDF</a>
 {% endif %}
+{% endif %}
+{% if site.data.theme.json-generation and site.data.transcripts[page.objectid] %}
+<a href="{{ '/assets/data/transcripts/' | append: page.objectid | append: '.json' | relative_url }}" class="btn btn-outline-dark" download>Download JSON</a>
 {% endif %}
 </div>
 {%if page.bio and site.data.theme.transcript-fields contains 'bio'%}{% include transcript/item/bio-modal.html %}{% endif %}

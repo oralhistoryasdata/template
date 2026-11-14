@@ -6,8 +6,11 @@
   Usage: include transcript/index/viz-overview.html height="450px"
 {%- endcomment -%}
 {%- assign viz-height = include.height | default: '400px' -%}
+{%- assign viz-page = site.pages | where: 'layout', 'visualization' | first -%}
+{%- unless viz-page -%}{%- assign viz-page = site.pages | where: 'layout', 'topic-visualization' | first -%}{%- endunless -%}
+{%- assign viz-url = viz-page.url | default: '/visualization.html' -%}
 {%- assign viz-source = site.data.topic_viz.output | default: 'assets/data/topic-viz' | prepend: '/' | relative_url -%}
-<a href="{{ '/visualization.html' | relative_url }}" class="d-block viz-overview" aria-label="Color-coded visualization of the topics in each interview. Open the visualization page.">
+<a href="{{ viz-url | relative_url }}" class="d-block viz-overview" aria-label="Color-coded visualization of the topics in each interview. Open the visualization page.">
   <canvas id="viz-overview-canvas" data-source="{{ viz-source }}" style="display:block; width:100%; height:{{ viz-height }};" aria-hidden="true"></canvas>
 </a>
 <script>

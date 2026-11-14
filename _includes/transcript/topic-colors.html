@@ -1,0 +1,13 @@
+{%- comment -%}
+  Topic colors for the interview pages. Sets `topic-palette` (20 colors); a tag in
+  _data/filters.csv takes the color at its position in that file, repeating after 20:
+    {% include transcript/topic-colors.html %}
+    {% assign color = topic-palette[forloop.index0 | modulo: 20] %}   (looping over site.data.filters)
+  The topic visualization colors its topics the same way in _plugins/topic_viz_index.rb
+  (PALETTE). Keep the two lists identical, in the same order.
+  Based on https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/, with the
+  light colors (yellow, cyan, lime, pink, lavender, beige, mint, apricot) and orange
+  deepened so each stands out at least 2:1 against the gray strip (#e6e9ed) the
+  topic bars are drawn on; beige and apricot became plum and clay to stay distinct.
+{%- endcomment -%}
+{%- assign topic-palette = '#e6194b,#3cb44b,#d99500,#4363d8,#f06800,#911eb4,#00a9c4,#f032e6,#a0a800,#ff658a,#008080,#a77bea,#9a6324,#b0437a,#800000,#1eb08f,#808000,#c9746b,#000075,#808080' | split: ',' -%}

@@ -1,8 +1,11 @@
-/* Topic Visualization: topic picker, per-person strips and passage list.
-   Linked directly from _layouts/visualization.html (no Sass import needed).
+/* Topic Visualization: topic picker, per-person strips and passage list, plus the
+   topic bar on each interview page (see the end of this file).
+   Used by _layouts/visualization.html and _includes/transcript/item/transcript-viz.html;
+   pulled into cb.css by assets/css/cb.scss.
    The strip colours are read from these variables by the script. */
 
-.topic-viz {
+.topic-viz,
+.tv-transcript {
     --tv-strip: #e6e9ed;           /* lines with no topic to show; topic colours come from the index */
     --tv-muted: var(--bs-secondary-color, #6c757d);
     --tv-border: var(--bs-border-color, #dee2e6);
@@ -411,7 +414,8 @@
 /* ---------- print: passages only ---------- */
 
 @media print {
-    body > *:not(main) {
+    /* only on the visualization page: print the passages without the site chrome */
+    body:has(.topic-viz) > *:not(main) {
         display: none !important;
     }
 
@@ -460,4 +464,94 @@
         color: inherit;
         text-decoration: none;
     }
+}
+
+/* ---------- selected person ----------
+   Selecting a name moves that row to the top (see orderRows in
+   _includes/transcript/js/visualization-js.html), spans it across every column and
+   gives it a tall strip. Laid out as a grid: name and line count, then the small
+   "Minimize" button, on one line; the strip below across the full width. */
+
+.topic-viz .tv-row.is-selected {
+    column-span: all;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    column-gap: 0.75rem;
+    row-gap: 0.6rem;          /* keeps the button clear of the strip */
+    height: auto;
+    margin: 0.25rem 0 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--tv-strip);
+}
+
+.topic-viz .tv-row.is-selected .tv-name {
+    grid-column: 1;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.topic-viz .tv-row.is-selected .tv-name-count {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* "Minimize" button: only on the selected row, just right of the line count */
+.tv-unselect {
+    display: none;
+}
+
+.topic-viz .tv-row.is-selected .tv-unselect {
+    display: inline-block;
+    grid-column: 2;
+    justify-self: start;
+    padding: 0.05rem 0.45rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.topic-viz .tv-row.is-selected .tv-strip {
+    grid-column: 1 / -1;
+    height: 5rem;
+}
+
+@media (max-width: 575.98px) {
+    .topic-viz .tv-row.is-selected .tv-strip {
+        height: 3.5rem;
+    }
+}
+
+/* ---------- interview page topic bar ----------
+   _includes/transcript/item/transcript-viz.html, drawn by
+   _includes/transcript/js/topic-strip-js.html. The topic buttons reuse .tv-topic. */
+
+.tv-transcript-strip {
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    margin: 0.75rem 0;
+    cursor: pointer;
+}
+
+.tv-transcript-topics {
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+}
+
+.tv-transcript-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+}
+
+.tv-across {
+    font-size: 0.875rem;
+}
+
+/* in the floating media box (media-scroll) the bar is all that shows */
+.media-scroll-wrapper .tv-transcript-strip {
+    height: 2rem;
+    margin: 0.25rem 0;
 }

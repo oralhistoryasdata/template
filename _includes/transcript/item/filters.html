@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-6">
                     <button class="reset btn btn-sm btn-primary input-group-text float-end float-md-none mt-2 mt-md-0"
-                        onclick="{% if site.data.filters and uniquesubjects%}vizFilter('all');{% else %}resetVals();{% endif %}" aria-label="Reset all filters and search">
+                        onclick="{% if site.data.filters %}vizFilter('all');{% else %}resetVals();{% endif %}" aria-label="Reset all filters and search">
                         Reset Filters
                     </button>
                 </div>

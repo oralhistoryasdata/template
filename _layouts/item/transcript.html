@@ -20,7 +20,7 @@ gallery: true
 {% include transcript/style/filter-style.html %}
 {%- assign min-count = 1 -%}
 {%- assign raw-subjects = items | map: "tags" | compact | join: ";" | split: ";" -%}
-{%- capture subjects -%}{% for s in raw-subjects %}{% if s != "" %}{{- s | strip | downcase -}};{% endif %}{%- endfor
+{%- capture subjects -%}{% for s in raw-subjects %}{% if s != "" %}{{- s | slugify -}};{% endif %}{%- endfor
 -%}{%-
 endcapture -%}
 {%- assign subjects = subjects | split: ";" -%}

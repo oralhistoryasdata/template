@@ -9,7 +9,8 @@
  *    lists them by interview below. Passage rows are only built when an
  *    interview is opened, so the page stays light for the largest topics.
  *  - Hover a strip for the passage; select it to open that line of the interview.
- *  - Select a person's name to narrow the passages to that person.
+ *  - Select a person's name to narrow the passages to that person; their row
+ *    moves to the top, spans the full width and grows taller.
  *  - URL: ?filter=<topic-slug>&id=<person or interview objectid>
  * Data comes from _plugins/topic_viz_index.rb. Layout: _layouts/visualization.html.
  * The Passages section is left out when transcript-contents is false in
@@ -143,7 +144,19 @@
       person.countEl = el('span', 'tv-name-count');
       name.appendChild(person.countEl);
       name.addEventListener('click', function () {
-        setOnly(state.only === person.id ? null : person.id, true);
+        var selecting = state.only !== person.id;
+        setOnly(selecting ? person.id : null);
+        // the selected row moves to the top and widens; keep it in view
+        if (selecting) person.row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+      // only shown on the selected (expanded) row; the name toggles it too
+      var close = el('button', 'tv-unselect btn btn-sm btn-outline-secondary');
+      close.type = 'button';
+      close.textContent = 'Minimize';
+      close.setAttribute('aria-label', 'Minimize ' + person.name + ' and show everyone');
+      close.addEventListener('click', function () {
+        setOnly(null);
+        person.nameButton.focus({ preventScroll: true });
       });
       var canvas = el('canvas', 'tv-strip');
       canvas.setAttribute('aria-hidden', 'true');
@@ -151,6 +164,7 @@
       canvas.addEventListener('pointerleave', hideTooltip);
       canvas.addEventListener('click', function (event) { activate(person, event); });
       row.appendChild(name);
+      row.appendChild(close);
       row.appendChild(canvas);
       person.row = row;
       person.nameButton = name;
@@ -168,8 +182,10 @@
       people.sort(function (a, b) { return a.name.localeCompare(b.name); });
     }
     var fragment = document.createDocumentFragment();
+    var first = null;  // the selected person's row goes first, spanning every column
     people.forEach(function (person) {
       var selected = state.only && person.interviews.some(function (i) { return state.only === person.id || state.only === i.id; });
+      if (selected && !first) first = person.row;
       person.row.hidden = state.hideEmpty && person.count === 0;
       person.row.classList.toggle('is-selected', !!selected);
       person.row.classList.toggle('is-dimmed', !!state.only && !selected);
@@ -179,6 +195,7 @@
       person.nameButton.setAttribute('aria-pressed', selected ? 'true' : 'false');
       fragment.appendChild(person.row);
     });
+    if (first) fragment.insertBefore(first, fragment.firstChild);
     els.rows.appendChild(fragment);
     data.order = people;
     drawAll();

@@ -16,7 +16,7 @@
     font-size: 12px;
 }
 
-.featured {
+.featured .words {
     background-color: aquamarine !important;
     color: black !important;
 }
@@ -31,7 +31,7 @@
     background-color: #212529 !important;
 }
 
-.legendTag, .transcriptTitle {
+.transcriptTitle {
     cursor: pointer;
 }
 .tableTimestamp {

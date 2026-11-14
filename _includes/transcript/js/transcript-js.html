@@ -38,43 +38,23 @@ const upperElement = getElement('upper-content');
 const step0 = getElement('step0');
 
 /**
- * Filters visualization by highlighting specific rectangles
+ * Shows a topic on the topic bar (_includes/transcript/js/topic-strip-js.html),
+ * or with "all" clears every filter and search.
  */
 function vizFilter(filterClass) {
-  // Skip URL update if just highlighting
-  if (filterClass !== "hilite") {
-    updateUrlParams(params, 'filter', filterClass);
-    
-    // Update filters dropdown if it exists
-    if (getElement('filters')) {
-      getElement('filters').value = filterClass;
-    }
+  if (filterClass === "all") {
+    resetVals();
+    return;
   }
 
-  // Process all rectangles
-  const rects = document.getElementsByTagName('rect');
-  Array.from(rects).forEach(rect => {
-    const classString = rect.classList;
-    
-    // First add dark class to all rectangles
-    classString.add('dark');
-    
-    // Remove any existing primary classes
-    Array.from(classString).forEach(item => {
-      if (item.startsWith('primary')) {
-        classString.remove(item);
-      }
-    });
+  updateUrlParams(params, 'filter', filterClass);
 
-    // Apply filtering logic
-    if (filterClass === "all") {
-      classString.remove('dark');
-      resetVals();
-    } else if (classString.contains(filterClass)) {
-      classString.remove('dark');
-      classString.add(`primary-${filterClass}`);
-    }
-  });
+  // Update filters dropdown if it exists
+  if (getElement('filters')) {
+    getElement('filters').value = filterClass;
+  }
+
+  if (window.ohdStrip) window.ohdStrip.setTopic(filterClass);
 }
 
 /**
@@ -94,7 +74,8 @@ function searchLines(searchQuery) {
   const filter = searchQuery.toUpperCase();
   let searchResults = '<option>Select and scroll to a matching line</option>';
   let matchCount = 0;
-  
+  const hits = [];
+
   // Process each line
   for (let i = 0; i < lines.length; i++) {
     const wordsElement = lines[i].getElementsByClassName("words")[0];
@@ -115,13 +96,7 @@ function searchLines(searchQuery) {
           "<span class='text-danger'>" + searchQuery + "</span>"
         );
         
-        // Highlight corresponding rectangle in visualization if filters exist
-        const rectal = "rect" + i;
-        const rectElement = getElement(rectal);
-        if (rectElement) {
-          rectElement.classList.add("hilite");
-          vizFilter('hilite');
-        }
+        hits.push(i);
       } else {
         wordsElement.classList.add("small", "text-muted");
       }
@@ -132,7 +107,10 @@ function searchLines(searchQuery) {
   if (getElement("filters")) {
     getElement("filters").selectedIndex = 0;
   }
-  
+
+  // Mark the matching lines on the topic bar
+  if (window.ohdStrip) window.ohdStrip.setHits(hits);
+
   // Update UI with results
   const statusMessage = matchCount + " lines match your query: " + searchQuery;
   announceToScreenReader(statusMessage);
@@ -163,8 +141,14 @@ function searchLines(searchQuery) {
  * Filter transcript lines by a specific tag
  */
 function filterLines(filterClass) {
+  // "Filter by Topic" (value "all") or an empty choice clears the filter
+  if (!filterClass || filterClass === 'all') {
+    vizFilter('all');
+    return;
+  }
+
   resetVals();
-  
+
   const itemcontainer = getElement("contents-container");
   if (!itemcontainer) return;
   
@@ -270,6 +254,7 @@ function scrollToLine(lineId) {
     
     // Highlight and make focusable
     targetElement.classList.add("border-featured");
+    if (window.ohdStrip) window.ohdStrip.setCurrent(targetElement);
     targetElement.setAttribute('tabindex', '0');
     
     // Smooth scroll to element
@@ -329,14 +314,8 @@ function resetVals() {
     lines[i].classList.remove('text-muted', 'featured', 'border-featured', 'small');
   }
   
-  // Reset visualization elements if they exist
-  const svgContainer = getElement("colorViz");
-  if (svgContainer) {
-    const rects = svgContainer.getElementsByTagName('rect');
-    for (let i = 0; i < rects.length; i++) {
-      rects[i].classList.remove('dark', 'hilite', 'primary-hilite');
-    }
-  }
+  // Reset the topic bar
+  if (window.ohdStrip) window.ohdStrip.clear();
 }
 
 /**

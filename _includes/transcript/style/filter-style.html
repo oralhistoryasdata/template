@@ -1,31 +1,16 @@
-<!-- list of colors provided by https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/ -->
+{%- comment -%}
+  A color class for each topic in _data/filters.csv (.<tag-slug> { fill; border-color }).
+  Colors: _includes/transcript/topic-colors.html.
+{%- endcomment -%}
+{%- include transcript/topic-colors.html -%}
 <style>
     {% for n in site.data.filters %}
-    {% capture color %}{% cycle '#e6194b','#3cb44b','#ffe119','#4363d8','#f58231','#911eb4','#46f0f0','#f032e6','#bcf60c','#fabebe','#008080','#e6beff','#9a6324','#fffac8','#800000','#aaffc3','#808000','#ffd8b1','#000075','#808080'%}{% endcapture %}
-  .{{ n.tag | slugify }} { 
-    fill: {{color}};
-    border-color: {{color}};
-  }
-
-  .{{ n.tag | slugify  }}.primary-{{ n.tag | slugify  }}{ 
-    fill: {{color}} !important;
+    {%- assign slug = n.tag | slugify -%}
+    {%- assign position = forloop.index0 | modulo: 20 -%}
+    {%- assign color = topic-palette[position] -%}
+  .{{ slug }} {
+    fill: {{ color }};
+    border-color: {{ color }};
   }
   {% endfor %}
-
-    .black {
-      fill: black;
-    }
-
-    .dark {
-      fill: black !important;
-    }
-
-    .primary-hilite {fill: red !important;}
-    
-    tr.black,
-    .hidden {
-      display: none;
-    }
-
-    .chart{cursor: pointer; overflow: visible;}
 </style>

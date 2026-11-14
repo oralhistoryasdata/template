@@ -32,13 +32,14 @@ module TopicViz
   # Order of the values in each passage array written to the tag files.
   FIELDS = %w[line timestamp speaker words].freeze
 
-  # Same colours, in the same order, as _includes/transcript/style/filter-style.html,
-  # so a tag listed in _data/filters.csv has one colour here and on the interview pages.
+  # A tag listed in _data/filters.csv takes the colour at its position in that file.
   # Tags not in filters.csv continue through the list, most common first; with more
-  # than 20 tags the colours repeat.
+  # than 20 tags the colours repeat. The interview pages colour filters.csv tags the
+  # same way from _includes/transcript/topic-colors.html, so a topic has one colour
+  # everywhere: keep the two lists identical, in the same order.
   PALETTE = %w[
-    #e6194b #3cb44b #ffe119 #4363d8 #f58231 #911eb4 #46f0f0 #f032e6 #bcf60c #fabebe
-    #008080 #e6beff #9a6324 #fffac8 #800000 #aaffc3 #808000 #ffd8b1 #000075 #808080
+    #e6194b #3cb44b #d99500 #4363d8 #f06800 #911eb4 #00a9c4 #f032e6 #a0a800 #ff658a
+    #008080 #a77bea #9a6324 #b0437a #800000 #1eb08f #808000 #c9746b #000075 #808080
   ].freeze
 
   # Written straight to _site, skipping Liquid (transcript text may contain "{{").
@@ -157,14 +158,16 @@ module TopicViz
       rows = site.data['filters']
       return {} unless rows.is_a?(Array)
 
-      rows.each_with_object({}) do |row, filters|
+      # 'position' is the row's place in the file (blank and repeated rows still count),
+      # as the interview pages number them in _includes/transcript/topic-colors.html.
+      rows.each_with_index.each_with_object({}) do |(row, position), filters|
         name = row['tag'].to_s.strip
         next if name.empty?
 
         slug = Jekyll::Utils.slugify(name)
         next if filters.key?(slug)
 
-        filters[slug] = { 'tag' => name, 'description' => row['description'].to_s.strip, 'position' => filters.size }
+        filters[slug] = { 'tag' => name, 'description' => row['description'].to_s.strip, 'position' => position }
       end
     end
 
@@ -209,7 +212,7 @@ module TopicViz
 
       ordered = tags.sort_by { |slug, tag| [-tag['count'], slug] }
       tag_index = {}
-      next_color = filters.size
+      next_color = filters.empty? ? 0 : filters.values.map { |filter| filter['position'] }.max + 1
       tag_rows = ordered.each_with_index.map do |(slug, tag), index|
         tag_index[slug] = index
         filter = filters[slug]

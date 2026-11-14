@@ -1,0 +1,3937 @@
+{
+  "title": "Interview with James McMichael",
+  "interviewee": "James McMichael",
+  "interviewer": "Devin Becker",
+  "date": "2014-03-17T00:00:00+00:00",
+  "subjects": [
+    "poetry"
+  ],
+  "segments": [
+    {
+      "id": "mcmichael_0",
+      "index": 0,
+      "speaker": "Devin Becker:",
+      "words": "Yeah, so we'll go through these. Some of it is a little repetitive. It's looking to be a little bit more exhaustive than, I guess, organic. If you feel like we've covered anything in some of these, just say, \"Let's go,\" it's fine.",
+      "tags": [],
+      "timestamp": "0:00:00"
+    },
+    {
+      "id": "mcmichael_1",
+      "index": 1,
+      "speaker": null,
+      "words": "Let me know if you have any questions in the middle, or anything like that. It doesn't need to go straight through. We can take breaks, or whatever&#8212;that sort of thing.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_2",
+      "index": 2,
+      "speaker": null,
+      "words": "So, we've gotten kind of where we're at. I'm going to ask you kind of currently compose some of these on the computer, how you currently save, and how you kind of back it up and work with the files. Then, we'll move on to the process questions.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_3",
+      "index": 3,
+      "speaker": null,
+      "words": "First questions&#8212; and these are meant to be kind of short answer, basically&#8212;what genres do you work in as a writer?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_4",
+      "index": 4,
+      "speaker": "James McMichael:",
+      "words": "Only poetry",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_5",
+      "index": 5,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_6",
+      "index": 6,
+      "speaker": null,
+      "words": "What kind of devices do you own or have access to for writing?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_7",
+      "index": 7,
+      "speaker": "JM:",
+      "words": "Just this machine",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_8",
+      "index": 8,
+      "speaker": "DB:",
+      "words": "Just that computer, and what operating system do you use on it?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_9",
+      "index": 9,
+      "speaker": "JM:",
+      "words": "I don't know.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_10",
+      "index": 10,
+      "speaker": "DB:",
+      "words": "Is it a Windows computer?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_11",
+      "index": 11,
+      "speaker": "JM:",
+      "words": "I think so.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_12",
+      "index": 12,
+      "speaker": "DB:",
+      "words": "I'm pretty sure it is.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_13",
+      "index": 13,
+      "speaker": "JM:",
+      "words": "I know almost nothing about it",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_14",
+      "index": 14,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_15",
+      "index": 15,
+      "speaker": null,
+      "words": "And you work on that device primarily, and that's where your files are stored as well?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_16",
+      "index": 16,
+      "speaker": "JM:",
+      "words": "My files are up here to the right. They're artist sketchbook, so they're unlined. And I take notes from the reading I do in those, and I also include (in green ink) my own responses to the things I'm reading, or things that occurred to me that might turn out to be germs for lines. So, I do that longhand.",
+      "tags": [
+        "paper",
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_17",
+      "index": 17,
+      "speaker": "DB:",
+      "words": "Do they transfer&#8212;for those ideas, and those workings&#8212;on to the computer? And when they are, are they saved just on that computer?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_18",
+      "index": 18,
+      "speaker": "JM:",
+      "words": "In a selective way. Then, I'll go in to these notebooks and take stuff from them. And then in that form, develop some of what's there&#8212;add to it. So, that's part of the process, too.",
+      "tags": [
+        "between",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_19",
+      "index": 19,
+      "speaker": "DB:",
+      "words": "Great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_20",
+      "index": 20,
+      "speaker": null,
+      "words": "So, I guess just in terms of your computer files, do you have them like in a certain folder? Do you save them in certain kind of organizational fashion? Or are they just, once you transfer them in there, they're there and you don't worry about them?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_21",
+      "index": 21,
+      "speaker": "JM:",
+      "words": "They're there and I can find them alphabetically.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_22",
+      "index": 22,
+      "speaker": "DB:",
+      "words": "OK, OK",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_23",
+      "index": 23,
+      "speaker": null,
+      "words": "So, are these files then primarily for your publishing sake, or...? I mean, do you...",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_24",
+      "index": 24,
+      "speaker": "JM:",
+      "words": "Only for composition.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_25",
+      "index": 25,
+      "speaker": "DB:",
+      "words": "Only for composition?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_26",
+      "index": 26,
+      "speaker": "JM:",
+      "words": "Yeah, right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_27",
+      "index": 27,
+      "speaker": "DB:",
+      "words": "Do you print them out and revise them from the computer?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_28",
+      "index": 28,
+      "speaker": "JM:",
+      "words": "Sometimes.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_29",
+      "index": 29,
+      "speaker": "DB:",
+      "words": "Sometimes.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_30",
+      "index": 30,
+      "speaker": null,
+      "words": "What are your naming conventions for those files?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_31",
+      "index": 31,
+      "speaker": "JM:",
+      "words": "Usually the date.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_32",
+      "index": 32,
+      "speaker": "DB:",
+      "words": "The date.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_33",
+      "index": 33,
+      "speaker": "JM:",
+      "words": "Oh, I'm sorry&#8212;the date and the notebook. So, the notebooks are numbered. So, it'll be from Notebook 23, or something like that.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_34",
+      "index": 34,
+      "speaker": "DB:",
+      "words": "Oh, great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_35",
+      "index": 35,
+      "speaker": "JM:",
+      "words": "So, that'll be that in addition to the date.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_36",
+      "index": 36,
+      "speaker": "DB:",
+      "words": "And if you went and revised one of the computer files, would you make a new file, or would you just like over what's already there?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_37",
+      "index": 37,
+      "speaker": "JM:",
+      "words": "I'd write over what's there, and then I would get probably a different number&#8212;you know, that document number.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_38",
+      "index": 38,
+      "speaker": "DB:",
+      "words": "Yeah, OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_39",
+      "index": 39,
+      "speaker": null,
+      "words": "So, it'd be like my example here&#8212;\"The Wasteland.1\" and then \"The Wasteland2\". That kind of thing?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_40",
+      "index": 40,
+      "speaker": "JM:",
+      "words": "Yeah, that kind of thing.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_41",
+      "index": 41,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_42",
+      "index": 42,
+      "speaker": null,
+      "words": "Do you back-up those files, or do you just keep them on that computer? Do you put them on like a Dropbox, or anything like that? Or is it just on that computer?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_43",
+      "index": 43,
+      "speaker": "JM:",
+      "words": "On Wednesday, I'm told by our tech, that what's there gets backed up. So, Wednesday about 2:00AM, or something like that, and on Thursday at 2:00AM, some back-up takes place. So, that's all I know about it.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_44",
+      "index": 44,
+      "speaker": "DB:",
+      "words": "Like you don't have an external hard-drive, or some other box that you put them?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_45",
+      "index": 45,
+      "speaker": "JM:",
+      "words": "There's this blue thing down there&#8212;whatever that is.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_46",
+      "index": 46,
+      "speaker": "DB:",
+      "words": "Oh, yeah! That's it, that it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_47",
+      "index": 47,
+      "speaker": "JM:",
+      "words": "That's it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_48",
+      "index": 48,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_49",
+      "index": 49,
+      "speaker": null,
+      "words": "When you get to like a final draft, or something, is there another protocol for that sort of file, or...?",
+      "tags": [
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_50",
+      "index": 50,
+      "speaker": "JM:",
+      "words": "That file would have the title of the poem, and then the highest number of the draft of that poem would be the most current one&#8212;the one that's replaced the others.",
+      "tags": [
+        "files"
+      ],
+      "timestamp": "5:00"
+    },
+    {
+      "id": "mcmichael_51",
+      "index": 51,
+      "speaker": "DB:",
+      "words": "OK, yeah, yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_52",
+      "index": 52,
+      "speaker": null,
+      "words": "And your tech--what's the relationship between you and your tech?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_53",
+      "index": 53,
+      "speaker": "JM:",
+      "words": "He's a genius. He's an expensive genius. His name is Steve Marinoff. We're entirely dependent on him&#8212;Susan and I for having these machines continue to work&#8212;and he's never failed us.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_54",
+      "index": 54,
+      "speaker": "DB:",
+      "words": "Good!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_55",
+      "index": 55,
+      "speaker": null,
+      "words": "And you guys like consult with him like when you get a new machine? Or... How does that relationship work?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_56",
+      "index": 56,
+      "speaker": "JM:",
+      "words": "If that happens or something goes wrong with one of these, but I'd say we see him maybe 3 or 4 times a year.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_57",
+      "index": 57,
+      "speaker": "DB:",
+      "words": "OK, and he just checks to make sure everything is working and backing up, and that sort of thing?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_58",
+      "index": 58,
+      "speaker": "JM:",
+      "words": "Right. We call him if we have a problem, and then we usually see him within a couple of days. He's wonderfully reliable.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_59",
+      "index": 59,
+      "speaker": "DB:",
+      "words": "How long has that relationship been going on?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_60",
+      "index": 60,
+      "speaker": "JM:",
+      "words": "I think like 8 year maybe, something like that. He had worked for another company, and now he's on his own.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_61",
+      "index": 61,
+      "speaker": "DB:",
+      "words": "Yeah, kind of his own consulting firm or something&#8212;great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_62",
+      "index": 62,
+      "speaker": "DB:",
+      "words": "And did you seek him out, or did you know him? I mean...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_63",
+      "index": 63,
+      "speaker": "JM:",
+      "words": "Susan had him come out when he was working with the company that he worked for before he had his own business. Liked him a lot, and so...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_64",
+      "index": 64,
+      "speaker": "DB:",
+      "words": "Great, great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_65",
+      "index": 65,
+      "speaker": "JM:",
+      "words": "His confidence inspiring. You know, we really count on&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_66",
+      "index": 66,
+      "speaker": "DB:",
+      "words": "That's the biggest thing!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_67",
+      "index": 67,
+      "speaker": "JM:",
+      "words": "We're very grateful for him",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_68",
+      "index": 68,
+      "speaker": "DB:",
+      "words": "Yeah, yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_69",
+      "index": 69,
+      "speaker": "DB:",
+      "words": "OK, so that's the basic kind of just to get a sense of where you're at with your digital composition. Now we'll talk more about the process and the writing, and the notebooks, and the artist books, and stuff like that.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_70",
+      "index": 70,
+      "speaker": "DB:",
+      "words": "And then to start, I'd like to kind of know- how long would you say you've been writing professionally? I mean, in the sense that that writing has been what's kind of supported you in some way. I know the teaching, but I think that's kind of intertwined.",
+      "tags": [],
+      "timestamp": "0:06:54"
+    },
+    {
+      "id": "mcmichael_71",
+      "index": 71,
+      "speaker": "JM:",
+      "words": "I published my first poem 53 years ago.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_72",
+      "index": 72,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_73",
+      "index": 73,
+      "speaker": null,
+      "words": "And could you give us kind of an overview of like the ark of your career&#8212;starting with maybe like your education, and then moving through?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_74",
+      "index": 74,
+      "speaker": "JM:",
+      "words": "I was an undergraduate at UC-Santa Barbara, and had some extraordinary teachers there. I learned how to read. Didn't learn how to write, but I learned how to read, I think, from them. Then I did my graduate work. Got a Ph.D. at Stanford immediately after I graduated from Santa Barbara.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_75",
+      "index": 75,
+      "speaker": null,
+      "words": "Was thru with the Ph.D. in 1965 at a time when white males got jobs in the Academy, so I took the job at Irvine and began teaching on the Fall of '65 there. Understood at that time that I had 6 years to complete a book that would get me tenure, and at that time, there weren't poets getting tenure by writing books of poems. So, it seemed as if what I needed to do was continue the critical, expository writing that I'd done as a Ph.D. student in English and American Literature. I wrote and published 4 essays out of my dissertation. They weren't exactly a book. I could've turned them in to a book but after about 2 years in the job, I started writing quite bad poems&#8212;and they continued to be bad poems until I'd completed a book of them. I submitted it for publication. It was accepted. It turned up in the mail. I sat down and read it, and it confirmed what I knew about it which was that it was a really bad book of poems.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_76",
+      "index": 76,
+      "speaker": "DB:",
+      "words": "And this is?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_77",
+      "index": 77,
+      "speaker": "JM:",
+      "words": "This was in 1971 that the book turned up&#8212;but it got me tenure!",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_78",
+      "index": 78,
+      "speaker": "DB:",
+      "words": "This is the \"Against the Falling Evil\"?.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_79",
+      "index": 79,
+      "speaker": "JM:",
+      "words": "Against the Falling Evil",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_80",
+      "index": 80,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_81",
+      "index": 81,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_82",
+      "index": 82,
+      "speaker": "DB:",
+      "words": "It had some good poems. It had the Vegetables",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_83",
+      "index": 83,
+      "speaker": "JM:",
+      "words": "It had the Vegetables in it, and",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_84",
+      "index": 84,
+      "speaker": null,
+      "words": "that was important to me in the sense that it gave me a standard that I wanted to live up to in anything else I kept after that. So then I had the great, good fortune of being able to have it take as long as it needed for me to write another book. I wrote the second book which I still like, and then I've gone off from there. With the kind of interruption in the writing of poetry, I finished 4 good things in the late '70s&#8212;it was published in 1980.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": "10:00"
+    },
+    {
+      "id": "mcmichael_85",
+      "index": 85,
+      "speaker": null,
+      "words": "And then I wrote a book on Ulysses. I needed to teach myself how to write a paragraph. I didn't know how to write a paragraph. I knew how to write a paragraph in graduate school prose, but not a paragraph. Those are different things, so that took quite a while. I didn't understand it&#8212;that's what I was doing at the time. I didn't understand that I didn't know what a paragraph was, but because I was meaning to be dealing with the content of what it was I was wanting to write about. It took about 4 years just to get that formal understanding in place about how to write a chapter of paragraphs.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_86",
+      "index": 86,
+      "speaker": null,
+      "words": "So, I worked on the Ulysses book uninterruptedly about 10 years, and then didn't go back to writing poems until it was finished. And so, I finished it about 1990, and then I'd been working on poems ever since then.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_87",
+      "index": 87,
+      "speaker": "DB:",
+      "words": "And since then, you've published 3 books?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_88",
+      "index": 88,
+      "speaker": "JM:",
+      "words": "I've published Each in a Place Apart, The World At-Large (which is New and Selected, and it's only about a tenth of that book is new), and then Capacity (which is published in 2006). And, I've just completed another book called If You Can Tell.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_89",
+      "index": 89,
+      "speaker": "DB:",
+      "words": "If You Can Tell. Do you know when that's coming up?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_90",
+      "index": 90,
+      "speaker": "JM:",
+      "words": "I'm guessing it'll be within the next 2 years",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_91",
+      "index": 91,
+      "speaker": "DB:",
+      "words": "Great, great! That was good.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_92",
+      "index": 92,
+      "speaker": "DB:",
+      "words": "So, generally, I've kind of broken these questions in to 3 stages of the writing process - the compositional stage, the stage of revision, and the organizational/archival stage. That is my own kind of box for these things. If you think those do not fit your own personal writing style, we can kind of go through these in different ways. But if that sounds OK, then we can start. But, if anytime like, \"Well, this doesn't make much sense,\" and you can go back and revise&#8212;because we talked about one thing in one section doesn't mean we can talk about that one thing.",
+      "tags": [],
+      "timestamp": "0:12:50"
+    },
+    {
+      "id": "mcmichael_93",
+      "index": 93,
+      "speaker": "JM:",
+      "words": "I understand the 1st two of those&#8212;they seem perfectly clear, but what would the archival...?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_94",
+      "index": 94,
+      "speaker": "DB:",
+      "words": "I would say that would be once you've revised poems or critical writing (or probably books of poems) in to more of a final state, how do you deal with organizing your collection; how do you deal with the more minutiae of saving them and making sure they're together, and then sending them off&#8212;kind of more the business part of it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_95",
+      "index": 95,
+      "speaker": "JM:",
+      "words": "I guess I asked because that's going on all the time in what I think of as the 1st two stages.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_96",
+      "index": 96,
+      "speaker": "DB:",
+      "words": "OK, so maybe we'll just address them in the 1st two stages, and it's not that...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_97",
+      "index": 97,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_98",
+      "index": 98,
+      "speaker": "DB:",
+      "words": "Maybe I have a couple of questions from that section but they won't be much.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_99",
+      "index": 99,
+      "speaker": "JM:",
+      "words": "I mean, this may just be parenthetical but, for me, since I tend to work in an extended (what can seem like) book length forms almost all the time, then any individual poem I'm working on has a necessary relationship to everything else I'm imagining. It's being with, and so that's part of what you're describing as archival&#8212;would have to be kind of in front of me all the time. So, that may be part of why it seems to me that it's&#8212;",
+      "tags": [
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_100",
+      "index": 100,
+      "speaker": "DB:",
+      "words": "No, that makes total sense to me.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_101",
+      "index": 101,
+      "speaker": null,
+      "words": "[That'll be",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_102",
+      "index": 102,
+      "speaker": null,
+      "words": "(15:00) a good shot&#8212;just my neck]",
+      "tags": [],
+      "timestamp": "[00:15:00]"
+    },
+    {
+      "id": "mcmichael_103",
+      "index": 103,
+      "speaker": null,
+      "words": "So, let's start with talking about kind of the compositional- the writing, the pre-writing, the generative parts. I know that reading has a quite a lot to do for you.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_104",
+      "index": 104,
+      "speaker": "JM:",
+      "words": "Yes",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_105",
+      "index": 105,
+      "speaker": "DB:",
+      "words": "I'd like to start when you first started writing, and I guess part of this will be kind of tracking the changes in your process. So, like if there were certain ways you worked in the beginning, did those change, and then, did they change again?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_106",
+      "index": 106,
+      "speaker": null,
+      "words": "So, when you first started writing, would you kind of describe your typical compositional (pre-writing, drafting) practices? Yeah, when you first started writing... And when would this period be?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_107",
+      "index": 107,
+      "speaker": "JM:",
+      "words": "I guess the early 1960s, when I was still an undergraduate&#8212;I was writing. I mean, if the poems that I wrote before 1970 were bad, those poems were awful (they were worse), and there weren't many of them. Soon after I'd started writing poems, I was in a Ph.D. program. And even though I had a Stegner Fellowship for one of the years that I was there (which entailed taking writing workshops), the workshop wasn't anything like the workshops that you and I know in the sense that not much went on in them. There were maybe four people in the room&#8212;not much got said about them&#8212;and it was a very minor part of the four years that I spent getting a Ph.D. So, the bulk of that work was reading and writing essays, and having conversations with my wonderful peers that were there.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_108",
+      "index": 108,
+      "speaker": null,
+      "words": "So, I didn't have any reliable habits as a writer of poems&#8212;I don't think&#8212;until I was maybe two years in to the job at Irvine. So, I'd say 1967 or something like that.",
+      "tags": [
+        "career"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_109",
+      "index": 109,
+      "speaker": "DB:",
+      "words": "Great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_110",
+      "index": 110,
+      "speaker": "JM:",
+      "words": "And then, whatever it was I was doing wasn't working&#8212;and I think it wasn't working because what I was needing to do was convince myself that I knew how to write a poem. So, the substance of the work was completely inverted in terms of it being a working out of my need to prove something to myself that I couldn't prove. I couldn't prove it because what I was proving to myself was that I didn't know how to write a good poem. That went on for 3, 4 years, and I think there wasn't anything I could alter until I asked myself if there was something I needed to write about rather than just my own insecurities as someone who didn't know how to write a poem.",
+      "tags": [
+        "career",
+        "prompt",
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_111",
+      "index": 111,
+      "speaker": "DB:",
+      "words": "Then so, after you wrote that, or sort of started to ask yourself that question and you started to write the poems that you considered your good poems, in terms of the sort of minutiae of your writing process, did that mark a shift? Or was there always a sort of way that you approached the writing and that kind of gradually expanded? Or...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_112",
+      "index": 112,
+      "speaker": "JM:",
+      "words": "There had to have been a shift that since before writing the Vegetables (which is a poem about the impact on me of my mother's death when I was 11 years old). Prior to having that as matter to write about, I wouldn't have been able to identify a phrase that I came up with that was good enough (there's no other way to say it) to keep. I come up with phrases and I didn't have the acumen to be able to tell that this phrase was better, was",
+      "tags": [
+        "career",
+        "change"
+      ],
+      "timestamp": "0:18:46"
+    },
+    {
+      "id": "mcmichael_113",
+      "index": 113,
+      "speaker": null,
+      "words": "(20:00) enough better than the accompanying phrases that it could supply me with an example of what I had to bring everything else up to. So, I was just putting stuff together, and there it was&#8212;it wasn't any good.",
+      "tags": [
+        "career",
+        "change"
+      ],
+      "timestamp": "[00:20:00]"
+    },
+    {
+      "id": "mcmichael_114",
+      "index": 114,
+      "speaker": null,
+      "words": "After I wrote the Vegetables, I had a standard that I had to apply all the time. And once it was in place, then I had something to work with besides form (I had form, too, but I had form before when I was filling form with bad phrases). Then, I felt more equipped, to know what to keep and what not to keep.",
+      "tags": [
+        "career",
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_115",
+      "index": 115,
+      "speaker": "DB:",
+      "words": "So, how were you then able to generate those phrases? Like, how were you able to generate the phrase that then you could judge as being enough or not?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_116",
+      "index": 116,
+      "speaker": "JM:",
+      "words": "I guess by way (and this is where what I'd said earlier about working in extended forms)&#8212;the only way I knew how to generate it was to think really in book length terms. So, I'd have (in the case of my second book, The Lovers' Familiar I came up with something that's formal but also structural&#8212;The Canonical Hours. So, I thought... There were 8 of those - Midnight, 3:00AM, 6:00, all the way on to 9:00PM. If they would organize the book as a whole and have a medieval affect to them, faintly Catholic&#8212;if that was in place but it was not really a religious book, how might things go? There were going to be more than 8 poems in the book, but it turned out to be 15. What would come in where in relation to a 24-hour period? What might happen between noon and 3:00PM?",
+      "tags": [
+        "prompt",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_117",
+      "index": 117,
+      "speaker": null,
+      "words": "So, I had that general scheme as something that could direct me toward, in one case, a portrait of an otter. You know, something along those lines. Then a lot of stuff in the course of working on the book (which I'm trying to remember how long&#8212;I think it took me 4 years to write it), a lot of stuff just fell away because it wasn't, again, good enough.",
+      "tags": [
+        "prompt",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_118",
+      "index": 118,
+      "speaker": "DB:",
+      "words": "And in terms of simply... Were you drafting by hand, or...?",
+      "tags": [],
+      "timestamp": "0:23:15"
+    },
+    {
+      "id": "mcmichael_119",
+      "index": 119,
+      "speaker": "JM:",
+      "words": "By hand&#8212;all of it by hand",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_120",
+      "index": 120,
+      "speaker": "DB:",
+      "words": "All of it by hand",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_121",
+      "index": 121,
+      "speaker": "JM:",
+      "words": "And then I would... The process through all of the books until this most recent one was all long-hand and then typewriter. I loved typing successive drafts because typing is so much easier than composing, so, it was a break. It was just, \"Oh, boy! I get to...\"",
+      "tags": [
+        "between",
+        "paper",
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_122",
+      "index": 122,
+      "speaker": null,
+      "words": "So, I never minded typing, and I suspected that I would miss it on this machine. I didn't miss it. It turned out, since I'm typing all the time--I'm composing from the beginning and I'm redoing everything&#8212;I liked this. I can't imagine how it was possible to write a book of prose (to write the Ulysses book) long-hand with a typewriter. I mean, I just can't. It would have been so much easier if I'd had some facility with the computer to write that.",
+      "tags": [
+        "between",
+        "paper",
+        "early"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_123",
+      "index": 123,
+      "speaker": "DB:",
+      "words": "Yeah, yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_124",
+      "index": 124,
+      "speaker": null,
+      "words": "So, essentially though, all of your books except this last one have followed the similar process of&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_125",
+      "index": 125,
+      "speaker": "JM:",
+      "words": "Yes",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_126",
+      "index": 126,
+      "speaker": "DB:",
+      "words": "Could you kind of detail that in kind of like step-by-step process?",
+      "tags": [],
+      "timestamp": "0:24:45"
+    },
+    {
+      "id": "mcmichael_127",
+      "index": 127,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_128",
+      "index": 128,
+      "speaker": null,
+      "words": "On a good day ... I mean I have to work every day usually in the morning, sometimes as early as 4:00. I didn't mean to get up at that time but I was awake at that time&#8212;I was wide awake at that time and I'd go to work right away. I'd go back over what I'd had up to that point in a poem and I'd find stuff that had to be revised. So, I'd do revision.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": "[00:25:00]"
+    },
+    {
+      "id": "mcmichael_129",
+      "index": 129,
+      "speaker": null,
+      "words": "Sometimes that would be all I would do on a given day, and then something that I hadn't yet gotten to would suggest itself, and I'd have a phrase or a sentence. That's what I mean when I use the word compose&#8212;Something I hadn't had yet, there's at least a possibility that I might have and it would sound maybe something like this, maybe one more of the words would actually survive. So then I'd nudge it along a little more and on a good day, if I had a line and a half, or two lines, that would be a pretty good day. And that could take 4 hours.",
+      "tags": [
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_130",
+      "index": 130,
+      "speaker": "DB:",
+      "words": "And in doing that, in kind of getting to that point, is that all done on loose notebook paper?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_131",
+      "index": 131,
+      "speaker": "JM:",
+      "words": "On long-hand.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_132",
+      "index": 132,
+      "speaker": "DB:",
+      "words": "Long-hand.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_133",
+      "index": 133,
+      "speaker": "JM:",
+      "words": "What did I work...? I think I just worked by 8x11 sheets of paper. I remember at one point they were yellow&#8212;and then they were white!",
+      "tags": [
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_134",
+      "index": 134,
+      "speaker": "DB:",
+      "words": "It didn't matter.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_135",
+      "index": 135,
+      "speaker": "JM:",
+      "words": "It didn't matter.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_136",
+      "index": 136,
+      "speaker": "DB:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_137",
+      "index": 137,
+      "speaker": null,
+      "words": "So, what would one of those pieces of paper look like?",
+      "tags": [
+        "paper",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_138",
+      "index": 138,
+      "speaker": "JM:",
+      "words": "A lot of crossing out, rehearsing what I had already that needed to be there to remind me of what seemed as if it had made the cut with me as something that could be kept, and then something new would join it for a while but it wouldn't really be good enough. And then, it would have to be revised. Pretty soon, it would be better enough maybe to stay, and then when I'd get (I don't know what) 8 or 9 lines more, then I'd go to the typed copy of what I'd transcribed from long-hand on to typed copy and add what was new, make what changes I'd made in long-hand, and then just bring all of that along with me.",
+      "tags": [
+        "paper",
+        "between",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_139",
+      "index": 139,
+      "speaker": null,
+      "words": "When I was writing my third book, Four Good Things, that entailed thousands of lines in untitled sections. There's 16 sections of it of varying lengths, and I'd do it section by section. It was pretty much chronological, but some of the sections were 16, 17 pages long, so I'd go through the whole process for that particular section. You know, if I were typing up what I'd recently added 4 or 5 lines to, I'd probably type the whole thing again.",
+      "tags": [
+        "mss",
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_140",
+      "index": 140,
+      "speaker": "DB:",
+      "words": "So, you were generating lines long-hand&#8212;working on those. And then as they got to the level where you though they could enter in to the poem, you would then retype the entire poem or section, and go from there?",
+      "tags": [
+        "paper",
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_141",
+      "index": 141,
+      "speaker": "JM:",
+      "words": "Yes, yeah",
+      "tags": [
+        "paper",
+        "between",
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_142",
+      "index": 142,
+      "speaker": null,
+      "words": "And never minded that activity&#8212;never minded it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_143",
+      "index": 143,
+      "speaker": "DB:",
+      "words": "Did you find that in typing that, were you actively making changes at that time, or not so much?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_144",
+      "index": 144,
+      "speaker": "JM:",
+      "words": "Not so much.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_145",
+      "index": 145,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_146",
+      "index": 146,
+      "speaker": null,
+      "words": "And then once you had that object, would you go back and read it to yourself, or read it out loud?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_147",
+      "index": 147,
+      "speaker": "JM:",
+      "words": "Yes, yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_148",
+      "index": 148,
+      "speaker": "DB:",
+      "words": "And then you would start the revision process on that type-written document?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_149",
+      "index": 149,
+      "speaker": "JM:",
+      "words": "I'd wait 'til the next day. It would, more often than not, not look so good the next day.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_150",
+      "index": 150,
+      "speaker": "DB:",
+      "words": "Yes, yes",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_151",
+      "index": 151,
+      "speaker": null,
+      "words": "So, would you save these sheets of paper on which you were long-hand composing?",
+      "tags": [
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_152",
+      "index": 152,
+      "speaker": null,
+      "words": "Not with any fondness. I mean, they were only (30:00) for my uses&#8212;it was not anything I wanted to preserve in anyway. I didn't care about anything other than finishing the poem and having it done. That was all that mattered to me.",
+      "tags": [
+        "paper",
+        "revision"
+      ],
+      "timestamp": "[00:30:00]"
+    },
+    {
+      "id": "mcmichael_153",
+      "index": 153,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_154",
+      "index": 154,
+      "speaker": "JM:",
+      "words": "And I didn't often find myself in situations in which lines that I'd deleted I later missed and wished I had copies of them to see if I could... I mean, that happened a few times but it was so rare that I don't think it influenced my ways of going at the whole process. I didn't ever regret throwing stuff away.",
+      "tags": [
+        "revision",
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_155",
+      "index": 155,
+      "speaker": "DB:",
+      "words": "Right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_156",
+      "index": 156,
+      "speaker": null,
+      "words": "I guess we can kind of maybe talk in about how... I mean, we're already talking about the revision process for these poems, and it seems like... I sort of asked the other writers like what is your sort of primary revision or textual changes, and it seems sort of subtractive. Like you would find something that you didn't like, and would you try to substitute something in for that?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": "0:30:50"
+    },
+    {
+      "id": "mcmichael_157",
+      "index": 157,
+      "speaker": "JM:",
+      "words": "If I could find it.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_158",
+      "index": 158,
+      "speaker": "DB:",
+      "words": "If you could find it.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_159",
+      "index": 159,
+      "speaker": "JM:",
+      "words": "And if I couldn't, then it probably needed to disappear.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_160",
+      "index": 160,
+      "speaker": "DB:",
+      "words": "Just that part, or...?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_161",
+      "index": 161,
+      "speaker": "JM:",
+      "words": "Just that part.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_162",
+      "index": 162,
+      "speaker": "DB:",
+      "words": "OK, but once you kind of had a structure of a general poem, though, it usually stayed?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_163",
+      "index": 163,
+      "speaker": "JM:",
+      "words": "By the time I got to the end of it, it did. I mean, I work on them almost only cumulatively so that I take them along line by line. I don't...I'm not able to write a draft of something. The only variation on that is that I'll sometimes get the ending--it'll present itself to me&#8212;I mean the phrases. And I'll have that as a kind of telos for where I'm headed&#8212;not all the time, but I'd say half the time that happens somewhat in advance of my getting even within the couple of pages of the ending itself. It'll occur to me, and it won't tell me what is missing. It won't do that. It'll be just something that I feel would provide the kind of closure that I think would work.",
+      "tags": [
+        "revision",
+        "mss",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_164",
+      "index": 164,
+      "speaker": "DB:",
+      "words": "So, essentially, you are writing (I don't know if you can) chronologically or...?",
+      "tags": [
+        "revision",
+        "mss",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_165",
+      "index": 165,
+      "speaker": "JM:",
+      "words": "It is chronologically.",
+      "tags": [
+        "revision",
+        "mss",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_166",
+      "index": 166,
+      "speaker": "DB:",
+      "words": "OK, so, as you build it and build it and build it, the revision process and the composition process are all happening at the same time?",
+      "tags": [
+        "revision",
+        "mss",
+        "prompt"
+      ],
+      "timestamp": "0:34:22"
+    },
+    {
+      "id": "mcmichael_167",
+      "index": 167,
+      "speaker": "JM:",
+      "words": "Yep, yep",
+      "tags": [
+        "revision",
+        "mss",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_168",
+      "index": 168,
+      "speaker": "DB:",
+      "words": "And that's happening in concert with the other poems in the book, or are you usually focused on one until it's done and then you move on?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_169",
+      "index": 169,
+      "speaker": "JM:",
+      "words": "I'm focused on one, but I have a pretty good sense of where it might go, organizationally, in relation to the others except right at the beginning of the project. At that point, I'm not clear on what's missing. I'm working toward beginning to understand what the whole might contain, but I just have to wait until... I mean, if I think of the last two books - there are 6 poems in capacity and 8 poems here (8 poems in the most recent one), and in both cases that's a small enough number that I'm not sure where in the process of writing either of those books (whether it took me 3 or 4 poems) to have a sense of what else I needed, but it was somewhere in there. Kind of midway, then I'd be a little clearer.",
+      "tags": [
+        "revision",
+        "mss",
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_170",
+      "index": 170,
+      "speaker": "DB:",
+      "words": "Can you talk a little bit about what that point is in the beginning of the project? Like how that... Is there something starting to emerge in your thinking, in your reading, or...? Where does that come from?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_171",
+      "index": 171,
+      "speaker": "JM:",
+      "words": "Again, I have to learn what it's possible to learn about the first and the second poem that I write in any of the projects. If I think about this most recent book, I was commissioned by the New York Times to write a Thanksgiving poem. I mean, that was the first poem that I wrote for this most recent book, and I wrote it. I kept taking my notes on all of the things that I was reading, and was caught up in the reading and the note-taking and all of that. All of it was to the end of my getting started on my second poem and I had no ideas what that was for 2 years, and then that poem came out of Proverbs. Then I spent another year and a half before I had any lines at all on a third poem. I looked back over a 4-1/2 to 5 year period in which I had written two poems (neither of them particularly long&#8212;the longer of the two was 4 pages). That was all I had. I didn't have a page a year, essentially.",
+      "tags": [
+        "mss",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_172",
+      "index": 172,
+      "speaker": null,
+      "words": "And for the life of me, I don't understand why I didn't just accept that I was thru writing. I mean, that should have been enough, but that wasn't what I felt –I don't know why, but I didn't. Then, I guess, I'd taught myself enough about what I was trying to learn in the whole project that it got underway, and then there was a momentum to it that I don't really remember in any of the other books that I wrote. There was kind of a momentum in writing Four Good Things but it was a momentum that I would describe as documentary even though there was an autobiographical element to it. It was as if I could hear some kind of narrator in a documentary saying this thing, or that. And the form of the thing was usually more than a 10-syllable line in this monolithic block that looked kind of like prose but still had a jamb, and it was lines.",
+      "tags": [
+        "mss",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_173",
+      "index": 173,
+      "speaker": null,
+      "words": "So, that gave me kind of momentum but very different from what the lack of momentum that I had when I began this book&#8212;there just wasn't any. I don't know where it was going to come from.",
+      "tags": [
+        "mss",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_174",
+      "index": 174,
+      "speaker": "DB:",
+      "words": "I guess, in those... You said you were kind of teaching yourself to get to the point where you can get that momentum back and start writing more. What are those parts of your life look like in terms of your writing, your practice? I mean, are you still waking up and working?",
+      "tags": [
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_175",
+      "index": 175,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_176",
+      "index": 176,
+      "speaker": "DB:",
+      "words": "I mean, in your writing and in your reading, taking notes...",
+      "tags": [
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_177",
+      "index": 177,
+      "speaker": "JM:",
+      "words": "All the time.",
+      "tags": [
+        "prompt"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_178",
+      "index": 178,
+      "speaker": "DB:",
+      "words": "Can you describe how that works, how that part of your practice works? And that's been pretty steady since the beginning, or since you start writing for the second book?",
+      "tags": [
+        "prompt"
+      ],
+      "timestamp": "0:37:59"
+    },
+    {
+      "id": "mcmichael_179",
+      "index": 179,
+      "speaker": "JM:",
+      "words": "Yes, all the way back, and I think the reading and the note-taking part of it has gotten to be more dominant over the course of the time. These notebooks...[points to bookshelves full of notebooks] And there are probably about 10 others and the ones that fit in that shelf right there&#8212;that's about 4 years of worth. Prior to those, I was working with 5x8 cards, writing in long-hand. That just got too hard to keep track of (I had boxes of them and arranged alphabetically), but this is an improvement on that. It's more... It's something I could find and I'd index these so I could find my way around these books. In a way, the cards&#8212;they just got too many of them.",
+      "tags": [
+        "prompt",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_180",
+      "index": 180,
+      "speaker": "DB:",
+      "words": "So, the cards, you had them in just like regular card... Would you flip through them like a card catalog kind of, or...?",
+      "tags": [
+        "prompt",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_181",
+      "index": 181,
+      "speaker": "JM:",
+      "words": "Except I wouldn't flip through them, that's the thing. They didn't invite me back to them the way these [notebooks] do. I can take one of these down at random and be reminded pretty quickly of why it was that particular book that I was reading and why I was having the responses to it that I did.",
+      "tags": [
+        "prompt",
+        "paper"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_182",
+      "index": 182,
+      "speaker": null,
+      "words": "(40:00)",
+      "tags": [],
+      "timestamp": "[00:40:00]"
+    },
+    {
+      "id": "mcmichael_183",
+      "index": 183,
+      "speaker": "DB:",
+      "words": "Do you mind grabbing one of those and just kind of showing how you would do that?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_184",
+      "index": 184,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_185",
+      "index": 185,
+      "speaker": "DB:",
+      "words": "[Hopefully, we'll get it in the frame.]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_186",
+      "index": 186,
+      "speaker": "JM:",
+      "words": "Let's see if I can find some pages here where I've gone&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_187",
+      "index": 187,
+      "speaker": "DB:",
+      "words": "Or I can take pictures of these, if you don't mind.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_188",
+      "index": 188,
+      "speaker": "JM:",
+      "words": "Not at all.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_189",
+      "index": 189,
+      "speaker": null,
+      "words": "I work on... These are the notes that I would take for the book that I'm reading. The RED is the more important material. It's something that, if I'm going through it I can read and just pick out the highlighted parts, then GREEN are my own responses. So, I'm always working on the right hand page when I'm taking notes from books I'm reading, then when I'm going back over the material, I'll work on this page and there'll be other changes. Usually more GREEN will turn up.",
+      "tags": [
+        "prompt",
+        "paper",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_190",
+      "index": 190,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_191",
+      "index": 191,
+      "speaker": null,
+      "words": "And that's your response to it. OK, I got it. So, how do you index them?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_192",
+      "index": 192,
+      "speaker": "JM:",
+      "words": "Just by title and... Let's see. I've got some of those pages here.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_193",
+      "index": 193,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_194",
+      "index": 194,
+      "speaker": null,
+      "words": "And indexed by title of work that you're reading?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_195",
+      "index": 195,
+      "speaker": "JM:",
+      "words": "Now, where did they go? See, I should know where they are, Devin ... But I had the sheets.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_196",
+      "index": 196,
+      "speaker": null,
+      "words": "Ha, ha, ha, I can't find them now. They were usually in this red notebook. So, they're pages of an index that are arranged according to notebook numbers. They're here. Susan just rearranged them. They're somewhere in here, they're not lost.",
+      "tags": [
+        "future"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_197",
+      "index": 197,
+      "speaker": "DB:",
+      "words": "OK, good",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_198",
+      "index": 198,
+      "speaker": "JM:",
+      "words": "I hope so.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_199",
+      "index": 199,
+      "speaker": null,
+      "words": "So, then I just find my way to the notebook and it'll have the page numbers and everything. Oh, and then in the front of each notebook, I have the title and the page numbers.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_200",
+      "index": 200,
+      "speaker": "DB:",
+      "words": "Oh, OK. So you know you can go back and find the work you're thinking about for whatever you are doing.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_201",
+      "index": 201,
+      "speaker": "JM:",
+      "words": "Right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_202",
+      "index": 202,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_203",
+      "index": 203,
+      "speaker": null,
+      "words": "That's fascinating.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_204",
+      "index": 204,
+      "speaker": null,
+      "words": "OK, just to remind me then...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_205",
+      "index": 205,
+      "speaker": "JM:",
+      "words": "[You're very patient.]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_206",
+      "index": 206,
+      "speaker": "DB:",
+      "words": "[No, no. I like dogs. He's a good guy. I have a new appreciation for dogs, too. It's our first dog, so...]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_207",
+      "index": 207,
+      "speaker": "JM:",
+      "words": "[Would she be smelling Rufus on you?]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_208",
+      "index": 208,
+      "speaker": "DB:",
+      "words": "[I don't know. Maybe? Maybe on these jeans.]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_209",
+      "index": 209,
+      "speaker": "JM:",
+      "words": "[Yeah]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_210",
+      "index": 210,
+      "speaker": "DB:",
+      "words": "[I'm admitting my jeans are not super clean!]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_211",
+      "index": 211,
+      "speaker": null,
+      "words": "So, the index cards&#8212;were they cards that you were working&#8212;?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_212",
+      "index": 212,
+      "speaker": "JM:",
+      "words": "They were cards.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_213",
+      "index": 213,
+      "speaker": "DB:",
+      "words": "OK, and that's what...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_214",
+      "index": 214,
+      "speaker": "JM:",
+      "words": "Shall I... I think... I don't know if I have them. She may have moved those.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_215",
+      "index": 215,
+      "speaker": null,
+      "words": "She moved them somewhere. I don't know where they've gone.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_216",
+      "index": 216,
+      "speaker": "DB:",
+      "words": "Well, we can find them and take pictures later.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_217",
+      "index": 217,
+      "speaker": "JM:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_218",
+      "index": 218,
+      "speaker": null,
+      "words": "Michelle [Latiolais] wanted one. I gave her one. She framed it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_219",
+      "index": 219,
+      "speaker": "DB:",
+      "words": "Oh, that's awesome!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_220",
+      "index": 220,
+      "speaker": null,
+      "words": "So, and all that note-taking... Say... I mean, is there like a hypothetical where you could say like, \"I used my index to find something and that led to a line or...\"? How would that... I guess, what is that process like?",
+      "tags": [
+        "prompt",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_221",
+      "index": 221,
+      "speaker": "JM:",
+      "words": "That is the way it tends to work and yet I can't go back once I've got the line unless I'm quoting.",
+      "tags": [
+        "prompt",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_222",
+      "index": 222,
+      "speaker": "DB:",
+      "words": "Right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_223",
+      "index": 223,
+      "speaker": "JM:",
+      "words": "I can't make a connection. There's just some kind of break&#8212;something gets suggested and I can never reconstruct it.",
+      "tags": [
+        "prompt",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_224",
+      "index": 224,
+      "speaker": "DB:",
+      "words": "OK, wow!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_225",
+      "index": 225,
+      "speaker": "JM:",
+      "words": "Another way to say it is that I think the(45:00) reading...it feels like the reading does this to me. Like it just pulls me out towards stuff that other people, the writers of the books I'm taking notes on, are more connected to than I am but they do a good enough job of saying what their connections to it are that the things I'm reading become suggestive to me of things that I didn't know that they make available. And then that gives me a sense that there's less I've failed to address, and therefore maybe I've been brought to a position (with their help) of being able to find a phrase that lets me move from this point, in where I am with the poem I'm writing, further along.",
+      "tags": [
+        "prompt",
+        "highlight"
+      ],
+      "timestamp": "[00:45:00]"
+    },
+    {
+      "id": "mcmichael_226",
+      "index": 226,
+      "speaker": "DB:",
+      "words": "How do you choose the books that you're reading?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_227",
+      "index": 227,
+      "speaker": "JM:",
+      "words": "The disciplines that I've gone back to more and more than any others are philosophy, theology, history, psychology, sociology, anthropology. And one or other of those will seem like it's more pertinent, depending on where I am, in the process",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_228",
+      "index": 228,
+      "speaker": null,
+      "words": "So, I'm on Amazon a lot, truck stops in front of the house fairly frequently, and I'm helped enormously by the succession of books that turn up at the door that I have the time to indulge myself with.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_229",
+      "index": 229,
+      "speaker": "DB:",
+      "words": "Great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_230",
+      "index": 230,
+      "speaker": null,
+      "words": "So, you mentioned Amazon. Are you using the recommendations that Amazon provides you, or are you finding a book from another book?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_231",
+      "index": 231,
+      "speaker": "JM:",
+      "words": "I'm usually finding a book from another book. They do send me the monthly things--\"Here's my list,\" and I go through it but I'm usually ahead of them.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_232",
+      "index": 232,
+      "speaker": "DB:",
+      "words": "OK, that's good.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_233",
+      "index": 233,
+      "speaker": null,
+      "words": "Most people are not ahead of them ...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_234",
+      "index": 234,
+      "speaker": "JM:",
+      "words": "But they're not bad at it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_235",
+      "index": 235,
+      "speaker": "DB:",
+      "words": "Oh, no. They've got pretty powerful algorithms.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_236",
+      "index": 236,
+      "speaker": "JM:",
+      "words": "It's their job.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_237",
+      "index": 237,
+      "speaker": "DB:",
+      "words": "Yes, it's what they do",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_238",
+      "index": 238,
+      "speaker": null,
+      "words": "So, going back, you said... Then, so every book except this last book was composed in long-hand and on a typewriter.",
+      "tags": [
+        "change",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_239",
+      "index": 239,
+      "speaker": "JM:",
+      "words": "Yes",
+      "tags": [
+        "change",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_240",
+      "index": 240,
+      "speaker": "DB:",
+      "words": "What's the change then for this final&#8212;the last book here?",
+      "tags": [
+        "change",
+        "between"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_241",
+      "index": 241,
+      "speaker": "JM:",
+      "words": "There was, as I said before, a surprise that I wasn't at all missing the typing&#8212;the typing stage probably because it was all typing. So, it was as if... That's what's happened with this machine&#8212;was the long-hand and the typing just coalesced and because the same activity. I don't feel that it made any of it any quicker. I mean, it probably did, but that wasn't the sense I had of it. It was less cumbersome because it's sitting here and I put it over here, and all that. But it seemed like it was very easy transition&#8212;I don't miss the typewriter, which I loved, you know? But I don't miss it&#8212;I think it's in my storage space about 2 miles away from here.",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": "0:48:00"
+    },
+    {
+      "id": "mcmichael_242",
+      "index": 242,
+      "speaker": null,
+      "words": "So, it couldn't have been an easier shift from that technology to this one, I don't think.",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_243",
+      "index": 243,
+      "speaker": "DB:",
+      "words": "Just to clarify for myself&#8212;are you still doing the long-hand composition, or is all of that work now happening on the computer?",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_244",
+      "index": 244,
+      "speaker": "JM:",
+      "words": "It's all happening here [on the computer] except when I don't take the computer with me, say, to Idaho then I will (50:00) work in long-hand. So, I'll print out whatever it is of whatever I have working on and I take that printed copy with me. Then, I'll just work long-hand with it, leaving the computer here. Then, I'll be back in 3 weeks, or something like that, and then re-incorporate it into what I've got here in my files.",
+      "tags": [
+        "change",
+        "between",
+        "files",
+        "highlight"
+      ],
+      "timestamp": "[00:50:00]"
+    },
+    {
+      "id": "mcmichael_245",
+      "index": 245,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": "0:50:13"
+    },
+    {
+      "id": "mcmichael_246",
+      "index": 246,
+      "speaker": null,
+      "words": "One thing, I guess, I might... So, in the composition stage, do you still do like strikethroughs in that?",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_247",
+      "index": 247,
+      "speaker": "JM:",
+      "words": "Yeah. I work pretty much the way I've worked before.",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_248",
+      "index": 248,
+      "speaker": "DB:",
+      "words": "You just transferred those processes on the computer?",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_249",
+      "index": 249,
+      "speaker": "JM:",
+      "words": "Yes",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_250",
+      "index": 250,
+      "speaker": "DB:",
+      "words": "Did it take some time to figure how to do that--?",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_251",
+      "index": 251,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_252",
+      "index": 252,
+      "speaker": "DB:",
+      "words": "--or was it fairly intuitive?",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_253",
+      "index": 253,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_254",
+      "index": 254,
+      "speaker": null,
+      "words": "And I guess... I mean.... Then another aspect of it is letters that I write here. So, I'm doing whatever revision I do of the emails I send right here on this. In that way, this makes it a little more personal. I can't remember how it was like to write a letter to somebody. It wasn't one of these, and I understand that letters you post aren't any more invasive than something you send here [on the computer]. But I love how non-invasive this [the computer] is as a medium&#8212;not so much in terms of my being protected against being invaded by somebody else, but being able to say something (send somebody something here [on the computer]) and understand that they can open it when they want, and that it's not an imposition on them.",
+      "tags": [
+        "change",
+        "between",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_255",
+      "index": 255,
+      "speaker": "DB:",
+      "words": "So explain that a little bit. The non-invasive part&#8212;do you feel like the letter was a more invasive...?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_256",
+      "index": 256,
+      "speaker": "JM:",
+      "words": "No, I think it'd probably wasn't but it took more trouble to write it, and post it, and 32 cents, or whatever it costs (whatever a letter cost to send before I started doing this). Then I have a friend who's a lifer. He doesn't have a computer, so, it's with Robby that I correspond by snail mail.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_257",
+      "index": 257,
+      "speaker": "DB:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_258",
+      "index": 258,
+      "speaker": null,
+      "words": "And do those feel different now? I mean, is it sort of a more difficult to get up, to write that letter?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_259",
+      "index": 259,
+      "speaker": "JM:",
+      "words": "Yes. Yes, it is. And I wind up writing it here and printing it out, and signing it, and putting it in the mail. Then his letters to me are all in long-hand.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_260",
+      "index": 260,
+      "speaker": "DB:",
+      "words": "I guess, in keeping with this latest work, when you went back to revise the poems, that was a fairly similar process, too?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_261",
+      "index": 261,
+      "speaker": "JM:",
+      "words": "I think it was exactly.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_262",
+      "index": 262,
+      "speaker": "DB:",
+      "words": "Exactly the same?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_263",
+      "index": 263,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_264",
+      "index": 264,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_265",
+      "index": 265,
+      "speaker": "DB:",
+      "words": "And then kind of a general question about your revision process, and this is one that I kind of... And this is a little bit repetitive. So, are the revisions driven by sound, by meaning, by theme, by structure? Are these all kind of intertwining?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": "0:52:45"
+    },
+    {
+      "id": "mcmichael_266",
+      "index": 266,
+      "speaker": "JM:",
+      "words": "I think they are.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_267",
+      "index": 267,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_268",
+      "index": 268,
+      "speaker": "JM:",
+      "words": "You know, it has to be&#8212;it just has to be. What can your ear bear here? And if it can bear it, is it saying what it has to be saying?",
+      "tags": [
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_269",
+      "index": 269,
+      "speaker": "DB:",
+      "words": "So, that's kind of step 1 and step 2 for your revisions?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_270",
+      "index": 270,
+      "speaker": "JM:",
+      "words": "Yeah, and they're probably inseparable.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_271",
+      "index": 271,
+      "speaker": "DB:",
+      "words": "Right, right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_272",
+      "index": 272,
+      "speaker": null,
+      "words": "Do other people play a process in your revisions or in your working?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_273",
+      "index": 273,
+      "speaker": "JM:",
+      "words": "Yes, they do.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_274",
+      "index": 274,
+      "speaker": "DB:",
+      "words": "OK, how so?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_275",
+      "index": 275,
+      "speaker": "JM:",
+      "words": "I'll send then drafts and get responses from them that are almost always helpful. And they're helpful in terms less of my being able to meet what they might have preferred to having what they've said to me help me prefer what happens once I make the revisions.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_276",
+      "index": 276,
+      "speaker": "DB:",
+      "words": "OK, and have those people stayed the same throughout your career, or they've changed somewhat?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_277",
+      "index": 277,
+      "speaker": "JM:",
+      "words": "They've... Yeah, there've been a couple who are new in the last 4 or 5 years on this most recent books&#8212;colleagues.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_278",
+      "index": 278,
+      "speaker": "DB:",
+      "words": "And how will that process work? Will you now email them a section whereas before you might send them a letter with the section, or...?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_279",
+      "index": 279,
+      "speaker": "JM:",
+      "words": "Yeah, it's easier. This makes it a lot easier to do and (55:00) then, of course, I get work from other people in this form, too, and I like that. I've liked it... I mean, I haven't taught now for a year and a half, but I've really liked the way the computer makes it possible to re-lineate poems that I've gotten from students&#8212;just to give them a sense of how I hear what they're doing with the lines. It's been a help. It's been a help to me. I haven't seen much evidence that it means anything at all to them.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": "[00:55:00]"
+    },
+    {
+      "id": "mcmichael_280",
+      "index": 280,
+      "speaker": "DB:",
+      "words": "No, I can tell you from experience. It's a lesson--it's a valuable lesson.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_281",
+      "index": 281,
+      "speaker": "JM:",
+      "words": "Oh, good",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_282",
+      "index": 282,
+      "speaker": "DB:",
+      "words": "Definitely!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_283",
+      "index": 283,
+      "speaker": "JM:",
+      "words": "Well, you may be the only one.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_284",
+      "index": 284,
+      "speaker": "DB:",
+      "words": "Sometimes it's difficult in the lessons learned but definitely valuable.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_285",
+      "index": 285,
+      "speaker": null,
+      "words": "[OK, let me look at this for one second. Do you want to take a break by any chance?]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_286",
+      "index": 286,
+      "speaker": "JM:",
+      "words": "[I'm fine. Now you want to take a break!]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_287",
+      "index": 287,
+      "speaker": "DB:",
+      "words": "[She's tired of these questions]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_288",
+      "index": 288,
+      "speaker": "DB:",
+      "words": "So, how did you keep track of all these things? I mean, I guess, with the computer if fairly... You have one file with all of them in it?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": "0:56:19"
+    },
+    {
+      "id": "mcmichael_289",
+      "index": 289,
+      "speaker": "JM:",
+      "words": "Yes",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_290",
+      "index": 290,
+      "speaker": "DB:",
+      "words": "And before that, did you just have them in a binder, or...?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_291",
+      "index": 291,
+      "speaker": "JM:",
+      "words": "Just loose pages probably.",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_292",
+      "index": 292,
+      "speaker": "DB:",
+      "words": "Just loose pages.",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_293",
+      "index": 293,
+      "speaker": "JM:",
+      "words": "With a clip probably.",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_294",
+      "index": 294,
+      "speaker": "DB:",
+      "words": "OK, and with that... As you got the manuscript more towards where you wanted, that would just grow bigger and bigger?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_295",
+      "index": 295,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_296",
+      "index": 296,
+      "speaker": "DB:",
+      "words": "So, it's a fairly easy way to do that.",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_297",
+      "index": 297,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_298",
+      "index": 298,
+      "speaker": "DB:",
+      "words": "So it wasn't like some of the other writers, like they have these special notebooks; they have kind of like a process where they move from notebook to this, to this? That wasn't...?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_299",
+      "index": 299,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_300",
+      "index": 300,
+      "speaker": "DB:",
+      "words": "That part of the writing was never that...?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_301",
+      "index": 301,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_302",
+      "index": 302,
+      "speaker": "DB:",
+      "words": "And those files and that sort of ephemera, it's never....It doesn't seem that it was that dear to you?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": "0:57:25"
+    },
+    {
+      "id": "mcmichael_303",
+      "index": 303,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_304",
+      "index": 304,
+      "speaker": "DB:",
+      "words": "And it's still not?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_305",
+      "index": 305,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_306",
+      "index": 306,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_307",
+      "index": 307,
+      "speaker": null,
+      "words": "Do you know... Have you ever thought why?",
+      "tags": [
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_308",
+      "index": 308,
+      "speaker": "JM:",
+      "words": "All I care about is the product--that's all I care about.",
+      "tags": [
+        "mss",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_309",
+      "index": 309,
+      "speaker": "DB:",
+      "words": "And when do you... What do you consider the product?",
+      "tags": [
+        "mss",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_310",
+      "index": 310,
+      "speaker": "JM:",
+      "words": "The poem that I can't make any better.",
+      "tags": [
+        "mss",
+        "revision",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_311",
+      "index": 311,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_312",
+      "index": 312,
+      "speaker": null,
+      "words": "Do you... I guess, in the same way in the computer? How do you feel about computer files? Do you try to... Do you have much sort of sense of trying to maintain them and keep them, or are they just sort of means to getting it to that point?",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_313",
+      "index": 313,
+      "speaker": "JM:",
+      "words": "They're the Work In Progress. At the most recent stage, if I'm going to get on an airplane I'll send what I've got on the book as a whole to a couple of people. They'll understand why I did it. So, that would be one of the later things that I would do before I got on the car to take us to the airport.",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_314",
+      "index": 314,
+      "speaker": "DB:",
+      "words": "OK, yeah",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_315",
+      "index": 315,
+      "speaker": "JM:",
+      "words": "It's egomaniacal, you know, in its way.",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_316",
+      "index": 316,
+      "speaker": "DB:",
+      "words": "Yeah",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_317",
+      "index": 317,
+      "speaker": null,
+      "words": "But, I mean, it's also your work.",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_318",
+      "index": 318,
+      "speaker": "JM:",
+      "words": "It's my work.",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_319",
+      "index": 319,
+      "speaker": "DB:",
+      "words": "Yeah",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_320",
+      "index": 320,
+      "speaker": null,
+      "words": "So, the product (the poem)&#8212;where does it exist? Is it in the book? Is it in the printed out page? I mean, I know you're very strong proponent of the aural poem... I guess that's sort of a larger question, but where is it?",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_321",
+      "index": 321,
+      "speaker": "JM:",
+      "words": "I guess it's in the book.",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_322",
+      "index": 322,
+      "speaker": "DB:",
+      "words": "It's in the book?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_323",
+      "index": 323,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_324",
+      "index": 324,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_325",
+      "index": 325,
+      "speaker": "JM:",
+      "words": "And I would want form, which in my case is the line and the stanza, to instruct a reader of that book on how I hear the phrases and the sentences.",
+      "tags": [
+        "mss",
+        "revision",
+        "future",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_326",
+      "index": 326,
+      "speaker": "DB:",
+      "words": "Right, right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_327",
+      "index": 327,
+      "speaker": null,
+      "words": "Do you ever record yourself doing this? Have you ever like recorded yourself reading a book, or has anybody ever asked you to do that?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_328",
+      "index": 328,
+      "speaker": "JM:",
+      "words": "I did read... Somebody recorded All of Capacity. Matt Nelson did it. Some years ago, I was asked to do some for one of those New York poetry societies, or... I can't remember what the others are, but I did. I have recorded some things. I've liked doing it, but it's only been when somebody's asked me for a recording.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_329",
+      "index": 329,
+      "speaker": null,
+      "words": "(1:00:00)",
+      "tags": [],
+      "timestamp": "[01:00:00]"
+    },
+    {
+      "id": "mcmichael_330",
+      "index": 330,
+      "speaker": "DB:",
+      "words": "I think that would be a valuable thing.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_331",
+      "index": 331,
+      "speaker": null,
+      "words": "[Let me just look through these. I think, we've gone... We've actually organically answered some of these questions I have, so that's nice.]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_332",
+      "index": 332,
+      "speaker": "DB:",
+      "words": "This is a little off, but has the internet changed the way that you do any of this process? Has the kind of availability of all these extra information allowed you to maybe find books, or find ideas and research online in a way that changed anything for your writing?",
+      "tags": [],
+      "timestamp": "1:00:22"
+    },
+    {
+      "id": "mcmichael_333",
+      "index": 333,
+      "speaker": "JM:",
+      "words": "I'm so bad at this that Amazon has like been the only resource that I've been helped by. I'm sure there's lots else there, but it hasn't served me. I'll google some things but not much.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_334",
+      "index": 334,
+      "speaker": "DB:",
+      "words": "Not much",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_335",
+      "index": 335,
+      "speaker": null,
+      "words": "Do you... I mean, why do you feel like you're bad at it, I guess, is a question. Is it something... But it's something that... I mean, is it something that you feel like kind of naturally, inherently, bad at, or...?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_336",
+      "index": 336,
+      "speaker": "JM:",
+      "words": "Yes, I feel naturally, inherently bad at it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_337",
+      "index": 337,
+      "speaker": "DB:",
+      "words": "And at the times that you have sort of attempted to teach yourself, it's just not something that come naturally, and not something that you've needed?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_338",
+      "index": 338,
+      "speaker": "JM:",
+      "words": "I think, yeah. I think if I had needed it more I'd probably would've availed myself of it more and taught myself how to do it. I guess, yeah&#8212;I haven't felt the need of it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_339",
+      "index": 339,
+      "speaker": "DB:",
+      "words": "Yeah, yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_340",
+      "index": 340,
+      "speaker": null,
+      "words": "Again, where do your files and folders kind of reside on your computer? Are they... Do you have like a folder for that book with all the drafts, or is it just one document?",
+      "tags": [
+        "revision",
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_341",
+      "index": 341,
+      "speaker": "JM:",
+      "words": "Just one document.",
+      "tags": [
+        "revision",
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_342",
+      "index": 342,
+      "speaker": "DB:",
+      "words": "Just one document.",
+      "tags": [
+        "revision",
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_343",
+      "index": 343,
+      "speaker": "JM:",
+      "words": "Just the most recent.",
+      "tags": [
+        "revision",
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_344",
+      "index": 344,
+      "speaker": "DB:",
+      "words": "OK, and that's how it works for almost everything?",
+      "tags": [
+        "revision",
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_345",
+      "index": 345,
+      "speaker": "JM:",
+      "words": "Yes",
+      "tags": [
+        "revision",
+        "files"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_346",
+      "index": 346,
+      "speaker": "DB:",
+      "words": "OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_347",
+      "index": 347,
+      "speaker": "JM:",
+      "words": "And I think that would be related to what you probably remember&#8212;if I'm seeing students revisions, I'm interested in the one that they feel is the strongest, and I'm not going to compare it to earlier things. I wouldn't want... I want them to be making that call, and that's what I want them to hear from me back about.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_348",
+      "index": 348,
+      "speaker": "DB:",
+      "words": "Right, right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_349",
+      "index": 349,
+      "speaker": "DB:",
+      "words": "How do you... I mean, you've sort of spoken about this in describing your earlier practices. How did you get that acumen in sort of being able to tell? I mean, it's just...",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": "1:01:51"
+    },
+    {
+      "id": "mcmichael_350",
+      "index": 350,
+      "speaker": "JM:",
+      "words": "I don't know. Just listening to a lot of great, great music, I think. I mean, that would make more sense to me than anything else.",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_351",
+      "index": 351,
+      "speaker": "DB:",
+      "words": "Hmm...",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_352",
+      "index": 352,
+      "speaker": null,
+      "words": "OK, and what was the... Is there a progression of music that you listen to ever?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_353",
+      "index": 353,
+      "speaker": "JM:",
+      "words": "Yes, yes",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_354",
+      "index": 354,
+      "speaker": "DB:",
+      "words": "Can you talk a little bit about that?",
+      "tags": [
+        "revision"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_355",
+      "index": 355,
+      "speaker": "JM:",
+      "words": "I think I was helped immeasurably by what I listened to when I was 12 and 13 just in a really bad way, and that was first jazz from the early '50s that got to be more and more exclusively black jazz, or black musicians. And that got me through high school, and then I had other things to do once I went to college. It kind of was suspended pretty much all the way through my undergraduate work, and my graduate work, then it came back once I had the job here.",
+      "tags": [
+        "revision",
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_356",
+      "index": 356,
+      "speaker": null,
+      "words": "So, in the late '60s, it was the popular music&#8212;rock mostly&#8212;and The Stones and Hendrix were kind of at the top of that list. Then Hendrix was dead and The Stones weren't what they had been. At that point, I had a need for music that got to me, and there wasn't any more of it coming from jazz or rock, so then I started learning classical, learning the literature of",
+      "tags": [
+        "revision",
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_357",
+      "index": 357,
+      "speaker": null,
+      "words": "(1:05:00) classical music, and it's had hold of me since November of 1973. You know, I feel that it's trained my ear to be what it is. I don't know how it's done that but it's been elemental to me.",
+      "tags": [
+        "revision",
+        "change",
+        "highlight"
+      ],
+      "timestamp": "[01:05:00]"
+    },
+    {
+      "id": "mcmichael_358",
+      "index": 358,
+      "speaker": "DB:",
+      "words": "Did you take any formal education?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_359",
+      "index": 359,
+      "speaker": "JM:",
+      "words": "No, no",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_360",
+      "index": 360,
+      "speaker": "DB:",
+      "words": "Just listening?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_361",
+      "index": 361,
+      "speaker": "JM:",
+      "words": "I just listened.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_362",
+      "index": 362,
+      "speaker": "DB:",
+      "words": "And where would you find... How would you find new things? What was your progress there?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_363",
+      "index": 363,
+      "speaker": "JM:",
+      "words": "From composers and from artists both. So, going at it both ways",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_364",
+      "index": 364,
+      "speaker": "DB:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_365",
+      "index": 365,
+      "speaker": null,
+      "words": "Have there been particular composers, or artists, at times that you listen to more? I mean like is there... Does it move forward, or...?",
+      "tags": [
+        "revision",
+        "change"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_366",
+      "index": 366,
+      "speaker": "JM:",
+      "words": "It's been Mahler and Beethoven at the top, and then Brahms and Bach. Loads of others but Mahler and Beethoven most of all.",
+      "tags": [
+        "revision",
+        "change"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_367",
+      "index": 367,
+      "speaker": "DB:",
+      "words": "I mean, you based one of your stanzaic forms on the... Who was it? Was it&#8212;",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": "1:06:10"
+    },
+    {
+      "id": "mcmichael_368",
+      "index": 368,
+      "speaker": "JM:",
+      "words": "Well, Schoenberg, whom I'm not that crazy about but the 12-tone system suggested to me a stanzaic progression in which if I've got (as I had in the two most recent books) 1, 2, 3, 4, and 5 line stanzas&#8212;the 12-tone system in which he would not come back to a note until he had used the other eleven [on the] scale suggested to me a form in which I would not interrupt the progression of 1, 2, 3, 4, 5 until I'd exhausted all of those five. And then I would begin the next sequence with another number and try to have that second sequence be as varied from the first as I could be, and then continue that all the way through.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_369",
+      "index": 369,
+      "speaker": null,
+      "words": "That's not to say that I wouldn't wind up having a 3, 2, 1, 4, 5 sequence somewhere else in the poem, but I'd want it to be removed by several other sequences.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_370",
+      "index": 370,
+      "speaker": "DB:",
+      "words": "Right",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_371",
+      "index": 371,
+      "speaker": "JM:",
+      "words": "So, variety is one of the models but that was the form.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_372",
+      "index": 372,
+      "speaker": "DB:",
+      "words": "And how did you... Did you pick that up by listening, or was that from a reading? I mean, are you reading about this as well, or...?",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_373",
+      "index": 373,
+      "speaker": "JM:",
+      "words": "No. I mean, I just knew what the 12-tone system was and knew no more about it than that.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_374",
+      "index": 374,
+      "speaker": "DB:",
+      "words": "OK, but it&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_375",
+      "index": 375,
+      "speaker": "JM:",
+      "words": "It's just in one sentence thing. So that suggested itself to me. I began it with a poem I wrote about Greenland called \"T\"he World At Large.\" There, I was working with 1, 2, 3, and 4&#8212;I stopped at 4 there. And then the next time, I was in to Capacity. In that book, I added a 5-line stanza.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_376",
+      "index": 376,
+      "speaker": "DB:",
+      "words": "Capacious stanza.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_377",
+      "index": 377,
+      "speaker": "JM:",
+      "words": "It was more capacious.",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_378",
+      "index": 378,
+      "speaker": "DB:",
+      "words": "Great!",
+      "tags": [
+        "revision",
+        "mss"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_379",
+      "index": 379,
+      "speaker": "JM:",
+      "words": "I would say, too, that when I think back about moving from the late '60s when I was writing poems I didn't like, weren't very good, into the early '70s, I think there's a non-accidental relationship between the forms I was working with having been as short as a 3-minute take and a sonata form, or a scherzo trio form, or an adagio, or something like that that the lengths of it (the units I was working on ) got larger when I was listening to pieces of music that were 8-9 minutes to ½ an hour long.",
+      "tags": [
+        "revision",
+        "change",
+        "highlight"
+      ],
+      "timestamp": "1:08:35"
+    },
+    {
+      "id": "mcmichael_380",
+      "index": 380,
+      "speaker": "DB:",
+      "words": "Right, that makes a lot of sense.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_381",
+      "index": 381,
+      "speaker": null,
+      "words": "And you're listening to this classical piece. Was it a very active listening? I mean, is it usually like you're alone with the music? Is it a head-... Do you listen to it on",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_382",
+      "index": 382,
+      "speaker": null,
+      "words": "(01:10:00) headphones?",
+      "tags": [],
+      "timestamp": "[01:10:00]"
+    },
+    {
+      "id": "mcmichael_383",
+      "index": 383,
+      "speaker": "JM:",
+      "words": "Both",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_384",
+      "index": 384,
+      "speaker": "DB:",
+      "words": "Both",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_385",
+      "index": 385,
+      "speaker": "JM:",
+      "words": "A lot of it. You know, I spend a lot of time with it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_386",
+      "index": 386,
+      "speaker": "DB:",
+      "words": "Yeah, and are you ever writing while that's on?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_387",
+      "index": 387,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_388",
+      "index": 388,
+      "speaker": "DB:",
+      "words": "You give the attention to the music?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_389",
+      "index": 389,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_390",
+      "index": 390,
+      "speaker": "DB:",
+      "words": "OK, and that's still a part of your process now?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_391",
+      "index": 391,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_392",
+      "index": 392,
+      "speaker": "DB:",
+      "words": "That's fascinating!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_393",
+      "index": 393,
+      "speaker": "DB:",
+      "words": "OK, I have a little bit, a few more questions&#8212;a little bit on teaching&#8212;and then just kind of the blunt ending questions.",
+      "tags": [],
+      "timestamp": "1:10:32"
+    },
+    {
+      "id": "mcmichael_394",
+      "index": 394,
+      "speaker": null,
+      "words": "You just speak about this with the computer kind of changing your relationship with your students. You can kind of rely in their poems to show them how you hear them. Is there any other ways that you've seen this computer sort of age adjusting, or affecting, your teaching and working with students?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_395",
+      "index": 395,
+      "speaker": "JM:",
+      "words": "I don't think so. It's made it all more efficient in terms of not having to go to the mailbox to get the copies, but to just come here and here's their poems. I like that. I think they like it, too.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_396",
+      "index": 396,
+      "speaker": "DB:",
+      "words": "Right, right",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_397",
+      "index": 397,
+      "speaker": null,
+      "words": "Do you see, in your later students, that there's like an increased technological or cultural understanding that affected their work, or...?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_398",
+      "index": 398,
+      "speaker": "JM:",
+      "words": "No",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_399",
+      "index": 399,
+      "speaker": "DB:",
+      "words": "[inaudible 01:11:26]",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_400",
+      "index": 400,
+      "speaker": null,
+      "words": "That's fine with me.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_401",
+      "index": 401,
+      "speaker": "JM:",
+      "words": "I mean, except that I think there's a probably a proclivity for exotic words that they trust Google will help you with. I think that's happened.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_402",
+      "index": 402,
+      "speaker": "DB:",
+      "words": "Yeah, yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_403",
+      "index": 403,
+      "speaker": "JM:",
+      "words": "I don't... That's not necessarily a gain, but it's not terrible either.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_404",
+      "index": 404,
+      "speaker": "DB:",
+      "words": "Yeah, yeah. No, that's not bad.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_405",
+      "index": 405,
+      "speaker": null,
+      "words": "So, I guess, I just have like the kind of blunt questions. I mean, this sort of the frame of my thing (of my study) is - what changes happened with this rise of personal computer. I mean, for you, it seems like maybe not that many. Do you have any opinions on kind of how...? Is there a change in feel, change in structure, or...?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_406",
+      "index": 406,
+      "speaker": "JM:",
+      "words": "I like what's personal about this medium in that way that I've described already. I like the contact this machine gives me with people. I feel it's certainly more immediate. I think it's increased the contact that I have with people who are spread around the world. It's been more important to me since I don't go in to school and run in to people that I have conversations with. And I like the fact that it's this keyboard that connects me with them, and this keyboard that connects me with strangers who might read my poems. I like that about this&#8212;a lot. I like it a lot. I like it all the more now that when the phone rings, 90% of the time (even though I've asked not to be called by telemarketers) it's telemarketers.",
+      "tags": [
+        "change",
+        "highlight"
+      ],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_407",
+      "index": 407,
+      "speaker": "DB:",
+      "words": "Yeah, because most of your conversations that are important now are on the computer.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_408",
+      "index": 408,
+      "speaker": "JM:",
+      "words": "Yeah",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_409",
+      "index": 409,
+      "speaker": "DB:",
+      "words": "And then, I guess, has that changed the poems? Has that--?",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_410",
+      "index": 410,
+      "speaker": "JM:",
+      "words": "I don't think so.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_411",
+      "index": 411,
+      "speaker": "DB:",
+      "words": "No, OK",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_412",
+      "index": 412,
+      "speaker": "JM:",
+      "words": "But I can't know that. I mean, it might well have.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_413",
+      "index": 413,
+      "speaker": "DB:",
+      "words": "I mean, it's interesting to me. I guess just thinking of the Ulysses class, and just like thinking about that connection with people with being so integral to thinking about that book and about what you were talking about. And I wanted&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_414",
+      "index": 414,
+      "speaker": "JM:",
+      "words": "My favorite class, ever.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_415",
+      "index": 415,
+      "speaker": "DB:",
+      "words": "That was a great class.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_416",
+      "index": 416,
+      "speaker": "JM:",
+      "words": "I mean, just by miles and miles.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_417",
+      "index": 417,
+      "speaker": "DB:",
+      "words": "Good, good. I'm glad I was in it.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_418",
+      "index": 418,
+      "speaker": "JM:",
+      "words": "I'm glad you were, too.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_419",
+      "index": 419,
+      "speaker": "DB:",
+      "words": "I think... I guess... But I mentioned... I mean, it is in a sense a very good democratic object&#8212;",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_420",
+      "index": 420,
+      "speaker": "JM:",
+      "words": "It is.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_421",
+      "index": 421,
+      "speaker": "DB:",
+      "words": "--and I guess I can see your relationship to it in that way. And I guess, it would be left for others to comment how that may have broached this.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_422",
+      "index": 422,
+      "speaker": null,
+      "words": "OK, well thank you very much, Jim.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_423",
+      "index": 423,
+      "speaker": "JM:",
+      "words": "Oh, it's been so good.",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_424",
+      "index": 424,
+      "speaker": "DB:",
+      "words": "That's great!",
+      "tags": [],
+      "timestamp": null
+    },
+    {
+      "id": "mcmichael_425",
+      "index": 425,
+      "speaker": "JM:",
+      "words": "You're so good at this. You really are.",
+      "tags": [],
+      "timestamp": null
+    }
+  ],
+  "metadata": {
+    "totalSegments": 426,
+    "description": "Oral history interview with poet James McMichael conducted as part of CTRL+Shift project (https://ctrl-shift.org/)",
+    "location": "Long Beach, CA",
+    "source": "CTRL+Shift, Center for Digital Inquiry and Learning, University of Idaho Library, https://ctrl-shift.org/"
+  }
+}

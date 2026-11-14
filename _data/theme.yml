@@ -28,8 +28,8 @@ topic-viz-output: assets/data/topic-viz ## where the visualization's index and p
 
 ### JSON downloads ###
 # If you turn the below option `json-generation` to true, you'll need to run the rake command `generate_json` -- that command will generate the json files for your collection.
-# This only affects the "Transcripts as JSON" download options; the visualization no longer uses it.
-json-generation: false ## true/false --> defaults to false. If true, the Data Access section offers per-transcript JSON downloads.
+# This only affects the JSON downloads; the visualization no longer uses it.
+json-generation: true ## true/false --> defaults to false. If true, each interview page gets a "Download JSON" button (the collection download is always offered).
 
 
 

@@ -8,14 +8,13 @@
 layout: default
 custom-foot: transcript/js/visualization-js.html
 ---
-<link rel="stylesheet" href="{{ '/assets/css/topic-viz.css' | relative_url }}">
 {%- assign tv-size = site.data.theme.visualization-size | default: 'auto' | downcase | strip -%}
 {%- assign tv-count = site.data.topic_viz.interviews | default: site.data.transcripts.size -%}
 {%- if tv-size != 'large' and tv-size != 'compact' -%}
   {%- assign tv-threshold = site.data.theme.visualization-compact-threshold | default: 30 -%}
   {%- if tv-count > tv-threshold -%}{%- assign tv-size = 'compact' -%}{%- else -%}{%- assign tv-size = 'large' -%}{%- endif -%}
 {%- endif -%}
-{%- comment -%} Compact rows grow taller the fewer interviews there are (see assets/css/topic-viz.css) {%- endcomment -%}
+{%- comment -%} Compact rows grow taller the fewer interviews there are (see _sass/_topic-viz.scss) {%- endcomment -%}
 {%- if tv-count <= 10 -%}{%- assign tv-density = 'roomy' -%}
 {%- elsif tv-count <= 30 -%}{%- assign tv-density = 'cozy' -%}
 {%- elsif tv-count <= 100 -%}{%- assign tv-density = 'snug' -%}
