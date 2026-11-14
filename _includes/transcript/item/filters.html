@@ -9,9 +9,12 @@
     </div>
 </div>
 {% else %}
-<div class="row my-3 {% unless site.data.theme.search-and-filters-sticky == false %}sticky-top {% endunless %}bg-white border-bottom border-left border-right d-print-none py-3 w-md-75"
+{%- comment -%} On phones (below md) the topic menu and search share one row, and Reset
+    moves into the results row that appears once a topic or search is active, so the
+    sticky bar stays one line tall. Styles: #filters-search in _sass/_ohd.scss. {%- endcomment -%}
+<div class="row my-3 {% unless site.data.theme.search-and-filters-sticky == false %}sticky-top {% endunless %}bg-white border-bottom border-left border-right d-print-none py-2 py-md-3 w-md-75"
     id="filters-search">
-    <div class="col {% unless site.data.filters and uniqueSubjects.size > 0 %}d-none{% endunless %}">
+    <div class="col-6 col-md {% unless site.data.filters and uniqueSubjects.size > 0 %}d-none{% endunless %}">
         <!-- Enhanced label for screen readers -->
         <label for="filters" class="visually-hidden">Filter transcript by topic</label>
         <select id="filters" title="Filter by Topic" class="filters py-1 form-select border border-primary"
@@ -28,15 +31,17 @@
             {%endif%} {% endfor %}
         </select>
     </div>
-    <div class="col">
+    <div class="{% if site.data.filters and uniqueSubjects.size > 0 %}col-6 {% endif %}col-md">
         <div id="transcriptsearch" class="bg-lightr">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     <!-- Add a proper label for the search input -->
                     <label for="quicksearch" class="visually-hidden">Search transcript text</label>
                     <div class="input-group fs-5 mt-0 mt-md-0">
                         <input type="text" class="form-control border border-primary py-1" placeholder="Search transcript..."
                             aria-label="Search transcript" id="quicksearch" />
+                        <script>/* shorter placeholder where the box is narrow (phones) */
+                            if (window.matchMedia('(max-width: 767.98px)').matches) document.getElementById('quicksearch').placeholder = 'Search…';</script>
                         <div class="input-group-append">
                             <button class="rounded-right border border-primary btn btn-primary p-1" type="button"
                                 aria-label="Search transcript" id="goButton"
@@ -46,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="d-none d-md-block col-md-6">
                     <button class="reset btn btn-sm btn-primary input-group-text float-end float-md-none mt-2 mt-md-0"
                         onclick="{% if site.data.filters %}vizFilter('all');{% else %}resetVals();{% endif %}" aria-label="Reset all filters and search">
                         Reset Filters
@@ -55,15 +60,21 @@
             </div>
         </div>
     </div>
-    <div id="filtersearch-dropdown" class="col-12 d-none mt-3">
-        <p id="linecount" class="d-none small ms-3 h5">
+    <div id="filtersearch-dropdown" class="col-12 d-none mt-2 mt-md-3">
+        <p id="linecount" class="d-none small ms-md-3 mb-1 mb-md-2 h5">
             <span id="numberof"></span>
         </p>
 
         <!-- Enhance the dropdown with proper labeling -->
         <label for="searchResults" class="visually-hidden">Jump to matching line in transcript</label>
-        <select class="w-100 col-md-8 mb-2 form-select p-2 border border-primary" id="searchResults"
+        <div class="d-flex gap-2 align-items-start">
+        <select class="w-100 col-md-8 mb-md-2 form-select p-2 border border-primary" id="searchResults"
             onchange="scrollToLine(this.value);"></select>
+        <button class="reset btn btn-primary d-md-none flex-shrink-0" type="button"
+            onclick="{% if site.data.filters %}vizFilter('all');{% else %}resetVals();{% endif %}" aria-label="Reset all filters and search">
+            Reset
+        </button>
+        </div>
 
         <!-- Add a status announcer for screen readers -->
         <div role="status" aria-live="polite" class="visually-hidden" id="search-status-announcer"></div>

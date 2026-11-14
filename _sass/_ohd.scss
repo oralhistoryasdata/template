@@ -194,3 +194,30 @@
 #contents-container .words {
     overflow-wrap: anywhere;
 }
+
+/* sticky transcript search bar on phones (markup: _includes/transcript/item/filters.html):
+   one row of menu + search, and a small show/hide tab that covers less of the text */
+@media (max-width: 767.98px) {
+    #filters-search .filters,
+    #filters-search #quicksearch {
+        min-width: 0;
+        text-overflow: ellipsis;
+    }
+
+    #filters-search #goButton {
+        padding-left: 0.6rem !important;
+        padding-right: 0.6rem !important;
+    }
+
+    #filters-search .filter-tab {
+        width: auto;
+        bottom: -12px;
+        padding: 0.15rem 0.75rem !important;
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    #filters-search #linecount {
+        font-size: 0.85rem;
+    }
+}
